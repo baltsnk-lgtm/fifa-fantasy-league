@@ -110,6 +110,7 @@
     padding: 60px 16px;
     color: rgba(245,243,236,0.5);
   }
+  .state.error { color: #e57373; }
   footer {
     text-align: center;
     padding: 20px;
@@ -130,66 +131,83 @@
   <footer>Оновлюється автоматично щогодини</footer>
 
 <script>
-async function load() {
   const contentEl = document.getElementById('content');
   const updatedEl = document.getElementById('updated');
-  try {
-    const res = await fetch('standings.json?_=' + Date.now());
-    if (!res.ok) throw new Error('HTTP ' + res.status);
-    const data = await res.json();
-    const standings = data.standings || [];
 
-    if (!standings.length) {
-      contentEl.className = 'state';
-      contentEl.textContent = 'Дані ще не завантажено.';
-      return;
-    }
-
-    const rows = standings.map(p => `
-      <tr class="${p.rank <= 3 ? 'top3' : ''}">
-        <td class="rank">${p.rank}</td>
-        <td class="name">
-          <div class="name-cell">
-            <img class="avatar" src="${p.avatar}" alt="" onerror="this.style.display='none'">
-            ${escapeHtml(p.name)}
-          </div>
-        </td>
-        <td class="round">тур: ${p.round_points} (${p.round_rank}-е)</td>
-        <td class="points">${p.points}</td>
-      </tr>
-    `).join('');
-
-    contentEl.outerHTML = `
-      <table id="content">
-        <thead>
-          <tr>
-            <th class="num">#</th>
-            <th>Гравець</th>
-            <th class="num">Останній тур</th>
-            <th class="num">Очки</th>
-          </tr>
-        </thead>
-        <tbody>${rows}</tbody>
-      </table>
-    `;
-
-    const updated = new Date(data.updated_at);
-    updatedEl.textContent = 'Оновлено: ' + updated.toLocaleString('uk-UA', { dateStyle: 'medium', timeStyle: 'short' });
-  } catch (e) {
-    contentEl.className = 'state';
-    contentEl.textContent = 'Не вдалося завантажити standings.json (' + e.message + ')';
-    updatedEl.textContent = '';
+  function formatDate(iso) {
+    if (!iso) return 'ще не оновлювалось';
+    const d = new Date(iso);
+    if (isNaN(d.getTime())) return 'ще не оновлювалось';
+    return 'Оновлено ' + d.toLocaleString('uk-UA', {
+      day: '2-digit', month: '2-digit', year: 'numeric',
+      hour: '2-digit', minute: '2-digit'
+    });
   }
-}
 
-function escapeHtml(str) {
-  const div = document.createElement('div');
-  div.textContent = str;
-  return div.innerHTML;
-}
+  function escapeHtml(str) {
+    const div = document.createElement('div');
+    div.textContent = str;
+    return div.innerHTML;
+  }
 
-load();
-setInterval(load, 5 * 60 * 1000); // refresh view every 5 min (data itself updates hourly)
+  function renderTable(standings) {
+    const rows = standings.map((s, i) => {
+      const top3 = i < 3 ? ' top3' : '';
+      const avatar = s.avatar
+        ? `<img class="avatar" src="${s.avatar}" alt="" onerror="this.style.display='none'">`
+        : '';
+      return `
+        <tr class="${top3.trim()}">
+          <td class="rank">${s.rank ?? i + 1}</td>
+          <td class="name">
+            <div class="name-cell">${avatar}<span>${escapeHtml(s.name ?? '')}</span></div>
+          </td>
+          <td class="round">${s.round_points ?? '—'}</td>
+          <td class="points">${s.points ?? '—'}</td>
+        </tr>`;
+    }).join('');
+
+    const table = document.createElement('table');
+    table.id = 'content';
+    table.innerHTML = `
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Гравець</th>
+          <th class="num">Тур</th>
+          <th class="num">Очки</th>
+        </tr>
+      </thead>
+      <tbody>${rows}</tbody>`;
+    contentEl.replaceWith(table);
+  }
+
+  function showState(message, isError) {
+    contentEl.textContent = message;
+    contentEl.className = 'state' + (isError ? ' error' : '');
+  }
+
+  async function load() {
+    try {
+      const res = await fetch('standings.json', { cache: 'no-store' });
+      if (!res.ok) throw new Error('HTTP ' + res.status);
+      const data = await res.json();
+      const standings = data.standings || [];
+
+      updatedEl.textContent = formatDate(data.updated_at);
+
+      if (!standings.length) {
+        showState('Дані ще не завантажені. Перевір за годину.', false);
+        return;
+      }
+      renderTable(standings);
+    } catch (err) {
+      updatedEl.textContent = 'Помилка оновлення';
+      showState('Не вдалося завантажити таблицю: ' + err.message, true);
+    }
+  }
+
+  load();
 </script>
 </body>
 </html>
