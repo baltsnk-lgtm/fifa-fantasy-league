@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FIFA Fantasy — Закрита ліга</title>
+<style>
+  :root {
+    --pitch: #0b3d24;
+    --pitch-dark: #072818;
+    --gold: #d4af37;
+    --white: #f5f3ec;
+    --line: rgba(245,243,236,0.12);
+    --up: #4caf6d;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--pitch-dark);
+    background-image:
+      repeating-linear-gradient(90deg, rgba(255,255,255,0.02) 0 1px, transparent 1px 80px);
+    color: var(--white);
+    font-family: "FIFA Sans", "Oswald", "Arial Narrow", sans-serif;
+    min-height: 100vh;
+  }
+  header {
+    padding: 40px 24px 24px;
+    text-align: center;
+    border-bottom: 1px solid var(--line);
+  }
+  .eyebrow {
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-size: 12px;
+    color: var(--gold);
+    margin-bottom: 8px;
+  }
+  h1 {
+    margin: 0;
+    font-size: clamp(28px, 5vw, 44px);
+    font-weight: 800;
+    letter-spacing: -0.5px;
+  }
+  .meta {
+    margin-top: 10px;
+    font-size: 13px;
+    color: rgba(245,243,236,0.6);
+  }
+  main {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 24px 16px 60px;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  thead th {
+    text-align: left;
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: rgba(245,243,236,0.5);
+    padding: 0 12px 10px;
+    font-weight: 600;
+  }
+  thead th.num { text-align: right; }
+  tbody tr {
+    background: rgba(255,255,255,0.03);
+  }
+  tbody tr:nth-child(even) { background: rgba(255,255,255,0.05); }
+  tbody tr.top3 { background: rgba(212,175,55,0.08); }
+  td {
+    padding: 14px 12px;
+    border-top: 1px solid var(--line);
+    font-size: 15px;
+  }
+  td.rank {
+    font-weight: 800;
+    font-size: 18px;
+    width: 44px;
+    color: rgba(245,243,236,0.7);
+  }
+  tr.top3 td.rank { color: var(--gold); }
+  td.name {
+    font-weight: 600;
+  }
+  td.round {
+    text-align: right;
+    color: rgba(245,243,236,0.55);
+    font-size: 13px;
+  }
+  td.points {
+    text-align: right;
+    font-weight: 800;
+    font-size: 17px;
+    font-variant-numeric: tabular-nums;
+  }
+  .avatar {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    vertical-align: middle;
+    margin-right: 10px;
+    background: rgba(255,255,255,0.08);
+  }
+  .name-cell { display: flex; align-items: center; }
+  .state {
+    text-align: center;
+    padding: 60px 16px;
+    color: rgba(245,243,236,0.5);
+  }
+  footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 12px;
+    color: rgba(245,243,236,0.35);
+  }
+</style>
+</head>
+<body>
+  <header>
+    <div class="eyebrow">Закрита ліга · FIFA World Cup 2026</div>
+    <h1>Fantasy Leaderboard</h1>
+    <div class="meta" id="updated">Завантаження…</div>
+  </header>
+  <main>
+    <div id="content" class="state">Завантаження таблиці…</div>
+  </main>
+  <footer>Оновлюється автоматично щогодини</footer>
+
+<script>
+async function load() {
+  const contentEl = document.getElementById('content');
+  const updatedEl = document.getElementById('updated');
+  try {
+    const res = await fetch('standings.json?_=' + Date.now());
+    if (!res.ok) throw new Error('HTTP ' + res.status);
+    const data = await res.json();
+    const standings = data.standings || [];
+
+    if (!standings.length) {
+      contentEl.className = 'state';
+      contentEl.textContent = 'Дані ще не завантажено.';
+      return;
+    }
+
+    const rows = standings.map(p => `
+      <tr class="${p.rank <= 3 ? 'top3' : ''}">
+        <td class="rank">${p.rank}</td>
+        <td class="name">
+          <div class="name-cell">
+            <img class="avatar" src="${p.avatar}" alt="" onerror="this.style.display='none'">
+            ${escapeHtml(p.name)}
+          </div>
+        </td>
+        <td class="round">тур: ${p.round_points} (${p.round_rank}-е)</td>
+        <td class="points">${p.points}</td>
+      </tr>
+    `).join('');
+
+    contentEl.outerHTML = `
+      <table id="content">
+        <thead>
+          <tr>
+            <th class="num">#</th>
+            <th>Гравець</th>
+            <th class="num">Останній тур</th>
+            <th class="num">Очки</th>
+          </tr>
+        </thead>
+        <tbody>${rows}</tbody>
+      </table>
+    `;
+
+    const updated = new Date(data.updated_at);
+    updatedEl.textContent = 'Оновлено: ' + updated.toLocaleString('uk-UA', { dateStyle: 'medium', timeStyle: 'short' });
+  } catch (e) {
+    contentEl.className = 'state';
+    contentEl.textContent = 'Не вдалося завантажити standings.json (' + e.message + ')';
+    updatedEl.textContent = '';
+  }
+}
+
+function escapeHtml(str) {
+  const div = document.createElement('div');
+  div.textContent = str;
+  return div.innerHTML;
+}
+
+load();
+setInterval(load, 5 * 60 * 1000); // refresh view every 5 min (data itself updates hourly)
+</script>
+</body>
+</html>
