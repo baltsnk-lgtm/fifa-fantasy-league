@@ -1,5 +1,186 @@
 {
-  "updated_at": null,
+  "updated_at": "2026-07-03T20:33:10Z",
   "league_id": "248321",
-  "standings": []
+  "standings": [
+    {
+      "rank": 1,
+      "name": "reborned96",
+      "points": 385,
+      "round_points": 105,
+      "round_rank": 2,
+      "level": 10,
+      "avatar": "https://play.fifa.com/media/image/gamezone/avatars/WC_2026/10.svg"
+    },
+    {
+      "rank": 2,
+      "name": "Dyom",
+      "points": 364,
+      "round_points": 93,
+      "round_rank": 5,
+      "level": 6,
+      "avatar": "https://play.fifa.com/media/image/gamezone/avatars/WC_2026/6.svg"
+    },
+    {
+      "rank": 3,
+      "name": "Vetal307",
+      "points": 362,
+      "round_points": 97,
+      "round_rank": 4,
+      "level": 11,
+      "avatar": "https://play.fifa.com/media/image/gamezone/avatars/WC_2026/11.svg"
+    },
+    {
+      "rank": 4,
+      "name": "Andrii Lubinets",
+      "points": 338,
+      "round_points": 86,
+      "round_rank": 7,
+      "level": 2,
+      "avatar": "https://play.fifa.com/media/image/gamezone/avatars/WC_2026/2.svg"
+    },
+    {
+      "rank": 5,
+      "name": "bltsnk",
+      "points": 336,
+      "round_points": 109,
+      "round_rank": 1,
+      "level": 5,
+      "avatar": "https://play.fifa.com/media/image/gamezone/avatars/WC_2026/5.svg"
+    },
+    {
+      "rank": 6,
+      "name": "sergstappen",
+      "points": 335,
+      "round_points": 88,
+      "round_rank": 6,
+      "level": 2,
+      "avatar": "https://play.fifa.com/media/image/gamezone/avatars/WC_2026/2.svg"
+    },
+    {
+      "rank": 7,
+      "name": "Last Bite Of Suarez",
+      "points": 334,
+      "round_points": 78,
+      "round_rank": 10,
+      "level": 10,
+      "avatar": "https://play.fifa.com/media/image/gamezone/avatars/WC_2022/0.svg"
+    },
+    {
+      "rank": 8,
+      "name": "Maks66",
+      "points": 327,
+      "round_points": 73,
+      "round_rank": 14,
+      "level": 6,
+      "avatar": "https://play.fifa.com/media/image/gamezone/avatars/WC_2026/6.svg"
+    },
+    {
+      "rank": 9,
+      "name": "Pocik",
+      "points": 314,
+      "round_points": 104,
+      "round_rank": 3,
+      "level": 2,
+      "avatar": "https://play.fifa.com/media/image/gamezone/avatars/WC_2026/2.svg"
+    },
+    {
+      "rank": 10,
+      "name": "artemovie",
+      "points": 297,
+      "round_points": 74,
+      "round_rank": 12,
+      "level": 9,
+      "avatar": "https://play.fifa.com/media/image/gamezone/avatars/WC_2026/9.svg"
+    },
+    {
+      "rank": 11,
+      "name": "bucherino",
+      "points": 291,
+      "round_points": 80,
+      "round_rank": 9,
+      "level": 10,
+      "avatar": "https://play.fifa.com/media/image/gamezone/avatars/WC_2026/10.svg"
+    },
+    {
+      "rank": 12,
+      "name": "SRJ Team",
+      "points": 285,
+      "round_points": 77,
+      "round_rank": 11,
+      "level": 2,
+      "avatar": "https://play.fifa.com/media/image/gamezone/avatars/WC_2026/2.svg"
+    },
+    {
+      "rank": 13,
+      "name": "Oleksandr10",
+      "points": 277,
+      "round_points": 74,
+      "round_rank": 13,
+      "level": 10,
+      "avatar": "https://play.fifa.com/media/image/gamezone/avatars/WC_2026/10.svg"
+    },
+    {
+      "rank": 14,
+      "name": "OleksiiTim",
+      "points": 267,
+      "round_points": 81,
+      "round_rank": 8,
+      "level": 7,
+      "avatar": "https://play.fifa.com/media/image/gamezone/avatars/WC_2026/7.svg"
+    },
+    {
+      "rank": 15,
+      "name": "Anna B01",
+      "points": 264,
+      "round_points": 41,
+      "round_rank": 19,
+      "level": 7,
+      "avatar": "https://play.fifa.com/media/image/gamezone/avatars/WC_2026/7.svg"
+    },
+    {
+      "rank": 16,
+      "name": "TymofiiMC",
+      "points": 257,
+      "round_points": 57,
+      "round_rank": 16,
+      "level": 10,
+      "avatar": "https://play.fifa.com/media/image/gamezone/avatars/WC_2026/10.svg"
+    },
+    {
+      "rank": 17,
+      "name": "Ob1one",
+      "points": 243,
+      "round_points": 56,
+      "round_rank": 17,
+      "level": 10,
+      "avatar": "https://play.fifa.com/media/image/gamezone/avatars/WC_2026/10.svg"
+    },
+    {
+      "rank": 18,
+      "name": "antonishen21",
+      "points": 240,
+      "round_points": 68,
+      "round_rank": 15,
+      "level": 6,
+      "avatar": "https://play.fifa.com/media/image/gamezone/avatars/WC_2026/6.svg"
+    },
+    {
+      "rank": 19,
+      "name": "Coolelyk",
+      "points": 230,
+      "round_points": 42,
+      "round_rank": 18,
+      "level": 3,
+      "avatar": "https://play.fifa.com/media/image/gamezone/avatars/WC_2026/3.svg"
+    },
+    {
+      "rank": 20,
+      "name": "Oranje Wereldkampioen",
+      "points": 211,
+      "round_points": 40,
+      "round_rank": 20,
+      "level": 1,
+      "avatar": "https://play.fifa.com/media/image/gamezone/avatars/WC_2026/1.svg"
+    }
+  ]
 }
