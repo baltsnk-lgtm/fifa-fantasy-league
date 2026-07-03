@@ -4,119 +4,212 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>FIFA Fantasy — Закрита ліга</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 <style>
   :root {
-    --pitch: #0b3d24;
-    --pitch-dark: #072818;
-    --gold: #d4af37;
-    --white: #f5f3ec;
-    --line: rgba(245,243,236,0.12);
-    --up: #4caf6d;
+    --pitch-dark: #071e14;
+    --card: #0e2c1d;
+    --card-hover: #123723;
+    --gold: #d9b44a;
+    --gold-soft: rgba(217,180,74,0.14);
+    --white: #f3f1e8;
+    --muted: rgba(243,241,232,0.55);
+    --muted-2: rgba(243,241,232,0.35);
+    --line: rgba(243,241,232,0.10);
+    --up: #57c07a;
+    --down: #e2685f;
+    --font-display: "Space Grotesk", "Inter", sans-serif;
+    --font-body: "Inter", sans-serif;
   }
   * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
   body {
-    margin: 0;
     background: var(--pitch-dark);
-    background-image:
-      repeating-linear-gradient(90deg, rgba(255,255,255,0.02) 0 1px, transparent 1px 80px);
+    background-image: repeating-linear-gradient(90deg, rgba(255,255,255,0.015) 0 1px, transparent 1px 90px);
     color: var(--white);
-    font-family: "FIFA Sans", "Oswald", "Arial Narrow", sans-serif;
+    font-family: var(--font-body);
     min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
   }
   header {
-    padding: 40px 24px 24px;
+    padding: 36px 20px 0;
     text-align: center;
-    border-bottom: 1px solid var(--line);
+    max-width: 980px;
+    margin: 0 auto;
   }
   .eyebrow {
+    font-family: var(--font-display);
     letter-spacing: 3px;
     text-transform: uppercase;
-    font-size: 12px;
+    font-size: 11px;
+    font-weight: 600;
     color: var(--gold);
-    margin-bottom: 8px;
+    margin-bottom: 10px;
   }
   h1 {
+    font-family: var(--font-display);
     margin: 0;
-    font-size: clamp(28px, 5vw, 44px);
-    font-weight: 800;
+    font-size: clamp(30px, 5vw, 46px);
+    font-weight: 700;
     letter-spacing: -0.5px;
   }
   .meta {
     margin-top: 10px;
     font-size: 13px;
-    color: rgba(245,243,236,0.6);
+    color: var(--muted);
+  }
+  nav.tabs {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    gap: 4px;
+    overflow-x: auto;
+    max-width: 980px;
+    margin: 28px auto 0;
+    padding: 6px;
+    background: rgba(7,30,20,0.92);
+    backdrop-filter: blur(6px);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    scrollbar-width: thin;
+  }
+  nav.tabs button {
+    flex: 0 0 auto;
+    font-family: var(--font-display);
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--muted);
+    background: transparent;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: color .15s, background .15s;
+  }
+  nav.tabs button:hover { color: var(--white); }
+  nav.tabs button.active {
+    color: #0c2417;
+    background: var(--gold);
   }
   main {
-    max-width: 720px;
+    max-width: 980px;
     margin: 0 auto;
-    padding: 24px 16px 60px;
+    padding: 20px 16px 70px;
   }
-  table {
-    width: 100%;
-    border-collapse: collapse;
-  }
-  thead th {
-    text-align: left;
-    font-size: 11px;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-    color: rgba(245,243,236,0.5);
-    padding: 0 12px 10px;
-    font-weight: 600;
-  }
-  thead th.num { text-align: right; }
-  tbody tr {
-    background: rgba(255,255,255,0.03);
-  }
-  tbody tr:nth-child(even) { background: rgba(255,255,255,0.05); }
-  tbody tr.top3 { background: rgba(212,175,55,0.08); }
-  td {
-    padding: 14px 12px;
-    border-top: 1px solid var(--line);
+  section.panel { display: none; }
+  section.panel.active { display: block; animation: fade .2s ease; }
+  @keyframes fade { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: none; } }
+  h2.panel-title {
+    font-family: var(--font-display);
     font-size: 15px;
-  }
-  td.rank {
-    font-weight: 800;
-    font-size: 18px;
-    width: 44px;
-    color: rgba(245,243,236,0.7);
-  }
-  tr.top3 td.rank { color: var(--gold); }
-  td.name {
     font-weight: 600;
+    color: var(--gold);
+    margin: 4px 0 4px;
   }
-  td.round {
-    text-align: right;
-    color: rgba(245,243,236,0.55);
-    font-size: 13px;
+  p.panel-sub {
+    font-size: 12.5px;
+    color: var(--muted);
+    margin: 0 0 16px;
+    line-height: 1.5;
   }
-  td.points {
-    text-align: right;
-    font-weight: 800;
-    font-size: 17px;
+  .card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    overflow: hidden;
+  }
+  .scrollx { overflow-x: auto; }
+  table { width: 100%; border-collapse: collapse; font-size: 14px; }
+  thead th {
+    position: sticky;
+    top: 0;
+    text-align: left;
+    font-family: var(--font-display);
+    font-size: 10.5px;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    color: var(--muted);
+    padding: 12px 10px;
+    font-weight: 600;
+    background: var(--card);
+    border-bottom: 1px solid var(--line);
+    white-space: nowrap;
+  }
+  th.num, td.num { text-align: right; }
+  th.ctr, td.ctr { text-align: center; }
+  tbody tr { transition: background .1s; }
+  tbody tr:hover { background: var(--card-hover); }
+  tbody tr:not(:last-child) td { border-bottom: 1px solid var(--line); }
+  td { padding: 11px 10px; vertical-align: middle; white-space: nowrap; }
+  td.name-cell { white-space: normal; }
+  .rank-num {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 15px;
+    color: var(--muted);
+    width: 26px;
+    display: inline-block;
+  }
+  tr.top3 .rank-num { color: var(--gold); }
+  .delta { font-size: 11px; font-weight: 700; margin-left: 4px; }
+  .delta.up { color: var(--up); }
+  .delta.down { color: var(--down); }
+  .delta.flat { color: var(--muted-2); }
+  .player-row { display: flex; align-items: center; gap: 10px; }
+  .avatar { width: 26px; height: 26px; border-radius: 50%; background: rgba(255,255,255,0.08); flex: none; }
+  .pname { font-weight: 600; }
+  .psub { font-size: 11px; color: var(--muted); margin-top: 1px; }
+  .points-big {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 16px;
     font-variant-numeric: tabular-nums;
   }
-  .avatar {
-    width: 28px;
-    height: 28px;
-    border-radius: 50%;
-    vertical-align: middle;
-    margin-right: 10px;
-    background: rgba(255,255,255,0.08);
+  .points-sm { font-size: 12px; color: var(--muted); font-variant-numeric: tabular-nums; }
+  .spark polyline { fill: none; stroke: var(--gold); stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+  .spark { display: block; }
+  .pill {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 3px 9px;
+    border-radius: 999px;
+    background: var(--gold-soft);
+    color: var(--gold);
+    white-space: nowrap;
   }
-  .name-cell { display: flex; align-items: center; }
+  .pill.off { background: rgba(243,241,232,0.06); color: var(--muted-2); }
+  .pill.bad { background: rgba(226,104,95,0.14); color: var(--down); }
+  .tag { font-size: 10.5px; color: var(--muted); border: 1px solid var(--line); border-radius: 6px; padding: 1px 5px; margin-left: 5px; }
   .state {
     text-align: center;
     padding: 60px 16px;
-    color: rgba(245,243,236,0.5);
+    color: var(--muted);
+    font-size: 14px;
   }
-  .state.error { color: #e57373; }
+  .state.error { color: var(--down); }
+  .duel-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 14px;
+    font-size: 14px;
+    border-bottom: 1px solid var(--line);
+  }
+  .duel-item:last-child { border-bottom: none; }
+  .duel-item b { color: var(--gold); }
   footer {
     text-align: center;
-    padding: 20px;
-    font-size: 12px;
-    color: rgba(245,243,236,0.35);
+    padding: 26px;
+    font-size: 11.5px;
+    color: var(--muted-2);
   }
+  ::-webkit-scrollbar { height: 6px; width: 6px; }
+  ::-webkit-scrollbar-thumb { background: rgba(243,241,232,0.15); border-radius: 4px; }
 </style>
 </head>
 <body>
@@ -125,89 +218,443 @@
     <h1>Fantasy Leaderboard</h1>
     <div class="meta" id="updated">Завантаження…</div>
   </header>
-  <main>
-    <div id="content" class="state">Завантаження таблиці…</div>
+
+  <nav class="tabs" id="tabs"></nav>
+
+  <main id="main">
+    <div class="state" id="loading">Завантаження даних ліги…</div>
   </main>
-  <footer>Оновлюється автоматично щогодини</footer>
+
+  <footer>Оновлюється автоматично щогодини · FIFA World Cup 2026 Fantasy</footer>
 
 <script>
-  const contentEl = document.getElementById('content');
-  const updatedEl = document.getElementById('updated');
+const CHIP_FIELDS = [
+  ["wildCard", "Wildcard"],
+  ["twelfthMan", "12th Man"],
+  ["maxCaptain", "Max Captain"],
+  ["maxCaptainBooster", "Captain Booster"],
+  ["cleanSheet", "Clean Sheet"],
+  ["qualification", "Qualification"],
+];
 
-  function formatDate(iso) {
-    if (!iso) return 'ще не оновлювалось';
-    const d = new Date(iso);
-    if (isNaN(d.getTime())) return 'ще не оновлювалось';
-    return 'Оновлено ' + d.toLocaleString('uk-UA', {
-      day: '2-digit', month: '2-digit', year: 'numeric',
-      hour: '2-digit', minute: '2-digit'
-    });
+const TABS = [
+  { id: "table", label: "Таблиця" },
+  { id: "chips", label: "Чіпи" },
+  { id: "captains", label: "Капітани" },
+  { id: "transfers", label: "Трансфери" },
+  { id: "bench", label: "Лава" },
+  { id: "ownership", label: "Шаблон" },
+  { id: "diffs", label: "Диференціали" },
+  { id: "duels", label: "Дуелі" },
+];
+
+function esc(str) {
+  const d = document.createElement("div");
+  d.textContent = str == null ? "" : String(str);
+  return d.innerHTML;
+}
+
+function fmtDate(iso) {
+  if (!iso) return "ще не оновлювалось";
+  const d = new Date(iso);
+  if (isNaN(d.getTime())) return "ще не оновлювалось";
+  return "Оновлено " + d.toLocaleString("uk-UA", {
+    day: "2-digit", month: "2-digit", year: "numeric", hour: "2-digit", minute: "2-digit",
+  });
+}
+
+function sparkline(values, w, h) {
+  w = w || 84; h = h || 26;
+  if (!values.length) return "";
+  const max = Math.max(...values, 1);
+  const min = Math.min(...values, 0);
+  const range = (max - min) || 1;
+  const step = w / Math.max(values.length - 1, 1);
+  const pts = values.map((v, i) => (i * step).toFixed(1) + "," + (h - ((v - min) / range) * h).toFixed(1)).join(" ");
+  return `<svg viewBox="0 0 ${w} ${h}" class="spark" width="${w}" height="${h}"><polyline points="${pts}" /></svg>`;
+}
+
+async function main() {
+  let history, players, squads;
+  try {
+    [history, players, squads] = await Promise.all([
+      fetch("data/history.json", { cache: "no-store" }).then((r) => { if (!r.ok) throw new Error("history HTTP " + r.status); return r.json(); }),
+      fetch("data/players.json", { cache: "no-store" }).then((r) => r.ok ? r.json() : []),
+      fetch("data/squads.json", { cache: "no-store" }).then((r) => r.ok ? r.json() : []),
+    ]);
+  } catch (err) {
+    document.getElementById("updated").textContent = "Помилка оновлення";
+    document.getElementById("main").innerHTML = `<div class="state error">Не вдалося завантажити дані: ${esc(err.message)}</div>`;
+    return;
   }
 
-  function escapeHtml(str) {
-    const div = document.createElement('div');
-    div.textContent = str;
-    return div.innerHTML;
+  const teamsObj = history.teams || {};
+  const teamIds = Object.keys(teamsObj);
+  if (!teamIds.length) {
+    document.getElementById("updated").textContent = "ще не оновлювалось";
+    document.getElementById("main").innerHTML = `<div class="state">Дані ще не завантажені. Перевір за годину.</div>`;
+    return;
   }
 
-  function renderTable(standings) {
-    const rows = standings.map((s, i) => {
-      const top3 = i < 3 ? ' top3' : '';
-      const avatar = s.avatar
-        ? `<img class="avatar" src="${s.avatar}" alt="" onerror="this.style.display='none'">`
-        : '';
+  const currentRound = history.current_round || 1;
+  const rounds = Array.from({ length: currentRound }, (_, i) => i + 1);
+
+  const teams = teamIds.map((id) => ({ id, ...teamsObj[id] }));
+  teams.sort((a, b) => (a.overallRank ?? 999) - (b.overallRank ?? 999));
+
+  const playerMap = new Map((players || []).map((p) => [p.id, p]));
+  const squadMap = new Map((squads || []).map((s) => [s.id, s]));
+
+  function playerName(id) {
+    const p = playerMap.get(id);
+    if (!p) return "#" + id;
+    return p.knownName || [p.firstName, p.lastName].filter(Boolean).join(" ") || ("#" + id);
+  }
+  function playerSquadAbbr(id) {
+    const p = playerMap.get(id);
+    if (!p) return "";
+    const s = squadMap.get(p.squadId);
+    return s ? s.abbr : "";
+  }
+  function playerRoundPoints(id, round) {
+    const p = playerMap.get(id);
+    if (!p || !p.stats || !p.stats.roundPoints) return 0;
+    const v = p.stats.roundPoints[String(round)];
+    return typeof v === "number" ? v : 0;
+  }
+
+  function computeRankAt(round) {
+    const arr = teams.map((t) => ({ id: t.id, pts: t.rounds && t.rounds[String(round)] ? t.rounds[String(round)].overallPoints : null }));
+    arr.sort((a, b) => (b.pts ?? -Infinity) - (a.pts ?? -Infinity));
+    const m = new Map();
+    arr.forEach((t, i) => m.set(t.id, i + 1));
+    return m;
+  }
+  const currRankMap = computeRankAt(currentRound);
+  const prevRankMap = currentRound > 1 ? computeRankAt(currentRound - 1) : null;
+
+  function latestRoundData(team) {
+    for (let r = currentRound; r >= 1; r--) {
+      if (team.rounds && team.rounds[String(r)]) return { round: r, data: team.rounds[String(r)] };
+    }
+    return { round: null, data: null };
+  }
+
+  function flattenRoster(grouped) {
+    if (!grouped) return [];
+    return Object.values(grouped).flat();
+  }
+
+  // ---------- Ownership across the league (based on latest round squads) ----------
+  const ownership = new Map(); // playerId -> count
+  teams.forEach((t) => {
+    const { data } = latestRoundData(t);
+    if (!data) return;
+    const ids = new Set([...flattenRoster(data.lineup), ...flattenRoster(data.bench)]);
+    ids.forEach((id) => ownership.set(id, (ownership.get(id) || 0) + 1));
+  });
+  const numTeams = teams.length;
+
+  // =========================================================================
+  // TAB: Leaderboard
+  // =========================================================================
+  function renderTable() {
+    const rows = teams.map((t, i) => {
+      const rank = t.overallRank ?? (i + 1);
+      const top3 = rank <= 3 ? " top3" : "";
+      const cr = currRankMap.get(t.id);
+      const pr = prevRankMap ? prevRankMap.get(t.id) : null;
+      let deltaHtml = `<span class="delta flat">—</span>`;
+      if (pr != null && cr != null) {
+        const d = pr - cr;
+        if (d > 0) deltaHtml = `<span class="delta up">▲${d}</span>`;
+        else if (d < 0) deltaHtml = `<span class="delta down">▼${-d}</span>`;
+        else deltaHtml = `<span class="delta flat">=</span>`;
+      }
+      const series = rounds.map((r) => (t.rounds && t.rounds[String(r)] ? (t.rounds[String(r)].roundPoints || 0) : 0));
+      let bestR = null, worstR = null;
+      rounds.forEach((r) => {
+        if (!t.rounds || !t.rounds[String(r)]) return;
+        const pts = t.rounds[String(r)].roundPoints || 0;
+        if (bestR === null || pts > bestR.pts) bestR = { round: r, pts };
+        if (worstR === null || pts < worstR.pts) worstR = { round: r, pts };
+      });
+      const badges = (bestR && worstR && bestR.round !== worstR.round)
+        ? `<span class="tag" title="Найкращий тур">🔥${bestR.pts} (т${bestR.round})</span><span class="tag" title="Найгірший тур">📉${worstR.pts} (т${worstR.round})</span>`
+        : "";
       return `
         <tr class="${top3.trim()}">
-          <td class="rank">${s.rank ?? i + 1}</td>
-          <td class="name">
-            <div class="name-cell">${avatar}<span>${escapeHtml(s.name ?? '')}</span></div>
+          <td><span class="rank-num">${rank}</span>${deltaHtml}</td>
+          <td class="name-cell">
+            <div class="player-row">
+              <img class="avatar" src="${esc(t.avatar || "")}" alt="" onerror="this.style.visibility='hidden'">
+              <div>
+                <div class="pname">${esc(t.userName)}</div>
+                <div class="psub">${badges}</div>
+              </div>
+            </div>
           </td>
-          <td class="round">${s.round_points ?? '—'}</td>
-          <td class="points">${s.points ?? '—'}</td>
+          <td>${sparkline(series)}</td>
+          <td class="num points-sm">${t.roundPoints ?? "—"}</td>
+          <td class="num points-big">${t.overallPoints ?? "—"}</td>
         </tr>`;
-    }).join('');
+    }).join("");
+    return `
+      <h2 class="panel-title">Таблиця ліги</h2>
+      <p class="panel-sub">Тур ${currentRound}. Стрілка — зміна місця відносно попереднього туру. 🔥/📉 — найкращий і найгірший тур учасника.</p>
+      <div class="card scrollx"><table>
+        <thead><tr><th>#</th><th>Гравець</th><th>Форма</th><th class="num">Тур</th><th class="num">Очки</th></tr></thead>
+        <tbody>${rows}</tbody>
+      </table></div>`;
+  }
 
-    const table = document.createElement('table');
-    table.id = 'content';
-    table.innerHTML = `
-      <thead>
+  // =========================================================================
+  // TAB: Chips
+  // =========================================================================
+  function renderChips() {
+    const rows = teams.map((t) => {
+      const { data } = latestRoundData(t);
+      const used = CHIP_FIELDS.filter(([f]) => data && data[f] != null).length;
+      const cells = CHIP_FIELDS.map(([field]) => {
+        const val = data ? data[field] : null;
+        return val != null
+          ? `<td class="ctr"><span class="pill">Тур ${val}</span></td>`
+          : `<td class="ctr"><span class="pill off">—</span></td>`;
+      }).join("");
+      return `
         <tr>
-          <th>#</th>
-          <th>Гравець</th>
-          <th class="num">Тур</th>
-          <th class="num">Очки</th>
-        </tr>
-      </thead>
-      <tbody>${rows}</tbody>`;
-    contentEl.replaceWith(table);
+          <td class="name-cell"><div class="pname">${esc(t.userName)}</div></td>
+          ${cells}
+          <td class="ctr">${used}/${CHIP_FIELDS.length}</td>
+        </tr>`;
+    }).join("");
+    const headers = CHIP_FIELDS.map(([, label]) => `<th class="ctr">${esc(label)}</th>`).join("");
+    return `
+      <h2 class="panel-title">Використані чіпи</h2>
+      <p class="panel-sub">В якому турі гравець зіграв кожну фішку. "—" означає, що чіп ще в запасі.</p>
+      <div class="card scrollx"><table>
+        <thead><tr><th>Гравець</th>${headers}<th class="ctr">Разом</th></tr></thead>
+        <tbody>${rows}</tbody>
+      </table></div>`;
   }
 
-  function showState(message, isError) {
-    contentEl.textContent = message;
-    contentEl.className = 'state' + (isError ? ' error' : '');
+  // =========================================================================
+  // TAB: Captains
+  // =========================================================================
+  function renderCaptains() {
+    const totals = new Map();
+    const rows = teams.map((t) => {
+      let total = 0;
+      const cells = rounds.map((r) => {
+        const rd = t.rounds && t.rounds[String(r)];
+        if (!rd || rd.captain == null) return `<td class="ctr points-sm">—</td>`;
+        const pts = playerRoundPoints(rd.captain, r);
+        total += pts;
+        const name = playerName(rd.captain);
+        return `<td class="ctr"><div class="pname" style="font-size:12.5px">${esc(name)}</div><div class="points-sm">${pts} очок</div></td>`;
+      }).join("");
+      totals.set(t.id, total);
+      return { html: `<tr><td class="name-cell"><div class="pname">${esc(t.userName)}</div></td>${cells}<td class="ctr points-big">${total}</td></tr>`, total };
+    });
+    rows.sort((a, b) => b.total - a.total);
+    const headers = rounds.map((r) => `<th class="ctr">Тур ${r}</th>`).join("");
+    return `
+      <h2 class="panel-title">Капітанські вибори</h2>
+      <p class="panel-sub">Скільки "сирих" очок (без урахування помноження) набрав капітан кожного менеджера в кожному турі.</p>
+      <div class="card scrollx"><table>
+        <thead><tr><th>Гравець</th>${headers}<th class="ctr">Разом</th></tr></thead>
+        <tbody>${rows.map((r) => r.html).join("")}</tbody>
+      </table></div>`;
   }
 
-  async function load() {
-    try {
-      const res = await fetch('standings.json', { cache: 'no-store' });
-      if (!res.ok) throw new Error('HTTP ' + res.status);
-      const data = await res.json();
-      const standings = data.standings || [];
+  // =========================================================================
+  // TAB: Transfers
+  // =========================================================================
+  function renderTransfers() {
+    const rows = teams.map((t) => {
+      const { data } = latestRoundData(t);
+      const transfers = (data && data.transfers) || [];
+      const hits = transfers.filter((x) => x.isNegative).length;
+      const free = data ? data.freeTransfers : "—";
+      return { userName: t.userName, total: transfers.length, hits, free: free ?? "—" };
+    }).sort((a, b) => b.hits - a.hits || b.total - a.total);
+    const rowsHtml = rows.map((r) => `
+      <tr>
+        <td class="name-cell"><div class="pname">${esc(r.userName)}</div></td>
+        <td class="num">${r.total}</td>
+        <td class="ctr">${r.hits ? `<span class="pill bad">${r.hits}</span>` : `<span class="pill off">0</span>`}</td>
+        <td class="num">${r.free}</td>
+      </tr>`).join("");
+    return `
+      <h2 class="panel-title">Трансфери</h2>
+      <p class="panel-sub">Всього трансферів із початку сезону, скільки з них були "хітами" (платні), і скільки безкоштовних лишилось про запас.</p>
+      <div class="card scrollx"><table>
+        <thead><tr><th>Гравець</th><th class="num">Всього</th><th class="ctr">Хіти</th><th class="num">В банку</th></tr></thead>
+        <tbody>${rowsHtml}</tbody>
+      </table></div>`;
+  }
 
-      updatedEl.textContent = formatDate(data.updated_at);
+  // =========================================================================
+  // TAB: Bench waste
+  // =========================================================================
+  function renderBench() {
+    const rows = teams.map((t) => {
+      let total = 0, worst = null;
+      rounds.forEach((r) => {
+        const rd = t.rounds && t.rounds[String(r)];
+        if (!rd) return;
+        const autoIn = new Set((rd.substitutions || []).filter((s) => s.isAuto).map((s) => s.in));
+        const benchIds = flattenRoster(rd.bench).filter((id) => !autoIn.has(id));
+        const pts = benchIds.reduce((sum, id) => sum + playerRoundPoints(id, r), 0);
+        total += pts;
+        if (worst === null || pts > worst.pts) worst = { round: r, pts };
+      });
+      return { userName: t.userName, total, worst };
+    }).sort((a, b) => b.total - a.total);
+    const rowsHtml = rows.map((r) => `
+      <tr>
+        <td class="name-cell"><div class="pname">${esc(r.userName)}</div></td>
+        <td class="num points-big">${r.total}</td>
+        <td class="num points-sm">${r.worst ? `${r.worst.pts} (тур ${r.worst.round})` : "—"}</td>
+      </tr>`).join("");
+    return `
+      <h2 class="panel-title">Очки на лаві</h2>
+      <p class="panel-sub">Скільки очок набрали гравці на лаві запасних (без урахування тих, кого підключила автозаміна). Найбільше зверху — гірший менеджмент складу.</p>
+      <div class="card scrollx"><table>
+        <thead><tr><th>Гравець</th><th class="num">Разом втрачено</th><th class="num">Найгірший тур</th></tr></thead>
+        <tbody>${rowsHtml}</tbody>
+      </table></div>`;
+  }
 
-      if (!standings.length) {
-        showState('Дані ще не завантажені. Перевір за годину.', false);
-        return;
-      }
-      renderTable(standings);
-    } catch (err) {
-      updatedEl.textContent = 'Помилка оновлення';
-      showState('Не вдалося завантажити таблицю: ' + err.message, true);
+  // =========================================================================
+  // TAB: Ownership / template
+  // =========================================================================
+  function renderOwnership() {
+    const arr = Array.from(ownership.entries()).map(([id, count]) => ({ id, count }));
+    arr.sort((a, b) => b.count - a.count);
+    const top = arr.slice(0, 18);
+    const rowsHtml = top.map((x) => {
+      const pct = Math.round((x.count / numTeams) * 100);
+      const p = playerMap.get(x.id);
+      return `
+        <tr>
+          <td class="name-cell"><div class="pname">${esc(playerName(x.id))}</div><div class="psub">${esc(p ? p.position : "")} ${playerSquadAbbr(x.id) ? "· " + esc(playerSquadAbbr(x.id)) : ""}</div></td>
+          <td class="num">${x.count}/${numTeams}</td>
+          <td class="num points-big">${pct}%</td>
+        </tr>`;
+    }).join("");
+    return `
+      <h2 class="panel-title">Шаблонний склад ліги</h2>
+      <p class="panel-sub">Найпопулярніші гравці серед усіх ${numTeams} команд ліги за останній тур.</p>
+      <div class="card scrollx"><table>
+        <thead><tr><th>Гравець</th><th class="num">Команд</th><th class="num">% ліги</th></tr></thead>
+        <tbody>${rowsHtml}</tbody>
+      </table></div>`;
+  }
+
+  // =========================================================================
+  // TAB: Differentials
+  // =========================================================================
+  function renderDiffs() {
+    const threshold = Math.max(1, Math.round(numTeams * 0.15));
+    const arr = Array.from(ownership.entries())
+      .map(([id, count]) => ({ id, count, pts: playerRoundPoints(id, currentRound) }))
+      .filter((x) => x.count <= threshold && x.pts > 0)
+      .sort((a, b) => b.pts - a.pts)
+      .slice(0, 12);
+    if (!arr.length) {
+      return `<h2 class="panel-title">Диференціали</h2><p class="panel-sub">Малопопулярні гравці ліги, які дали багато очок в останньому турі.</p><div class="state">Поки що немає яскравих диференціалів.</div>`;
     }
+    const rowsHtml = arr.map((x) => {
+      const p = playerMap.get(x.id);
+      const owners = teams.filter((t) => {
+        const { data } = latestRoundData(t);
+        if (!data) return false;
+        const ids = new Set([...flattenRoster(data.lineup), ...flattenRoster(data.bench)]);
+        return ids.has(x.id);
+      }).map((t) => t.userName).join(", ");
+      return `
+        <tr>
+          <td class="name-cell"><div class="pname">${esc(playerName(x.id))}</div><div class="psub">${esc(p ? p.position : "")} ${playerSquadAbbr(x.id) ? "· " + esc(playerSquadAbbr(x.id)) : ""}</div></td>
+          <td class="num points-big">${x.pts}</td>
+          <td class="num">${x.count}/${numTeams}</td>
+          <td class="name-cell psub">${esc(owners)}</td>
+        </tr>`;
+    }).join("");
+    return `
+      <h2 class="panel-title">Диференціали туру ${currentRound}</h2>
+      <p class="panel-sub">Гравці, яких взяли ≤${threshold} команд ліги, але вони набрали найбільше очок цього туру.</p>
+      <div class="card scrollx"><table>
+        <thead><tr><th>Гравець</th><th class="num">Очок (тур)</th><th class="num">Команд</th><th>Хто взяв</th></tr></thead>
+        <tbody>${rowsHtml}</tbody>
+      </table></div>`;
   }
 
-  load();
+  // =========================================================================
+  // TAB: Duels
+  // =========================================================================
+  function renderDuels() {
+    if (!prevRankMap) {
+      return `<h2 class="panel-title">Дуелі туру</h2><p class="panel-sub">Порівняння з попереднім туром.</p><div class="state">Ще не було попереднього туру для порівняння.</div>`;
+    }
+    const items = [];
+    for (let i = 0; i < teams.length - 1; i++) {
+      const a = teams[i], b = teams[i + 1];
+      const pa = prevRankMap.get(a.id), pb = prevRankMap.get(b.id);
+      if (pa != null && pb != null && pa > pb) {
+        items.push(`<div class="duel-item">🔀 <b>${esc(a.userName)}</b> обійшов ${esc(b.userName)} цього туру (був${pa === pb ? "" : "и"} ${pa}-й проти ${pb}-го)</div>`);
+      }
+    }
+    if (!items.length) {
+      return `<h2 class="panel-title">Дуелі туру</h2><p class="panel-sub">Хто кого обійшов у сусідній парі рейтингу цього туру.</p><div class="state">Цього туру порядок сусідніх пар не змінився.</div>`;
+    }
+    return `
+      <h2 class="panel-title">Дуелі туру ${currentRound}</h2>
+      <p class="panel-sub">Хто кого обійшов у сусідній парі турнірної таблиці порівняно з попереднім туром.</p>
+      <div class="card">${items.join("")}</div>`;
+  }
+
+  const renderers = {
+    table: renderTable,
+    chips: renderChips,
+    captains: renderCaptains,
+    transfers: renderTransfers,
+    bench: renderBench,
+    ownership: renderOwnership,
+    diffs: renderDiffs,
+    duels: renderDuels,
+  };
+
+  // Build tab bar
+  const tabsNav = document.getElementById("tabs");
+  tabsNav.innerHTML = TABS.map((t, i) => `<button data-tab="${t.id}" class="${i === 0 ? "active" : ""}">${esc(t.label)}</button>`).join("");
+
+  // Build panels
+  const mainEl = document.getElementById("main");
+  mainEl.innerHTML = TABS.map((t, i) => `<section class="panel${i === 0 ? " active" : ""}" id="panel-${t.id}"></section>`).join("");
+  TABS.forEach((t) => {
+    try {
+      document.getElementById("panel-" + t.id).innerHTML = renderers[t.id]();
+    } catch (e) {
+      document.getElementById("panel-" + t.id).innerHTML = `<div class="state error">Помилка відображення: ${esc(e.message)}</div>`;
+    }
+  });
+
+  tabsNav.addEventListener("click", (e) => {
+    const btn = e.target.closest("button[data-tab]");
+    if (!btn) return;
+    const id = btn.dataset.tab;
+    tabsNav.querySelectorAll("button").forEach((b) => b.classList.toggle("active", b === btn));
+    mainEl.querySelectorAll("section.panel").forEach((s) => s.classList.toggle("active", s.id === "panel-" + id));
+  });
+
+  document.getElementById("updated").textContent = fmtDate(history.updated_at);
+}
+
+main().catch((err) => {
+  document.getElementById("updated").textContent = "Помилка оновлення";
+  document.getElementById("main").innerHTML = `<div class="state error">Несподівана помилка: ${esc(err.message)}</div>`;
+});
 </script>
 </body>
 </html>
