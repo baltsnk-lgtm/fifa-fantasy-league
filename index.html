@@ -411,15 +411,21 @@ async function main() {
   // =========================================================================
   // TAB: Chips
   // =========================================================================
+  function chipRound(val) {
+    if (val == null) return null;
+    return typeof val === "object" ? val.roundId : val;
+  }
+
   function renderChips() {
     const rows = teams.map((t) => {
       const { data } = latestRoundData(t);
       const used = CHIP_FIELDS.filter(([f]) => data && data[f] != null).length;
       const cells = CHIP_FIELDS.map(([field]) => {
         const val = data ? data[field] : null;
-        return val != null
-          ? `<td class="ctr"><span class="pill">Тур ${val}</span></td>`
-          : `<td class="ctr"><span class="pill off">—</span></td>`;
+        const roundNum = chipRound(val);
+        if (roundNum == null) return `<td class="ctr"><span class="pill off">—</span></td>`;
+        const playerExtra = (val && typeof val === "object" && val.playerId) ? ` · ${playerName(val.playerId)}` : "";
+        return `<td class="ctr"><span class="pill">Тур ${roundNum}${esc(playerExtra)}</span></td>`;
       }).join("");
       return `
         <tr>
