@@ -25,10 +25,10 @@ jobs:
           FIFA_COOKIE: ${{ secrets.FIFA_COOKIE }}
         run: python scraper.py
 
-      - name: Commit updated standings.json
+      - name: Commit updated data
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add standings.json
+          git add data/
           git diff --staged --quiet || git commit -m "Update standings [skip ci]"
           git push
