@@ -1,0 +1,8592 @@
+{
+  "teams": {
+    "4952062": {
+      "userName": "reborned96",
+      "rounds": {
+        "1": {
+          "captain": 500,
+          "vice": 855,
+          "lineup": {
+            "GK": [
+              235
+            ],
+            "DEF": [
+              542,
+              1088,
+              380,
+              847,
+              916
+            ],
+            "MID": [
+              939,
+              1366,
+              543
+            ],
+            "FWD": [
+              500,
+              855
+            ]
+          },
+          "bench": {
+            "GK": [
+              423
+            ],
+            "DEF": [],
+            "MID": [
+              256,
+              1135
+            ],
+            "FWD": [
+              1094
+            ]
+          },
+          "benchOrder": [
+            423,
+            256,
+            1094,
+            1135
+          ],
+          "substitutions": [
+            {
+              "out": 1094,
+              "in": 916,
+              "isAuto": false
+            },
+            {
+              "out": 939,
+              "in": 855,
+              "isAuto": false
+            },
+            {
+              "out": 1135,
+              "in": 939,
+              "isAuto": false
+            }
+          ],
+          "transfers": [],
+          "captainChanges": [
+            {
+              "out": 542,
+              "in": 855,
+              "type": "vice"
+            }
+          ],
+          "value": 100,
+          "maxCaptain": null,
+          "maxCaptainBooster": null,
+          "twelfthMan": null,
+          "wildCard": null,
+          "qualification": null,
+          "cleanSheet": null,
+          "qualificationPlayerIds": [],
+          "cleanSheetPlayerIds": [],
+          "roundPoints": 80,
+          "overallPoints": 80,
+          "freeTransfers": 0,
+          "negativeTransfers": 0,
+          "locked": false
+        },
+        "2": {
+          "captain": 500,
+          "vice": 173,
+          "lineup": {
+            "GK": [
+              235
+            ],
+            "DEF": [
+              542,
+              1088,
+              380,
+              916
+            ],
+            "MID": [
+              256,
+              173,
+              939
+            ],
+            "FWD": [
+              500,
+              1094,
+              412
+            ]
+          },
+          "bench": {
+            "GK": [
+              423
+            ],
+            "DEF": [
+              847
+            ],
+            "MID": [
+              1135,
+              1366
+            ],
+            "FWD": []
+          },
+          "benchOrder": [
+            423,
+            847,
+            1135,
+            1366
+          ],
+          "substitutions": [
+            {
+              "out": 423,
+              "in": 235,
+              "isAuto": false
+            },
+            {
+              "out": 500,
+              "in": 1094,
+              "isAuto": false
+            },
+            {
+              "out": 916,
+              "in": 500,
+              "isAuto": false
+            },
+            {
+              "out": 1366,
+              "in": 256,
+              "isAuto": false
+            },
+            {
+              "out": 847,
+              "in": 916,
+              "isAuto": false
+            }
+          ],
+          "transfers": [
+            {
+              "out": 855,
+              "in": 412,
+              "isNegative": false
+            },
+            {
+              "out": 543,
+              "in": 173,
+              "isNegative": false
+            }
+          ],
+          "captainChanges": [
+            {
+              "out": 1094,
+              "in": 412,
+              "type": "captain"
+            },
+            {
+              "out": 412,
+              "in": 1088,
+              "type": "captain"
+            },
+            {
+              "out": 1088,
+              "in": 500,
+              "type": "captain"
+            }
+          ],
+          "value": 97,
+          "maxCaptain": null,
+          "maxCaptainBooster": null,
+          "twelfthMan": {
+            "playerId": 517,
+            "roundId": 2
+          },
+          "wildCard": null,
+          "qualification": null,
+          "cleanSheet": null,
+          "qualificationPlayerIds": [],
+          "cleanSheetPlayerIds": [],
+          "roundPoints": 114,
+          "overallPoints": 194,
+          "freeTransfers": 0,
+          "negativeTransfers": 0,
+          "locked": false
+        },
+        "3": {
+          "captain": 500,
+          "vice": 468,
+          "lineup": {
+            "GK": [
+              317
+            ],
+            "DEF": [
+              457,
+              2012,
+              795,
+              114
+            ],
+            "MID": [
+              792,
+              1092,
+              173
+            ],
+            "FWD": [
+              804,
+              500,
+              468
+            ]
+          },
+          "bench": {
+            "GK": [
+              730
+            ],
+            "DEF": [
+              142
+            ],
+            "MID": [
+              2044,
+              682
+            ],
+            "FWD": []
+          },
+          "benchOrder": [
+            730,
+            142,
+            2044,
+            682
+          ],
+          "substitutions": [
+            {
+              "out": 730,
+              "in": 317,
+              "isAuto": false
+            },
+            {
+              "out": 2044,
+              "in": 114,
+              "isAuto": false
+            },
+            {
+              "out": 682,
+              "in": 468,
+              "isAuto": false
+            },
+            {
+              "out": 142,
+              "in": 457,
+              "isAuto": false
+            }
+          ],
+          "transfers": [
+            {
+              "out": 235,
+              "in": 317,
+              "isNegative": false
+            },
+            {
+              "out": 423,
+              "in": 1522,
+              "isNegative": false
+            },
+            {
+              "out": 542,
+              "in": 142,
+              "isNegative": false
+            },
+            {
+              "out": 1088,
+              "in": 2012,
+              "isNegative": false
+            },
+            {
+              "out": 380,
+              "in": 303,
+              "isNegative": false
+            },
+            {
+              "out": 847,
+              "in": 795,
+              "isNegative": false
+            },
+            {
+              "out": 916,
+              "in": 114,
+              "isNegative": false
+            },
+            {
+              "out": 1366,
+              "in": 792,
+              "isNegative": false
+            },
+            {
+              "out": 939,
+              "in": 2044,
+              "isNegative": false
+            },
+            {
+              "out": 1135,
+              "in": 1092,
+              "isNegative": false
+            },
+            {
+              "out": 256,
+              "in": 1597,
+              "isNegative": false
+            },
+            {
+              "out": 412,
+              "in": 1043,
+              "isNegative": false
+            },
+            {
+              "out": 1094,
+              "in": 804,
+              "isNegative": false
+            },
+            {
+              "out": 1522,
+              "in": 730,
+              "isNegative": false
+            },
+            {
+              "out": 303,
+              "in": 457,
+              "isNegative": false
+            },
+            {
+              "out": 1597,
+              "in": 682,
+              "isNegative": false
+            },
+            {
+              "out": 1043,
+              "in": 468,
+              "isNegative": false
+            }
+          ],
+          "captainChanges": [
+            {
+              "out": 2044,
+              "in": 2012,
+              "type": "vice"
+            },
+            {
+              "out": 142,
+              "in": 792,
+              "type": "captain"
+            },
+            {
+              "out": 792,
+              "in": 804,
+              "type": "captain"
+            },
+            {
+              "out": 2012,
+              "in": 795,
+              "type": "vice"
+            },
+            {
+              "out": 804,
+              "in": 500,
+              "type": "captain"
+            },
+            {
+              "out": 795,
+              "in": 468,
+              "type": "vice"
+            },
+            {
+              "out": 500,
+              "in": 468,
+              "type": "captain"
+            },
+            {
+              "out": 500,
+              "in": 500,
+              "type": "vice"
+            },
+            {
+              "out": 468,
+              "in": 500,
+              "type": "captain"
+            },
+            {
+              "out": 468,
+              "in": 1092,
+              "type": "vice"
+            },
+            {
+              "out": 1092,
+              "in": 468,
+              "type": "vice"
+            }
+          ],
+          "value": 99,
+          "maxCaptain": null,
+          "maxCaptainBooster": null,
+          "twelfthMan": {
+            "playerId": 517,
+            "roundId": 2
+          },
+          "wildCard": 3,
+          "qualification": null,
+          "cleanSheet": null,
+          "qualificationPlayerIds": [],
+          "cleanSheetPlayerIds": [],
+          "roundPoints": 86,
+          "overallPoints": 280,
+          "freeTransfers": null,
+          "negativeTransfers": 0,
+          "locked": false
+        },
+        "4": {
+          "captain": 1094,
+          "vice": 517,
+          "lineup": {
+            "GK": [
+              1271
+            ],
+            "DEF": [
+              30,
+              2031,
+              1320
+            ],
+            "MID": [
+              517,
+              1684,
+              501,
+              1274
+            ],
+            "FWD": [
+              1094,
+              500,
+              38
+            ]
+          },
+          "bench": {
+            "GK": [
+              262
+            ],
+            "DEF": [
+              523,
+              457
+            ],
+            "MID": [
+              173
+            ],
+            "FWD": []
+          },
+          "benchOrder": [
+            262,
+            523,
+            457,
+            173
+          ],
+          "substitutions": [
+            {
+              "out": 523,
+              "in": 1320,
+              "isAuto": false
+            },
+            {
+              "out": 457,
+              "in": 30,
+              "isAuto": false
+            },
+            {
+              "out": 173,
+              "in": 38,
+              "isAuto": false
+            }
+          ],
+          "transfers": [
+            {
+              "out": 730,
+              "in": 477,
+              "isNegative": false
+            },
+            {
+              "out": 317,
+              "in": 45,
+              "isNegative": false
+            },
+            {
+              "out": 142,
+              "in": 523,
+              "isNegative": false
+            },
+            {
+              "out": 2012,
+              "in": 916,
+              "isNegative": false
+            },
+            {
+              "out": 795,
+              "in": 2031,
+              "isNegative": false
+            },
+            {
+              "out": 114,
+              "in": 1088,
+              "isNegative": false
+            },
+            {
+              "out": 792,
+              "in": 517,
+              "isNegative": false
+            },
+            {
+              "out": 2044,
+              "in": 939,
+              "isNegative": false
+            },
+            {
+              "out": 682,
+              "in": 241,
+              "isNegative": false
+            },
+            {
+              "out": 804,
+              "in": 38,
+              "isNegative": false
+            },
+            {
+              "out": 500,
+              "in": 1267,
+              "isNegative": false
+            },
+            {
+              "out": 477,
+              "in": 1271,
+              "isNegative": false
+            },
+            {
+              "out": 523,
+              "in": 542,
+              "isNegative": false
+            },
+            {
+              "out": 517,
+              "in": 501,
+              "isNegative": false
+            },
+            {
+              "out": 468,
+              "in": 500,
+              "isNegative": false
+            },
+            {
+              "out": 45,
+              "in": 235,
+              "isNegative": false
+            },
+            {
+              "out": 1267,
+              "in": 855,
+              "isNegative": false
+            },
+            {
+              "out": 542,
+              "in": 1963,
+              "isNegative": false
+            },
+            {
+              "out": 1088,
+              "in": 492,
+              "isNegative": false
+            },
+            {
+              "out": 916,
+              "in": 1320,
+              "isNegative": false
+            },
+            {
+              "out": 939,
+              "in": 1526,
+              "isNegative": false
+            },
+            {
+              "out": 241,
+              "in": 1274,
+              "isNegative": false
+            },
+            {
+              "out": 457,
+              "in": 1318,
+              "isNegative": false
+            },
+            {
+              "out": 235,
+              "in": 262,
+              "isNegative": false
+            },
+            {
+              "out": 1963,
+              "in": 457,
+              "isNegative": false
+            },
+            {
+              "out": 1526,
+              "in": 517,
+              "isNegative": false
+            },
+            {
+              "out": 1092,
+              "in": 1684,
+              "isNegative": false
+            },
+            {
+              "out": 492,
+              "in": 523,
+              "isNegative": false
+            },
+            {
+              "out": 1318,
+              "in": 30,
+              "isNegative": false
+            },
+            {
+              "out": 855,
+              "in": 1094,
+              "isNegative": false
+            }
+          ],
+          "captainChanges": [
+            {
+              "out": 173,
+              "in": 1684,
+              "type": "captain"
+            },
+            {
+              "out": 1684,
+              "in": 501,
+              "type": "captain"
+            },
+            {
+              "out": 501,
+              "in": 457,
+              "type": "captain"
+            },
+            {
+              "out": 457,
+              "in": 2031,
+              "type": "captain"
+            },
+            {
+              "out": 2031,
+              "in": 1094,
+              "type": "captain"
+            }
+          ],
+          "value": 104,
+          "maxCaptain": null,
+          "maxCaptainBooster": null,
+          "twelfthMan": {
+            "playerId": 517,
+            "roundId": 2
+          },
+          "wildCard": 3,
+          "qualification": 4,
+          "cleanSheet": null,
+          "qualificationPlayerIds": [
+            1271,
+            2031,
+            1094,
+            500,
+            517,
+            1684,
+            501,
+            1274
+          ],
+          "cleanSheetPlayerIds": [],
+          "roundPoints": 105,
+          "overallPoints": 385,
+          "freeTransfers": null,
+          "negativeTransfers": 0,
+          "locked": false
+        }
+      },
+      "avatar": "https://play.fifa.com/media/image/gamezone/avatars/WC_2026/10.svg",
+      "level": 10,
+      "overallRank": 1,
+      "roundRank": 2,
+      "overallPoints": 385,
+      "roundPoints": 105
+    },
+    "4779999": {
+      "userName": "Dyom",
+      "rounds": {
+        "1": {
+          "captain": 1600,
+          "vice": 939,
+          "lineup": {
+            "GK": [
+              1099
+            ],
+            "DEF": [
+              1429,
+              916,
+              1141
+            ],
+            "MID": [
+              517,
+              1366,
+              939,
+              1106,
+              1600
+            ],
+            "FWD": [
+              259,
+              531
+            ]
+          },
+          "bench": {
+            "GK": [
+              506
+            ],
+            "DEF": [
+              164,
+              795
+            ],
+            "MID": [],
+            "FWD": [
+              1094
+            ]
+          },
+          "benchOrder": [
+            506,
+            164,
+            1094,
+            795
+          ],
+          "substitutions": [
+            {
+              "out": 1094,
+              "in": 531,
+              "isAuto": false
+            },
+            {
+              "out": 164,
+              "in": 916,
+              "isAuto": false
+            },
+            {
+              "out": 795,
+              "in": 1094,
+              "isAuto": false
+            },
+            {
+              "out": 1094,
+              "in": 259,
+              "isAuto": false
+            }
+          ],
+          "transfers": [],
+          "captainChanges": [
+            {
+              "out": 531,
+              "in": 939,
+              "type": "captain"
+            },
+            {
+              "out": 531,
+              "in": 517,
+              "type": "vice"
+            },
+            {
+              "out": 939,
+              "in": 531,
+              "type": "captain"
+            },
+            {
+              "out": 517,
+              "in": 939,
+              "type": "vice"
+            },
+            {
+              "out": 531,
+              "in": 1600,
+              "type": "captain"
+            }
+          ],
+          "value": 100,
+          "maxCaptain": null,
+          "maxCaptainBooster": null,
+          "twelfthMan": null,
+          "wildCard": null,
+          "qualification": null,
+          "cleanSheet": null,
+          "qualificationPlayerIds": [],
+          "cleanSheetPlayerIds": [],
+          "roundPoints": 60,
+          "overallPoints": 60,
+          "freeTransfers": 0,
+          "negativeTransfers": 0,
+          "locked": false
+        },
+        "2": {
+          "captain": 1094,
+          "vice": 517,
+          "lineup": {
+            "GK": [
+              1099
+            ],
+            "DEF": [
+              795,
+              164,
+              916,
+              1429
+            ],
+            "MID": [
+              517,
+              1106,
+              939
+            ],
+            "FWD": [
+              531,
+              1094,
+              1267
+            ]
+          },
+          "bench": {
+            "GK": [
+              1153
+            ],
+            "DEF": [
+              1141
+            ],
+            "MID": [
+              1366,
+              1600
+            ],
+            "FWD": []
+          },
+          "benchOrder": [
+            1153,
+            1141,
+            1366,
+            1600
+          ],
+          "substitutions": [
+            {
+              "out": 1153,
+              "in": 1099,
+              "isAuto": false
+            },
+            {
+              "out": 1366,
+              "in": 1429,
+              "isAuto": false
+            },
+            {
+              "out": 1141,
+              "in": 916,
+              "isAuto": false
+            },
+            {
+              "out": 1600,
+              "in": 939,
+              "isAuto": false
+            }
+          ],
+          "transfers": [
+            {
+              "out": 259,
+              "in": 1267,
+              "isNegative": false
+            },
+            {
+              "out": 506,
+              "in": 1153,
+              "isNegative": false
+            }
+          ],
+          "captainChanges": [
+            {
+              "out": 1106,
+              "in": 517,
+              "type": "vice"
+            },
+            {
+              "out": 1094,
+              "in": 531,
+              "type": "captain"
+            },
+            {
+              "out": 531,
+              "in": 1600,
+              "type": "captain"
+            },
+            {
+              "out": 1600,
+              "in": 1094,
+              "type": "captain"
+            }
+          ],
+          "value": 100,
+          "maxCaptain": null,
+          "maxCaptainBooster": null,
+          "twelfthMan": {
+            "playerId": 38,
+            "roundId": 2
+          },
+          "wildCard": null,
+          "qualification": null,
+          "cleanSheet": null,
+          "qualificationPlayerIds": [],
+          "cleanSheetPlayerIds": [],
+          "roundPoints": 125,
+          "overallPoints": 185,
+          "freeTransfers": 0,
+          "negativeTransfers": 0,
+          "locked": false
+        },
+        "3": {
+          "captain": 173,
+          "vice": 1223,
+          "lineup": {
+            "GK": [
+              214
+            ],
+            "DEF": [
+              2012,
+              1320,
+              1088,
+              248
+            ],
+            "MID": [
+              517,
+              792,
+              1223,
+              173
+            ],
+            "FWD": [
+              38,
+              468
+            ]
+          },
+          "bench": {
+            "GK": [
+              45
+            ],
+            "DEF": [
+              2016
+            ],
+            "MID": [
+              1601
+            ],
+            "FWD": [
+              1094
+            ]
+          },
+          "benchOrder": [
+            45,
+            1094,
+            2016,
+            1601
+          ],
+          "substitutions": [
+            {
+              "out": 2016,
+              "in": 1320,
+              "isAuto": false
+            },
+            {
+              "out": 1601,
+              "in": 1223,
+              "isAuto": false
+            },
+            {
+              "out": 1094,
+              "in": 248,
+              "isAuto": false
+            }
+          ],
+          "transfers": [
+            {
+              "out": 1267,
+              "in": 468,
+              "isNegative": false
+            },
+            {
+              "out": 1099,
+              "in": 214,
+              "isNegative": false
+            },
+            {
+              "out": 1153,
+              "in": 45,
+              "isNegative": false
+            },
+            {
+              "out": 795,
+              "in": 2031,
+              "isNegative": false
+            },
+            {
+              "out": 164,
+              "in": 1088,
+              "isNegative": false
+            },
+            {
+              "out": 1141,
+              "in": 1320,
+              "isNegative": false
+            },
+            {
+              "out": 1429,
+              "in": 740,
+              "isNegative": false
+            },
+            {
+              "out": 1366,
+              "in": 792,
+              "isNegative": false
+            },
+            {
+              "out": 1106,
+              "in": 1223,
+              "isNegative": false
+            },
+            {
+              "out": 1600,
+              "in": 173,
+              "isNegative": false
+            },
+            {
+              "out": 939,
+              "in": 1601,
+              "isNegative": false
+            },
+            {
+              "out": 531,
+              "in": 38,
+              "isNegative": false
+            },
+            {
+              "out": 2031,
+              "in": 248,
+              "isNegative": false
+            },
+            {
+              "out": 916,
+              "in": 2012,
+              "isNegative": false
+            },
+            {
+              "out": 740,
+              "in": 2016,
+              "isNegative": false
+            }
+          ],
+          "captainChanges": [],
+          "value": 100,
+          "maxCaptain": null,
+          "maxCaptainBooster": null,
+          "twelfthMan": {
+            "playerId": 38,
+            "roundId": 2
+          },
+          "wildCard": 3,
+          "qualification": null,
+          "cleanSheet": null,
+          "qualificationPlayerIds": [],
+          "cleanSheetPlayerIds": [],
+          "roundPoints": 86,
+          "overallPoints": 271,
+          "freeTransfers": null,
+          "negativeTransfers": 0,
+          "locked": false
+        },
+        "4": {
+          "captain": 500,
+          "vice": 501,
+          "lineup": {
+            "GK": [
+              757
+            ],
+            "DEF": [
+              1086,
+              1264,
+              1318,
+              1320
+            ],
+            "MID": [
+              1158,
+              501,
+              173
+            ],
+            "FWD": [
+              500,
+              468,
+              38
+            ]
+          },
+          "bench": {
+            "GK": [
+              1099
+            ],
+            "DEF": [
+              463
+            ],
+            "MID": [
+              491,
+              1601
+            ],
+            "FWD": []
+          },
+          "benchOrder": [
+            1099,
+            491,
+            1601,
+            463
+          ],
+          "substitutions": [
+            {
+              "out": 1601,
+              "in": 38,
+              "isAuto": false
+            },
+            {
+              "out": 491,
+              "in": 1320,
+              "isAuto": false
+            },
+            {
+              "out": 463,
+              "in": 1318,
+              "isAuto": false
+            }
+          ],
+          "transfers": [
+            {
+              "out": 214,
+              "in": 757,
+              "isNegative": false
+            },
+            {
+              "out": 1223,
+              "in": 1158,
+              "isNegative": false
+            },
+            {
+              "out": 2016,
+              "in": 1264,
+              "isNegative": false
+            },
+            {
+              "out": 792,
+              "in": 491,
+              "isNegative": false
+            },
+            {
+              "out": 1094,
+              "in": 500,
+              "isNegative": false
+            },
+            {
+              "out": 2012,
+              "in": 1086,
+              "isNegative": false
+            },
+            {
+              "out": 248,
+              "in": 916,
+              "isNegative": false
+            },
+            {
+              "out": 517,
+              "in": 501,
+              "isNegative": false
+            },
+            {
+              "out": 916,
+              "in": 248,
+              "isNegative": false
+            },
+            {
+              "out": 248,
+              "in": 463,
+              "isNegative": false
+            },
+            {
+              "out": 1088,
+              "in": 1318,
+              "isNegative": false
+            },
+            {
+              "out": 45,
+              "in": 1099,
+              "isNegative": false
+            }
+          ],
+          "captainChanges": [
+            {
+              "out": 1601,
+              "in": 491,
+              "type": "vice"
+            },
+            {
+              "out": 173,
+              "in": 1601,
+              "type": "captain"
+            },
+            {
+              "out": 1601,
+              "in": 468,
+              "type": "captain"
+            },
+            {
+              "out": 468,
+              "in": 757,
+              "type": "captain"
+            },
+            {
+              "out": 757,
+              "in": 500,
+              "type": "captain"
+            },
+            {
+              "out": 491,
+              "in": 501,
+              "type": "vice"
+            }
+          ],
+          "value": 103,
+          "maxCaptain": null,
+          "maxCaptainBooster": null,
+          "twelfthMan": {
+            "playerId": 38,
+            "roundId": 2
+          },
+          "wildCard": 3,
+          "qualification": 4,
+          "cleanSheet": null,
+          "qualificationPlayerIds": [
+            757,
+            1086,
+            1264,
+            500,
+            468,
+            1158,
+            501,
+            173
+          ],
+          "cleanSheetPlayerIds": [],
+          "roundPoints": 93,
+          "overallPoints": 364,
+          "freeTransfers": null,
+          "negativeTransfers": 0,
+          "locked": false
+        }
+      },
+      "avatar": "https://play.fifa.com/media/image/gamezone/avatars/WC_2026/6.svg",
+      "level": 6,
+      "overallRank": 2,
+      "roundRank": 5,
+      "overallPoints": 364,
+      "roundPoints": 93
+    },
+    "3698906": {
+      "userName": "Vetal307",
+      "rounds": {
+        "1": {
+          "captain": 468,
+          "vice": 477,
+          "lineup": {
+            "GK": [
+              477
+            ],
+            "DEF": [
+              916,
+              28,
+              1088
+            ],
+            "MID": [
+              936,
+              517,
+              937,
+              1999,
+              57
+            ],
+            "FWD": [
+              468,
+              500
+            ]
+          },
+          "bench": {
+            "GK": [
+              1598
+            ],
+            "DEF": [
+              520,
+              1429
+            ],
+            "MID": [],
+            "FWD": [
+              805
+            ]
+          },
+          "benchOrder": [
+            1598,
+            520,
+            805,
+            1429
+          ],
+          "substitutions": [
+            {
+              "out": 468,
+              "in": 805,
+              "isAuto": false
+            },
+            {
+              "out": 805,
+              "in": 468,
+              "isAuto": false
+            },
+            {
+              "out": 1598,
+              "in": 477,
+              "isAuto": false
+            },
+            {
+              "out": 520,
+              "in": 28,
+              "isAuto": false
+            },
+            {
+              "out": 1429,
+              "in": 936,
+              "isAuto": false
+            }
+          ],
+          "transfers": [],
+          "captainChanges": [
+            {
+              "out": 520,
+              "in": 468,
+              "type": "captain"
+            },
+            {
+              "out": 1598,
+              "in": 517,
+              "type": "vice"
+            },
+            {
+              "out": 805,
+              "in": 520,
+              "type": "captain"
+            },
+            {
+              "out": 517,
+              "in": 1598,
+              "type": "vice"
+            },
+            {
+              "out": 520,
+              "in": 1598,
+              "type": "captain"
+            },
+            {
+              "out": 520,
+              "in": 805,
+              "type": "vice"
+            },
+            {
+              "out": 477,
+              "in": 517,
+              "type": "captain"
+            },
+            {
+              "out": 468,
+              "in": 1999,
+              "type": "vice"
+            },
+            {
+              "out": 1999,
+              "in": 57,
+              "type": "vice"
+            },
+            {
+              "out": 57,
+              "in": 937,
+              "type": "vice"
+            },
+            {
+              "out": 937,
+              "in": 916,
+              "type": "vice"
+            },
+            {
+              "out": 916,
+              "in": 477,
+              "type": "vice"
+            },
+            {
+              "out": 517,
+              "in": 468,
+              "type": "captain"
+            }
+          ],
+          "value": 99,
+          "maxCaptain": null,
+          "maxCaptainBooster": null,
+          "twelfthMan": null,
+          "wildCard": null,
+          "qualification": null,
+          "cleanSheet": null,
+          "qualificationPlayerIds": [],
+          "cleanSheetPlayerIds": [],
+          "roundPoints": 86,
+          "overallPoints": 86,
+          "freeTransfers": 0,
+          "negativeTransfers": 0,
+          "locked": false
+        },
+        "2": {
+          "captain": 500,
+          "vice": 517,
+          "lineup": {
+            "GK": [
+              477
+            ],
+            "DEF": [
+              916,
+              28,
+              1088,
+              1429
+            ],
+            "MID": [
+              517,
+              671,
+              937,
+              57
+            ],
+            "FWD": [
+              468,
+              500
+            ]
+          },
+          "bench": {
+            "GK": [
+              1598
+            ],
+            "DEF": [
+              526
+            ],
+            "MID": [
+              1999
+            ],
+            "FWD": [
+              805
+            ]
+          },
+          "benchOrder": [
+            1598,
+            526,
+            805,
+            1999
+          ],
+          "substitutions": [
+            {
+              "out": 805,
+              "in": 468,
+              "isAuto": false
+            },
+            {
+              "out": 526,
+              "in": 28,
+              "isAuto": false
+            },
+            {
+              "out": 1598,
+              "in": 477,
+              "isAuto": false
+            },
+            {
+              "out": 1999,
+              "in": 937,
+              "isAuto": false
+            }
+          ],
+          "transfers": [
+            {
+              "out": 520,
+              "in": 526,
+              "isNegative": false
+            },
+            {
+              "out": 936,
+              "in": 671,
+              "isNegative": false
+            }
+          ],
+          "captainChanges": [
+            {
+              "out": 500,
+              "in": 805,
+              "type": "captain"
+            },
+            {
+              "out": 468,
+              "in": 526,
+              "type": "captain"
+            },
+            {
+              "out": 28,
+              "in": 671,
+              "type": "captain"
+            },
+            {
+              "out": 671,
+              "in": 57,
+              "type": "captain"
+            },
+            {
+              "out": 57,
+              "in": 500,
+              "type": "captain"
+            }
+          ],
+          "value": 98,
+          "maxCaptain": null,
+          "maxCaptainBooster": null,
+          "twelfthMan": null,
+          "wildCard": null,
+          "qualification": null,
+          "cleanSheet": null,
+          "qualificationPlayerIds": [],
+          "cleanSheetPlayerIds": [],
+          "roundPoints": 91,
+          "overallPoints": 177,
+          "freeTransfers": 0,
+          "negativeTransfers": 0,
+          "locked": false
+        },
+        "3": {
+          "captain": 500,
+          "vice": 1709,
+          "lineup": {
+            "GK": [
+              477
+            ],
+            "DEF": [
+              795,
+              2012,
+              165,
+              796,
+              1709
+            ],
+            "MID": [
+              1526,
+              792,
+              1696
+            ],
+            "FWD": [
+              38,
+              500
+            ]
+          },
+          "bench": {
+            "GK": [
+              2010
+            ],
+            "DEF": [],
+            "MID": [
+              682,
+              736
+            ],
+            "FWD": [
+              804
+            ]
+          },
+          "benchOrder": [
+            2010,
+            682,
+            804,
+            736
+          ],
+          "substitutions": [
+            {
+              "out": 2010,
+              "in": 477,
+              "isAuto": false
+            },
+            {
+              "out": 736,
+              "in": 1526,
+              "isAuto": false
+            },
+            {
+              "out": 682,
+              "in": 1709,
+              "isAuto": false
+            },
+            {
+              "out": 804,
+              "in": 38,
+              "isAuto": false
+            }
+          ],
+          "transfers": [
+            {
+              "out": 526,
+              "in": 2012,
+              "isNegative": false
+            },
+            {
+              "out": 1999,
+              "in": 792,
+              "isNegative": false
+            },
+            {
+              "out": 937,
+              "in": 682,
+              "isNegative": false
+            },
+            {
+              "out": 57,
+              "in": 1696,
+              "isNegative": false
+            },
+            {
+              "out": 916,
+              "in": 795,
+              "isNegative": false
+            },
+            {
+              "out": 1429,
+              "in": 300,
+              "isNegative": false
+            },
+            {
+              "out": 1598,
+              "in": 2010,
+              "isNegative": false
+            },
+            {
+              "out": 805,
+              "in": 38,
+              "isNegative": false
+            },
+            {
+              "out": 28,
+              "in": 1035,
+              "isNegative": false
+            },
+            {
+              "out": 468,
+              "in": 804,
+              "isNegative": false
+            },
+            {
+              "out": 671,
+              "in": 322,
+              "isNegative": false
+            },
+            {
+              "out": 1035,
+              "in": 303,
+              "isNegative": false
+            },
+            {
+              "out": 303,
+              "in": 165,
+              "isNegative": false
+            },
+            {
+              "out": 300,
+              "in": 1318,
+              "isNegative": false
+            },
+            {
+              "out": 322,
+              "in": 348,
+              "isNegative": false
+            },
+            {
+              "out": 517,
+              "in": 939,
+              "isNegative": false
+            },
+            {
+              "out": 1318,
+              "in": 796,
+              "isNegative": false
+            },
+            {
+              "out": 1088,
+              "in": 30,
+              "isNegative": false
+            },
+            {
+              "out": 348,
+              "in": 322,
+              "isNegative": false
+            },
+            {
+              "out": 30,
+              "in": 1709,
+              "isNegative": false
+            },
+            {
+              "out": 322,
+              "in": 1526,
+              "isNegative": false
+            },
+            {
+              "out": 939,
+              "in": 138,
+              "isNegative": false
+            },
+            {
+              "out": 138,
+              "in": 736,
+              "isNegative": false
+            }
+          ],
+          "captainChanges": [
+            {
+              "out": 792,
+              "in": 736,
+              "type": "captain"
+            },
+            {
+              "out": 1526,
+              "in": 795,
+              "type": "captain"
+            },
+            {
+              "out": 795,
+              "in": 804,
+              "type": "captain"
+            },
+            {
+              "out": 38,
+              "in": 500,
+              "type": "captain"
+            }
+          ],
+          "value": 98,
+          "maxCaptain": null,
+          "maxCaptainBooster": null,
+          "twelfthMan": null,
+          "wildCard": 3,
+          "qualification": null,
+          "cleanSheet": null,
+          "qualificationPlayerIds": [],
+          "cleanSheetPlayerIds": [],
+          "roundPoints": 88,
+          "overallPoints": 265,
+          "freeTransfers": null,
+          "negativeTransfers": 0,
+          "locked": false
+        },
+        "4": {
+          "captain": 500,
+          "vice": 1099,
+          "lineup": {
+            "GK": [
+              1099
+            ],
+            "DEF": [
+              2031,
+              1088,
+              248,
+              1318
+            ],
+            "MID": [
+              1133,
+              501,
+              1092
+            ],
+            "FWD": [
+              855,
+              500,
+              38
+            ]
+          },
+          "bench": {
+            "GK": [
+              45
+            ],
+            "DEF": [
+              457
+            ],
+            "MID": [
+              241,
+              173
+            ],
+            "FWD": []
+          },
+          "benchOrder": [
+            45,
+            241,
+            173,
+            457
+          ],
+          "substitutions": [
+            {
+              "out": 241,
+              "in": 1318,
+              "isAuto": false
+            },
+            {
+              "out": 173,
+              "in": 38,
+              "isAuto": false
+            },
+            {
+              "out": 457,
+              "in": 248,
+              "isAuto": false
+            }
+          ],
+          "transfers": [
+            {
+              "out": 804,
+              "in": 855,
+              "isNegative": false
+            },
+            {
+              "out": 736,
+              "in": 173,
+              "isNegative": false
+            },
+            {
+              "out": 682,
+              "in": 517,
+              "isNegative": false
+            },
+            {
+              "out": 1696,
+              "in": 1092,
+              "isNegative": false
+            },
+            {
+              "out": 1526,
+              "in": 1133,
+              "isNegative": false
+            },
+            {
+              "out": 796,
+              "in": 1318,
+              "isNegative": false
+            },
+            {
+              "out": 2012,
+              "in": 1088,
+              "isNegative": false
+            },
+            {
+              "out": 795,
+              "in": 2031,
+              "isNegative": false
+            },
+            {
+              "out": 2010,
+              "in": 45,
+              "isNegative": false
+            },
+            {
+              "out": 792,
+              "in": 241,
+              "isNegative": false
+            },
+            {
+              "out": 1709,
+              "in": 463,
+              "isNegative": false
+            },
+            {
+              "out": 165,
+              "in": 1089,
+              "isNegative": false
+            },
+            {
+              "out": 1089,
+              "in": 248,
+              "isNegative": false
+            },
+            {
+              "out": 477,
+              "in": 1099,
+              "isNegative": false
+            },
+            {
+              "out": 517,
+              "in": 501,
+              "isNegative": false
+            },
+            {
+              "out": 463,
+              "in": 457,
+              "isNegative": false
+            }
+          ],
+          "captainChanges": [
+            {
+              "out": 1318,
+              "in": 173,
+              "type": "captain"
+            },
+            {
+              "out": 501,
+              "in": 1099,
+              "type": "vice"
+            },
+            {
+              "out": 173,
+              "in": 855,
+              "type": "captain"
+            },
+            {
+              "out": 855,
+              "in": 500,
+              "type": "captain"
+            }
+          ],
+          "value": 105,
+          "maxCaptain": null,
+          "maxCaptainBooster": null,
+          "twelfthMan": null,
+          "wildCard": 3,
+          "qualification": 4,
+          "cleanSheet": null,
+          "qualificationPlayerIds": [
+            1099,
+            2031,
+            1088,
+            855,
+            500,
+            1133,
+            501,
+            1092
+          ],
+          "cleanSheetPlayerIds": [],
+          "roundPoints": 97,
+          "overallPoints": 362,
+          "freeTransfers": null,
+          "negativeTransfers": 0,
+          "locked": false
+        }
+      },
+      "avatar": "https://play.fifa.com/media/image/gamezone/avatars/WC_2026/11.svg",
+      "level": 11,
+      "overallRank": 3,
+      "roundRank": 4,
+      "overallPoints": 362,
+      "roundPoints": 97
+    },
+    "5344013": {
+      "userName": "Andrii Lubinets",
+      "rounds": {
+        "1": {
+          "captain": 855,
+          "vice": 500,
+          "lineup": {
+            "GK": [
+              1598
+            ],
+            "DEF": [
+              740,
+              457,
+              1088
+            ],
+            "MID": [
+              517,
+              1215,
+              936,
+              1366
+            ],
+            "FWD": [
+              855,
+              500,
+              468
+            ]
+          },
+          "bench": {
+            "GK": [
+              1001
+            ],
+            "DEF": [
+              2031,
+              1979
+            ],
+            "MID": [
+              1526
+            ],
+            "FWD": []
+          },
+          "benchOrder": [
+            1001,
+            1526,
+            2031,
+            1979
+          ],
+          "substitutions": [
+            {
+              "out": 1526,
+              "in": 936,
+              "isAuto": false
+            }
+          ],
+          "transfers": [],
+          "captainChanges": [],
+          "value": 100,
+          "maxCaptain": null,
+          "maxCaptainBooster": null,
+          "twelfthMan": null,
+          "wildCard": null,
+          "qualification": null,
+          "cleanSheet": null,
+          "qualificationPlayerIds": [],
+          "cleanSheetPlayerIds": [],
+          "roundPoints": 92,
+          "overallPoints": 92,
+          "freeTransfers": 0,
+          "negativeTransfers": 0,
+          "locked": false
+        },
+        "2": {
+          "captain": 500,
+          "vice": 855,
+          "lineup": {
+            "GK": [
+              1598
+            ],
+            "DEF": [
+              2031,
+              457,
+              1088
+            ],
+            "MID": [
+              517,
+              1215,
+              1600,
+              1366
+            ],
+            "FWD": [
+              855,
+              500,
+              468
+            ]
+          },
+          "bench": {
+            "GK": [
+              1001
+            ],
+            "DEF": [
+              740,
+              1979
+            ],
+            "MID": [
+              832
+            ],
+            "FWD": []
+          },
+          "benchOrder": [
+            1001,
+            740,
+            1979,
+            832
+          ],
+          "substitutions": [],
+          "transfers": [
+            {
+              "out": 936,
+              "in": 1600,
+              "isNegative": false
+            },
+            {
+              "out": 1526,
+              "in": 832,
+              "isNegative": false
+            }
+          ],
+          "captainChanges": [],
+          "value": 99,
+          "maxCaptain": null,
+          "maxCaptainBooster": null,
+          "twelfthMan": {
+            "playerId": 38,
+            "roundId": 2
+          },
+          "wildCard": null,
+          "qualification": null,
+          "cleanSheet": null,
+          "qualificationPlayerIds": [],
+          "cleanSheetPlayerIds": [],
+          "roundPoints": 94,
+          "overallPoints": 186,
+          "freeTransfers": 0,
+          "negativeTransfers": 0,
+          "locked": false
+        },
+        "3": {
+          "captain": 500,
+          "vice": 855,
+          "lineup": {
+            "GK": [
+              1598
+            ],
+            "DEF": [
+              2031,
+              457,
+              1088
+            ],
+            "MID": [
+              517,
+              1215,
+              1600,
+              1366
+            ],
+            "FWD": [
+              855,
+              500,
+              468
+            ]
+          },
+          "bench": {
+            "GK": [
+              1001
+            ],
+            "DEF": [
+              740,
+              1979
+            ],
+            "MID": [
+              832
+            ],
+            "FWD": []
+          },
+          "benchOrder": [
+            1001,
+            740,
+            1979,
+            832
+          ],
+          "substitutions": [
+            {
+              "out": 855,
+              "in": 1979,
+              "isAuto": true
+            },
+            {
+              "out": 1366,
+              "in": 832,
+              "isAuto": true
+            }
+          ],
+          "transfers": [],
+          "captainChanges": [],
+          "value": 99,
+          "maxCaptain": null,
+          "maxCaptainBooster": null,
+          "twelfthMan": {
+            "playerId": 38,
+            "roundId": 2
+          },
+          "wildCard": null,
+          "qualification": null,
+          "cleanSheet": null,
+          "qualificationPlayerIds": [],
+          "cleanSheetPlayerIds": [],
+          "roundPoints": 66,
+          "overallPoints": 252,
+          "freeTransfers": 0,
+          "negativeTransfers": 0,
+          "locked": false
+        },
+        "4": {
+          "captain": 500,
+          "vice": 855,
+          "lineup": {
+            "GK": [
+              1598
+            ],
+            "DEF": [
+              2031,
+              457,
+              1088
+            ],
+            "MID": [
+              517,
+              1215,
+              1600,
+              1366
+            ],
+            "FWD": [
+              855,
+              500,
+              468
+            ]
+          },
+          "bench": {
+            "GK": [
+              1001
+            ],
+            "DEF": [
+              740,
+              1979
+            ],
+            "MID": [
+              832
+            ],
+            "FWD": []
+          },
+          "benchOrder": [
+            1001,
+            740,
+            1979,
+            832
+          ],
+          "substitutions": [],
+          "transfers": [],
+          "captainChanges": [],
+          "value": 99,
+          "maxCaptain": null,
+          "maxCaptainBooster": null,
+          "twelfthMan": {
+            "playerId": 38,
+            "roundId": 2
+          },
+          "wildCard": null,
+          "qualification": null,
+          "cleanSheet": null,
+          "qualificationPlayerIds": [],
+          "cleanSheetPlayerIds": [],
+          "roundPoints": 86,
+          "overallPoints": 338,
+          "freeTransfers": null,
+          "negativeTransfers": 0,
+          "locked": false
+        }
+      },
+      "avatar": "https://play.fifa.com/media/image/gamezone/avatars/WC_2026/2.svg",
+      "level": 2,
+      "overallRank": 4,
+      "roundRank": 7,
+      "overallPoints": 338,
+      "roundPoints": 86
+    },
+    "3166273": {
+      "userName": "bltsnk",
+      "rounds": {
+        "1": {
+          "captain": 500,
+          "vice": 38,
+          "lineup": {
+            "GK": [
+              1569
+            ],
+            "DEF": [
+              542,
+              917,
+              444,
+              797
+            ],
+            "MID": [
+              501,
+              936,
+              256
+            ],
+            "FWD": [
+              38,
+              500,
+              39
+            ]
+          },
+          "bench": {
+            "GK": [
+              155
+            ],
+            "DEF": [
+              225
+            ],
+            "MID": [
+              119,
+              1092
+            ],
+            "FWD": []
+          },
+          "benchOrder": [
+            155,
+            225,
+            119,
+            1092
+          ],
+          "substitutions": [
+            {
+              "out": 1092,
+              "in": 39,
+              "isAuto": false
+            }
+          ],
+          "transfers": [],
+          "captainChanges": [],
+          "value": 99,
+          "maxCaptain": null,
+          "maxCaptainBooster": null,
+          "twelfthMan": null,
+          "wildCard": null,
+          "qualification": null,
+          "cleanSheet": null,
+          "qualificationPlayerIds": [],
+          "cleanSheetPlayerIds": [],
+          "roundPoints": 78,
+          "overallPoints": 78,
+          "freeTransfers": 0,
+          "negativeTransfers": 0,
+          "locked": false
+        },
+        "2": {
+          "captain": 500,
+          "vice": 38,
+          "lineup": {
+            "GK": [
+              1569
+            ],
+            "DEF": [
+              542,
+              917,
+              165
+            ],
+            "MID": [
+              324,
+              517,
+              936,
+              543
+            ],
+            "FWD": [
+              38,
+              500,
+              855
+            ]
+          },
+          "bench": {
+            "GK": [
+              155
+            ],
+            "DEF": [
+              28,
+              1318
+            ],
+            "MID": [
+              125
+            ],
+            "FWD": []
+          },
+          "benchOrder": [
+            155,
+            28,
+            125,
+            1318
+          ],
+          "substitutions": [
+            {
+              "out": 125,
+              "in": 324,
+              "isAuto": false
+            }
+          ],
+          "transfers": [
+            {
+              "out": 797,
+              "in": 492,
+              "isNegative": false
+            },
+            {
+              "out": 225,
+              "in": 827,
+              "isNegative": false
+            },
+            {
+              "out": 39,
+              "in": 855,
+              "isNegative": false
+            },
+            {
+              "out": 501,
+              "in": 517,
+              "isNegative": false
+            },
+            {
+              "out": 444,
+              "in": 1318,
+              "isNegative": false
+            },
+            {
+              "out": 1092,
+              "in": 543,
+              "isNegative": false
+            },
+            {
+              "out": 119,
+              "in": 125,
+              "isNegative": false
+            },
+            {
+              "out": 827,
+              "in": 28,
+              "isNegative": false
+            },
+            {
+              "out": 492,
+              "in": 165,
+              "isNegative": false
+            },
+            {
+              "out": 256,
+              "in": 324,
+              "isNegative": false
+            }
+          ],
+          "captainChanges": [],
+          "value": 100,
+          "maxCaptain": null,
+          "maxCaptainBooster": null,
+          "twelfthMan": null,
+          "wildCard": 2,
+          "qualification": null,
+          "cleanSheet": null,
+          "qualificationPlayerIds": [],
+          "cleanSheetPlayerIds": [],
+          "roundPoints": 87,
+          "overallPoints": 165,
+          "freeTransfers": null,
+          "negativeTransfers": 0,
+          "locked": false
+        },
+        "3": {
+          "captain": 500,
+          "vice": 38,
+          "lineup": {
+            "GK": [
+              1569
+            ],
+            "DEF": [
+              542,
+              917,
+              165,
+              1318
+            ],
+            "MID": [
+              517,
+              792,
+              936,
+              543
+            ],
+            "FWD": [
+              38,
+              500
+            ]
+          },
+          "bench": {
+            "GK": [
+              155
+            ],
+            "DEF": [
+              28
+            ],
+            "MID": [
+              1057
+            ],
+            "FWD": [
+              855
+            ]
+          },
+          "benchOrder": [
+            155,
+            28,
+            855,
+            1057
+          ],
+          "substitutions": [
+            {
+              "out": 855,
+              "in": 1318,
+              "isAuto": false
+            }
+          ],
+          "transfers": [
+            {
+              "out": 125,
+              "in": 1057,
+              "isNegative": false
+            },
+            {
+              "out": 324,
+              "in": 792,
+              "isNegative": false
+            }
+          ],
+          "captainChanges": [],
+          "value": 99,
+          "maxCaptain": null,
+          "maxCaptainBooster": null,
+          "twelfthMan": null,
+          "wildCard": 2,
+          "qualification": null,
+          "cleanSheet": null,
+          "qualificationPlayerIds": [],
+          "cleanSheetPlayerIds": [],
+          "roundPoints": 62,
+          "overallPoints": 227,
+          "freeTransfers": 0,
+          "negativeTransfers": 0,
+          "locked": false
+        },
+        "4": {
+          "captain": 500,
+          "vice": 38,
+          "lineup": {
+            "GK": [
+              757
+            ],
+            "DEF": [
+              916,
+              1261,
+              1088,
+              30
+            ],
+            "MID": [
+              517,
+              501,
+              1092
+            ],
+            "FWD": [
+              38,
+              500,
+              468
+            ]
+          },
+          "bench": {
+            "GK": [
+              453
+            ],
+            "DEF": [
+              1318
+            ],
+            "MID": [
+              543,
+              1601
+            ],
+            "FWD": []
+          },
+          "benchOrder": [
+            453,
+            543,
+            1318,
+            1601
+          ],
+          "substitutions": [
+            {
+              "out": 1601,
+              "in": 1092,
+              "isAuto": false
+            },
+            {
+              "out": 543,
+              "in": 30,
+              "isAuto": false
+            },
+            {
+              "out": 1261,
+              "in": 1318,
+              "isAuto": false
+            },
+            {
+              "out": 1318,
+              "in": 1261,
+              "isAuto": false
+            }
+          ],
+          "transfers": [
+            {
+              "out": 1057,
+              "in": 1092,
+              "isNegative": false
+            },
+            {
+              "out": 1569,
+              "in": 757,
+              "isNegative": false
+            },
+            {
+              "out": 155,
+              "in": 453,
+              "isNegative": false
+            },
+            {
+              "out": 542,
+              "in": 916,
+              "isNegative": false
+            },
+            {
+              "out": 917,
+              "in": 1261,
+              "isNegative": false
+            },
+            {
+              "out": 165,
+              "in": 1088,
+              "isNegative": false
+            },
+            {
+              "out": 28,
+              "in": 30,
+              "isNegative": false
+            },
+            {
+              "out": 792,
+              "in": 501,
+              "isNegative": false
+            },
+            {
+              "out": 936,
+              "in": 1601,
+              "isNegative": false
+            },
+            {
+              "out": 855,
+              "in": 468,
+              "isNegative": false
+            }
+          ],
+          "captainChanges": [],
+          "value": 104,
+          "maxCaptain": null,
+          "maxCaptainBooster": null,
+          "twelfthMan": null,
+          "wildCard": 2,
+          "qualification": 4,
+          "cleanSheet": null,
+          "qualificationPlayerIds": [
+            757,
+            916,
+            1261,
+            1088,
+            500,
+            468,
+            517,
+            501,
+            1092
+          ],
+          "cleanSheetPlayerIds": [],
+          "roundPoints": 109,
+          "overallPoints": 336,
+          "freeTransfers": null,
+          "negativeTransfers": 0,
+          "locked": false
+        }
+      },
+      "avatar": "https://play.fifa.com/media/image/gamezone/avatars/WC_2026/5.svg",
+      "level": 5,
+      "overallRank": 5,
+      "roundRank": 1,
+      "overallPoints": 336,
+      "roundPoints": 109
+    },
+    "3577130": {
+      "userName": "sergstappen",
+      "rounds": {
+        "1": {
+          "captain": 855,
+          "vice": 517,
+          "lineup": {
+            "GK": [
+              1569
+            ],
+            "DEF": [
+              1570,
+              542,
+              2052,
+              457
+            ],
+            "MID": [
+              939,
+              256,
+              125,
+              517
+            ],
+            "FWD": [
+              855,
+              1094
+            ]
+          },
+          "bench": {
+            "GK": [
+              1522
+            ],
+            "DEF": [
+              2053
+            ],
+            "MID": [
+              129
+            ],
+            "FWD": [
+              805
+            ]
+          },
+          "benchOrder": [
+            1522,
+            2053,
+            805,
+            129
+          ],
+          "substitutions": [
+            {
+              "out": 2053,
+              "in": 457,
+              "isAuto": false
+            },
+            {
+              "out": 805,
+              "in": 855,
+              "isAuto": false
+            },
+            {
+              "out": 1522,
+              "in": 1569,
+              "isAuto": false
+            },
+            {
+              "out": 129,
+              "in": 256,
+              "isAuto": false
+            }
+          ],
+          "transfers": [],
+          "captainChanges": [
+            {
+              "out": 1094,
+              "in": 855,
+              "type": "captain"
+            }
+          ],
+          "value": 98,
+          "maxCaptain": null,
+          "maxCaptainBooster": null,
+          "twelfthMan": null,
+          "wildCard": null,
+          "qualification": null,
+          "cleanSheet": null,
+          "qualificationPlayerIds": [],
+          "cleanSheetPlayerIds": [],
+          "roundPoints": 71,
+          "overallPoints": 71,
+          "freeTransfers": 0,
+          "negativeTransfers": 0,
+          "locked": false
+        },
+        "2": {
+          "captain": 500,
+          "vice": 517,
+          "lineup": {
+            "GK": [
+              1245
+            ],
+            "DEF": [
+              1231,
+              1229,
+              2013
+            ],
+            "MID": [
+              792,
+              256,
+              173,
+              517
+            ],
+            "FWD": [
+              855,
+              38,
+              500
+            ]
+          },
+          "bench": {
+            "GK": [
+              317
+            ],
+            "DEF": [
+              303,
+              404
+            ],
+            "MID": [
+              1255
+            ],
+            "FWD": []
+          },
+          "benchOrder": [
+            317,
+            303,
+            404,
+            1255
+          ],
+          "substitutions": [
+            {
+              "out": 1229,
+              "in": 404,
+              "isAuto": false
+            },
+            {
+              "out": 317,
+              "in": 1245,
+              "isAuto": false
+            },
+            {
+              "out": 303,
+              "in": 1229,
+              "isAuto": false
+            },
+            {
+              "out": 404,
+              "in": 855,
+              "isAuto": false
+            },
+            {
+              "out": 1255,
+              "in": 256,
+              "isAuto": false
+            }
+          ],
+          "transfers": [
+            {
+              "out": 1570,
+              "in": 1231,
+              "isNegative": false
+            },
+            {
+              "out": 457,
+              "in": 2013,
+              "isNegative": false
+            },
+            {
+              "out": 542,
+              "in": 1229,
+              "isNegative": false
+            },
+            {
+              "out": 939,
+              "in": 792,
+              "isNegative": false
+            },
+            {
+              "out": 129,
+              "in": 1255,
+              "isNegative": false
+            },
+            {
+              "out": 125,
+              "in": 173,
+              "isNegative": false
+            },
+            {
+              "out": 1522,
+              "in": 1245,
+              "isNegative": false
+            },
+            {
+              "out": 1569,
+              "in": 317,
+              "isNegative": false
+            },
+            {
+              "out": 805,
+              "in": 38,
+              "isNegative": false
+            },
+            {
+              "out": 1094,
+              "in": 500,
+              "isNegative": false
+            },
+            {
+              "out": 2053,
+              "in": 303,
+              "isNegative": false
+            },
+            {
+              "out": 2052,
+              "in": 404,
+              "isNegative": false
+            }
+          ],
+          "captainChanges": [
+            {
+              "out": 500,
+              "in": 792,
+              "type": "captain"
+            },
+            {
+              "out": 792,
+              "in": 500,
+              "type": "captain"
+            }
+          ],
+          "value": 100,
+          "maxCaptain": null,
+          "maxCaptainBooster": null,
+          "twelfthMan": null,
+          "wildCard": 2,
+          "qualification": null,
+          "cleanSheet": null,
+          "qualificationPlayerIds": [],
+          "cleanSheetPlayerIds": [],
+          "roundPoints": 99,
+          "overallPoints": 170,
+          "freeTransfers": null,
+          "negativeTransfers": 0,
+          "locked": false
+        },
+        "3": {
+          "captain": 256,
+          "vice": 31,
+          "lineup": {
+            "GK": [
+              317
+            ],
+            "DEF": [
+              795,
+              303,
+              2013,
+              31
+            ],
+            "MID": [
+              792,
+              173,
+              256
+            ],
+            "FWD": [
+              38,
+              807,
+              500
+            ]
+          },
+          "bench": {
+            "GK": [
+              1245
+            ],
+            "DEF": [
+              139
+            ],
+            "MID": [
+              1255,
+              517
+            ],
+            "FWD": []
+          },
+          "benchOrder": [
+            1245,
+            1255,
+            139,
+            517
+          ],
+          "substitutions": [
+            {
+              "out": 517,
+              "in": 256,
+              "isAuto": false
+            },
+            {
+              "out": 1255,
+              "in": 31,
+              "isAuto": false
+            },
+            {
+              "out": 139,
+              "in": 38,
+              "isAuto": false
+            }
+          ],
+          "transfers": [
+            {
+              "out": 855,
+              "in": 807,
+              "isNegative": false
+            },
+            {
+              "out": 1229,
+              "in": 795,
+              "isNegative": false
+            },
+            {
+              "out": 1231,
+              "in": 139,
+              "isNegative": true
+            },
+            {
+              "out": 404,
+              "in": 31,
+              "isNegative": true
+            }
+          ],
+          "captainChanges": [
+            {
+              "out": 792,
+              "in": 807,
+              "type": "captain"
+            },
+            {
+              "out": 807,
+              "in": 303,
+              "type": "captain"
+            },
+            {
+              "out": 303,
+              "in": 807,
+              "type": "captain"
+            },
+            {
+              "out": 807,
+              "in": 500,
+              "type": "captain"
+            },
+            {
+              "out": 500,
+              "in": 38,
+              "type": "captain"
+            },
+            {
+              "out": 38,
+              "in": 256,
+              "type": "captain"
+            },
+            {
+              "out": 38,
+              "in": 31,
+              "type": "vice"
+            }
+          ],
+          "value": 97,
+          "maxCaptain": null,
+          "maxCaptainBooster": null,
+          "twelfthMan": {
+            "playerId": 804,
+            "roundId": 3
+          },
+          "wildCard": 2,
+          "qualification": null,
+          "cleanSheet": null,
+          "qualificationPlayerIds": [],
+          "cleanSheetPlayerIds": [],
+          "roundPoints": 77,
+          "overallPoints": 247,
+          "freeTransfers": 0,
+          "negativeTransfers": 0,
+          "locked": false
+        },
+        "4": {
+          "captain": 1094,
+          "vice": 1320,
+          "lineup": {
+            "GK": [
+              477
+            ],
+            "DEF": [
+              30,
+              463,
+              2031,
+              1320
+            ],
+            "MID": [
+              501,
+              1133,
+              1526
+            ],
+            "FWD": [
+              1094,
+              500,
+              38
+            ]
+          },
+          "bench": {
+            "GK": [
+              262
+            ],
+            "DEF": [
+              248
+            ],
+            "MID": [
+              1158,
+              173
+            ],
+            "FWD": []
+          },
+          "benchOrder": [
+            262,
+            1158,
+            173,
+            248
+          ],
+          "substitutions": [
+            {
+              "out": 173,
+              "in": 38,
+              "isAuto": false
+            },
+            {
+              "out": 248,
+              "in": 30,
+              "isAuto": false
+            },
+            {
+              "out": 1158,
+              "in": 1320,
+              "isAuto": false
+            }
+          ],
+          "transfers": [
+            {
+              "out": 807,
+              "in": 1338,
+              "isNegative": false
+            },
+            {
+              "out": 31,
+              "in": 1320,
+              "isNegative": false
+            },
+            {
+              "out": 1255,
+              "in": 1133,
+              "isNegative": false
+            },
+            {
+              "out": 792,
+              "in": 501,
+              "isNegative": false
+            },
+            {
+              "out": 1245,
+              "in": 477,
+              "isNegative": false
+            },
+            {
+              "out": 317,
+              "in": 262,
+              "isNegative": false
+            },
+            {
+              "out": 139,
+              "in": 248,
+              "isNegative": false
+            },
+            {
+              "out": 303,
+              "in": 1264,
+              "isNegative": false
+            },
+            {
+              "out": 2013,
+              "in": 2031,
+              "isNegative": false
+            },
+            {
+              "out": 795,
+              "in": 463,
+              "isNegative": false
+            },
+            {
+              "out": 517,
+              "in": 1526,
+              "isNegative": false
+            },
+            {
+              "out": 1338,
+              "in": 1094,
+              "isNegative": false
+            },
+            {
+              "out": 1264,
+              "in": 30,
+              "isNegative": false
+            },
+            {
+              "out": 256,
+              "in": 1158,
+              "isNegative": false
+            }
+          ],
+          "captainChanges": [
+            {
+              "out": 173,
+              "in": 501,
+              "type": "captain"
+            },
+            {
+              "out": 501,
+              "in": 463,
+              "type": "captain"
+            },
+            {
+              "out": 1526,
+              "in": 2031,
+              "type": "vice"
+            },
+            {
+              "out": 463,
+              "in": 1526,
+              "type": "captain"
+            },
+            {
+              "out": 2031,
+              "in": 1158,
+              "type": "vice"
+            },
+            {
+              "out": 1526,
+              "in": 2031,
+              "type": "captain"
+            },
+            {
+              "out": 2031,
+              "in": 1094,
+              "type": "captain"
+            }
+          ],
+          "value": 98,
+          "maxCaptain": null,
+          "maxCaptainBooster": null,
+          "twelfthMan": {
+            "playerId": 804,
+            "roundId": 3
+          },
+          "wildCard": 2,
+          "qualification": null,
+          "cleanSheet": 4,
+          "qualificationPlayerIds": [],
+          "cleanSheetPlayerIds": [
+            477,
+            463
+          ],
+          "roundPoints": 88,
+          "overallPoints": 335,
+          "freeTransfers": null,
+          "negativeTransfers": 0,
+          "locked": false
+        }
+      },
+      "avatar": "https://play.fifa.com/media/image/gamezone/avatars/WC_2026/2.svg",
+      "level": 2,
+      "overallRank": 6,
+      "roundRank": 6,
+      "overallPoints": 335,
+      "roundPoints": 88
+    },
+    "1731201": {
+      "userName": "Last Bite Of Suarez",
+      "rounds": {
+        "1": {
+          "captain": 500,
+          "vice": 939,
+          "lineup": {
+            "GK": [
+              423
+            ],
+            "DEF": [
+              850,
+              542,
+              740,
+              1088,
+              252
+            ],
+            "MID": [
+              1366,
+              939,
+              543
+            ],
+            "FWD": [
+              855,
+              500
+            ]
+          },
+          "bench": {
+            "GK": [
+              477
+            ],
+            "DEF": [],
+            "MID": [
+              125,
+              107
+            ],
+            "FWD": [
+              804
+            ]
+          },
+          "benchOrder": [
+            477,
+            125,
+            804,
+            107
+          ],
+          "substitutions": [
+            {
+              "out": 804,
+              "in": 855,
+              "isAuto": false
+            },
+            {
+              "out": 939,
+              "in": 107,
+              "isAuto": false
+            },
+            {
+              "out": 107,
+              "in": 939,
+              "isAuto": false
+            },
+            {
+              "out": 125,
+              "in": 252,
+              "isAuto": false
+            }
+          ],
+          "transfers": [],
+          "captainChanges": [
+            {
+              "out": 740,
+              "in": 1366,
+              "type": "captain"
+            },
+            {
+              "out": 1366,
+              "in": 543,
+              "type": "captain"
+            },
+            {
+              "out": 543,
+              "in": 1088,
+              "type": "captain"
+            },
+            {
+              "out": 1088,
+              "in": 500,
+              "type": "captain"
+            }
+          ],
+          "value": 99,
+          "maxCaptain": null,
+          "maxCaptainBooster": null,
+          "twelfthMan": null,
+          "wildCard": null,
+          "qualification": null,
+          "cleanSheet": null,
+          "qualificationPlayerIds": [],
+          "cleanSheetPlayerIds": [],
+          "roundPoints": 90,
+          "overallPoints": 90,
+          "freeTransfers": 0,
+          "negativeTransfers": 0,
+          "locked": false
+        },
+        "2": {
+          "captain": 38,
+          "vice": 855,
+          "lineup": {
+            "GK": [
+              423
+            ],
+            "DEF": [
+              252,
+              542,
+              740,
+              1088
+            ],
+            "MID": [
+              939,
+              832,
+              543
+            ],
+            "FWD": [
+              38,
+              500,
+              855
+            ]
+          },
+          "bench": {
+            "GK": [
+              477
+            ],
+            "DEF": [
+              850
+            ],
+            "MID": [
+              1366,
+              125
+            ],
+            "FWD": []
+          },
+          "benchOrder": [
+            477,
+            850,
+            1366,
+            125
+          ],
+          "substitutions": [
+            {
+              "out": 125,
+              "in": 832,
+              "isAuto": false
+            },
+            {
+              "out": 939,
+              "in": 855,
+              "isAuto": false
+            },
+            {
+              "out": 1366,
+              "in": 939,
+              "isAuto": false
+            },
+            {
+              "out": 850,
+              "in": 252,
+              "isAuto": false
+            }
+          ],
+          "transfers": [
+            {
+              "out": 804,
+              "in": 38,
+              "isNegative": false
+            },
+            {
+              "out": 107,
+              "in": 832,
+              "isNegative": false
+            }
+          ],
+          "captainChanges": [
+            {
+              "out": 740,
+              "in": 543,
+              "type": "captain"
+            },
+            {
+              "out": 939,
+              "in": 1088,
+              "type": "vice"
+            },
+            {
+              "out": 543,
+              "in": 423,
+              "type": "captain"
+            },
+            {
+              "out": 1088,
+              "in": 939,
+              "type": "vice"
+            },
+            {
+              "out": 423,
+              "in": 1088,
+              "type": "captain"
+            },
+            {
+              "out": 1088,
+              "in": 832,
+              "type": "captain"
+            },
+            {
+              "out": 832,
+              "in": 38,
+              "type": "captain"
+            }
+          ],
+          "value": 99,
+          "maxCaptain": null,
+          "maxCaptainBooster": null,
+          "twelfthMan": {
+            "playerId": 468,
+            "roundId": 2
+          },
+          "wildCard": null,
+          "qualification": null,
+          "cleanSheet": null,
+          "qualificationPlayerIds": [],
+          "cleanSheetPlayerIds": [],
+          "roundPoints": 103,
+          "overallPoints": 193,
+          "freeTransfers": 0,
+          "negativeTransfers": 0,
+          "locked": false
+        },
+        "3": {
+          "captain": 248,
+          "vice": 792,
+          "lineup": {
+            "GK": [
+              317
+            ],
+            "DEF": [
+              1035,
+              795,
+              303,
+              139,
+              248
+            ],
+            "MID": [
+              173,
+              1092,
+              792,
+              1158
+            ],
+            "FWD": [
+              804
+            ]
+          },
+          "bench": {
+            "GK": [
+              809
+            ],
+            "DEF": [],
+            "MID": [
+              1597
+            ],
+            "FWD": [
+              855,
+              531
+            ]
+          },
+          "benchOrder": [
+            809,
+            855,
+            531,
+            1597
+          ],
+          "substitutions": [
+            {
+              "out": 531,
+              "in": 855,
+              "isAuto": false
+            },
+            {
+              "out": 855,
+              "in": 248,
+              "isAuto": false
+            }
+          ],
+          "transfers": [
+            {
+              "out": 939,
+              "in": 792,
+              "isNegative": false
+            },
+            {
+              "out": 125,
+              "in": 1092,
+              "isNegative": false
+            },
+            {
+              "out": 1366,
+              "in": 173,
+              "isNegative": false
+            },
+            {
+              "out": 832,
+              "in": 1597,
+              "isNegative": false
+            },
+            {
+              "out": 423,
+              "in": 317,
+              "isNegative": false
+            },
+            {
+              "out": 477,
+              "in": 809,
+              "isNegative": false
+            },
+            {
+              "out": 850,
+              "in": 1035,
+              "isNegative": false
+            },
+            {
+              "out": 500,
+              "in": 804,
+              "isNegative": false
+            },
+            {
+              "out": 38,
+              "in": 531,
+              "isNegative": false
+            },
+            {
+              "out": 542,
+              "in": 795,
+              "isNegative": false
+            },
+            {
+              "out": 1088,
+              "in": 139,
+              "isNegative": false
+            },
+            {
+              "out": 543,
+              "in": 1158,
+              "isNegative": false
+            },
+            {
+              "out": 740,
+              "in": 303,
+              "isNegative": false
+            },
+            {
+              "out": 252,
+              "in": 248,
+              "isNegative": false
+            }
+          ],
+          "captainChanges": [
+            {
+              "out": 139,
+              "in": 531,
+              "type": "captain"
+            },
+            {
+              "out": 531,
+              "in": 804,
+              "type": "captain"
+            },
+            {
+              "out": 804,
+              "in": 855,
+              "type": "captain"
+            }
+          ],
+          "value": 99,
+          "maxCaptain": null,
+          "maxCaptainBooster": null,
+          "twelfthMan": {
+            "playerId": 468,
+            "roundId": 2
+          },
+          "wildCard": 3,
+          "qualification": null,
+          "cleanSheet": null,
+          "qualificationPlayerIds": [],
+          "cleanSheetPlayerIds": [],
+          "roundPoints": 63,
+          "overallPoints": 256,
+          "freeTransfers": null,
+          "negativeTransfers": 0,
+          "locked": false
+        },
+        "4": {
+          "captain": 500,
+          "vice": 501,
+          "lineup": {
+            "GK": [
+              45
+            ],
+            "DEF": [
+              30,
+              467,
+              168
+            ],
+            "MID": [
+              501,
+              173,
+              1092,
+              1133
+            ],
+            "FWD": [
+              500,
+              468,
+              38
+            ]
+          },
+          "bench": {
+            "GK": [
+              809
+            ],
+            "DEF": [
+              248,
+              796
+            ],
+            "MID": [
+              241
+            ],
+            "FWD": []
+          },
+          "benchOrder": [
+            809,
+            248,
+            241,
+            796
+          ],
+          "substitutions": [
+            {
+              "out": 30,
+              "in": 501,
+              "isAuto": false
+            },
+            {
+              "out": 38,
+              "in": 468,
+              "isAuto": false
+            },
+            {
+              "out": 809,
+              "in": 45,
+              "isAuto": false
+            },
+            {
+              "out": 796,
+              "in": 30,
+              "isAuto": false
+            },
+            {
+              "out": 241,
+              "in": 38,
+              "isAuto": false
+            }
+          ],
+          "transfers": [
+            {
+              "out": 317,
+              "in": 45,
+              "isNegative": false
+            },
+            {
+              "out": 531,
+              "in": 500,
+              "isNegative": false
+            },
+            {
+              "out": 792,
+              "in": 501,
+              "isNegative": false
+            },
+            {
+              "out": 1158,
+              "in": 1133,
+              "isNegative": false
+            },
+            {
+              "out": 1597,
+              "in": 435,
+              "isNegative": false
+            },
+            {
+              "out": 139,
+              "in": 463,
+              "isNegative": false
+            },
+            {
+              "out": 303,
+              "in": 1088,
+              "isNegative": false
+            },
+            {
+              "out": 1035,
+              "in": 796,
+              "isNegative": false
+            },
+            {
+              "out": 795,
+              "in": 1963,
+              "isNegative": false
+            },
+            {
+              "out": 804,
+              "in": 38,
+              "isNegative": false
+            },
+            {
+              "out": 855,
+              "in": 468,
+              "isNegative": false
+            },
+            {
+              "out": 463,
+              "in": 30,
+              "isNegative": false
+            },
+            {
+              "out": 435,
+              "in": 241,
+              "isNegative": false
+            },
+            {
+              "out": 1963,
+              "in": 467,
+              "isNegative": false
+            },
+            {
+              "out": 1088,
+              "in": 168,
+              "isNegative": false
+            }
+          ],
+          "captainChanges": [
+            {
+              "out": 241,
+              "in": 173,
+              "type": "captain"
+            },
+            {
+              "out": 173,
+              "in": 796,
+              "type": "captain"
+            },
+            {
+              "out": 467,
+              "in": 501,
+              "type": "vice"
+            },
+            {
+              "out": 796,
+              "in": 500,
+              "type": "captain"
+            }
+          ],
+          "value": 104,
+          "maxCaptain": null,
+          "maxCaptainBooster": null,
+          "twelfthMan": {
+            "playerId": 468,
+            "roundId": 2
+          },
+          "wildCard": 3,
+          "qualification": 4,
+          "cleanSheet": null,
+          "qualificationPlayerIds": [
+            467,
+            168,
+            500,
+            468,
+            501,
+            173,
+            1092,
+            1133
+          ],
+          "cleanSheetPlayerIds": [],
+          "roundPoints": 78,
+          "overallPoints": 334,
+          "freeTransfers": null,
+          "negativeTransfers": 0,
+          "locked": false
+        }
+      },
+      "avatar": "https://play.fifa.com/media/image/gamezone/avatars/WC_2022/0.svg",
+      "level": 10,
+      "overallRank": 7,
+      "roundRank": 10,
+      "overallPoints": 334,
+      "roundPoints": 78
+    },
+    "5361425": {
+      "userName": "Maks66",
+      "rounds": {
+        "1": {
+          "captain": 500,
+          "vice": 939,
+          "lineup": {
+            "GK": [
+              1598
+            ],
+            "DEF": [
+              1088,
+              1009,
+              28,
+              85
+            ],
+            "MID": [
+              936,
+              939,
+              1027
+            ],
+            "FWD": [
+              855,
+              1124,
+              500
+            ]
+          },
+          "bench": {
+            "GK": [
+              1314
+            ],
+            "DEF": [
+              520
+            ],
+            "MID": [
+              1092,
+              1135
+            ],
+            "FWD": []
+          },
+          "benchOrder": [
+            1314,
+            1092,
+            520,
+            1135
+          ],
+          "substitutions": [
+            {
+              "out": 1135,
+              "in": 855,
+              "isAuto": false
+            },
+            {
+              "out": 855,
+              "in": 1135,
+              "isAuto": false
+            },
+            {
+              "out": 1135,
+              "in": 936,
+              "isAuto": false
+            },
+            {
+              "out": 520,
+              "in": 855,
+              "isAuto": false
+            },
+            {
+              "out": 1092,
+              "in": 85,
+              "isAuto": false
+            }
+          ],
+          "transfers": [],
+          "captainChanges": [
+            {
+              "out": 1124,
+              "in": 500,
+              "type": "captain"
+            },
+            {
+              "out": 1124,
+              "in": 939,
+              "type": "vice"
+            }
+          ],
+          "value": 100,
+          "maxCaptain": null,
+          "maxCaptainBooster": null,
+          "twelfthMan": null,
+          "wildCard": null,
+          "qualification": null,
+          "cleanSheet": null,
+          "qualificationPlayerIds": [],
+          "cleanSheetPlayerIds": [],
+          "roundPoints": 95,
+          "overallPoints": 95,
+          "freeTransfers": 0,
+          "negativeTransfers": 0,
+          "locked": false
+        },
+        "2": {
+          "captain": 500,
+          "vice": 468,
+          "lineup": {
+            "GK": [
+              506
+            ],
+            "DEF": [
+              2053,
+              1088,
+              165
+            ],
+            "MID": [
+              936,
+              939,
+              937,
+              1601
+            ],
+            "FWD": [
+              855,
+              468,
+              500
+            ]
+          },
+          "bench": {
+            "GK": [
+              1314
+            ],
+            "DEF": [
+              28,
+              496
+            ],
+            "MID": [
+              1366
+            ],
+            "FWD": []
+          },
+          "benchOrder": [
+            1314,
+            28,
+            1366,
+            496
+          ],
+          "substitutions": [
+            {
+              "out": 1366,
+              "in": 939,
+              "isAuto": false
+            },
+            {
+              "out": 28,
+              "in": 855,
+              "isAuto": false
+            },
+            {
+              "out": 496,
+              "in": 936,
+              "isAuto": false
+            }
+          ],
+          "transfers": [
+            {
+              "out": 1124,
+              "in": 468,
+              "isNegative": false
+            },
+            {
+              "out": 1092,
+              "in": 1366,
+              "isNegative": false
+            },
+            {
+              "out": 85,
+              "in": 165,
+              "isNegative": false
+            },
+            {
+              "out": 520,
+              "in": 2053,
+              "isNegative": false
+            },
+            {
+              "out": 1027,
+              "in": 1601,
+              "isNegative": false
+            },
+            {
+              "out": 1009,
+              "in": 496,
+              "isNegative": false
+            },
+            {
+              "out": 1135,
+              "in": 937,
+              "isNegative": false
+            },
+            {
+              "out": 1598,
+              "in": 506,
+              "isNegative": false
+            }
+          ],
+          "captainChanges": [],
+          "value": 100,
+          "maxCaptain": null,
+          "maxCaptainBooster": null,
+          "twelfthMan": null,
+          "wildCard": 2,
+          "qualification": null,
+          "cleanSheet": null,
+          "qualificationPlayerIds": [],
+          "cleanSheetPlayerIds": [],
+          "roundPoints": 97,
+          "overallPoints": 192,
+          "freeTransfers": null,
+          "negativeTransfers": 0,
+          "locked": false
+        },
+        "3": {
+          "captain": 500,
+          "vice": 855,
+          "lineup": {
+            "GK": [
+              506
+            ],
+            "DEF": [
+              28,
+              1088,
+              796,
+              165
+            ],
+            "MID": [
+              792,
+              937,
+              939
+            ],
+            "FWD": [
+              855,
+              500,
+              468
+            ]
+          },
+          "bench": {
+            "GK": [
+              1314
+            ],
+            "DEF": [
+              2053
+            ],
+            "MID": [
+              1601,
+              2020
+            ],
+            "FWD": []
+          },
+          "benchOrder": [
+            1314,
+            2053,
+            1601,
+            2020
+          ],
+          "substitutions": [
+            {
+              "out": 2020,
+              "in": 468,
+              "isAuto": false
+            },
+            {
+              "out": 1601,
+              "in": 939,
+              "isAuto": false
+            },
+            {
+              "out": 2053,
+              "in": 28,
+              "isAuto": false
+            }
+          ],
+          "transfers": [
+            {
+              "out": 496,
+              "in": 796,
+              "isNegative": false
+            },
+            {
+              "out": 1366,
+              "in": 792,
+              "isNegative": false
+            },
+            {
+              "out": 936,
+              "in": 2020,
+              "isNegative": true
+            }
+          ],
+          "captainChanges": [],
+          "value": 98,
+          "maxCaptain": null,
+          "maxCaptainBooster": null,
+          "twelfthMan": {
+            "playerId": 804,
+            "roundId": 3
+          },
+          "wildCard": 2,
+          "qualification": null,
+          "cleanSheet": null,
+          "qualificationPlayerIds": [],
+          "cleanSheetPlayerIds": [],
+          "roundPoints": 62,
+          "overallPoints": 254,
+          "freeTransfers": 0,
+          "negativeTransfers": 0,
+          "locked": false
+        },
+        "4": {
+          "captain": 38,
+          "vice": 500,
+          "lineup": {
+            "GK": [
+              235
+            ],
+            "DEF": [
+              165,
+              525,
+              542,
+              461
+            ],
+            "MID": [
+              1092,
+              1133,
+              491
+            ],
+            "FWD": [
+              500,
+              468,
+              38
+            ]
+          },
+          "bench": {
+            "GK": [
+              423
+            ],
+            "DEF": [
+              1318
+            ],
+            "MID": [
+              56,
+              173
+            ],
+            "FWD": []
+          },
+          "benchOrder": [
+            423,
+            1318,
+            56,
+            173
+          ],
+          "substitutions": [
+            {
+              "out": 173,
+              "in": 38,
+              "isAuto": false
+            }
+          ],
+          "transfers": [
+            {
+              "out": 506,
+              "in": 423,
+              "isNegative": false
+            },
+            {
+              "out": 1314,
+              "in": 235,
+              "isNegative": false
+            },
+            {
+              "out": 2053,
+              "in": 1318,
+              "isNegative": false
+            },
+            {
+              "out": 1088,
+              "in": 525,
+              "isNegative": false
+            },
+            {
+              "out": 796,
+              "in": 542,
+              "isNegative": false
+            },
+            {
+              "out": 165,
+              "in": 461,
+              "isNegative": false
+            },
+            {
+              "out": 28,
+              "in": 164,
+              "isNegative": false
+            },
+            {
+              "out": 2020,
+              "in": 1133,
+              "isNegative": false
+            },
+            {
+              "out": 792,
+              "in": 173,
+              "isNegative": false
+            },
+            {
+              "out": 937,
+              "in": 491,
+              "isNegative": false
+            },
+            {
+              "out": 1601,
+              "in": 56,
+              "isNegative": false
+            },
+            {
+              "out": 939,
+              "in": 256,
+              "isNegative": false
+            },
+            {
+              "out": 855,
+              "in": 38,
+              "isNegative": false
+            },
+            {
+              "out": 256,
+              "in": 1092,
+              "isNegative": false
+            },
+            {
+              "out": 164,
+              "in": 165,
+              "isNegative": false
+            }
+          ],
+          "captainChanges": [
+            {
+              "out": 500,
+              "in": 38,
+              "type": "captain"
+            },
+            {
+              "out": 1092,
+              "in": 500,
+              "type": "vice"
+            }
+          ],
+          "value": 104,
+          "maxCaptain": null,
+          "maxCaptainBooster": null,
+          "twelfthMan": {
+            "playerId": 804,
+            "roundId": 3
+          },
+          "wildCard": 2,
+          "qualification": null,
+          "cleanSheet": 4,
+          "qualificationPlayerIds": [],
+          "cleanSheetPlayerIds": [
+            165,
+            525,
+            542,
+            461,
+            491
+          ],
+          "roundPoints": 73,
+          "overallPoints": 327,
+          "freeTransfers": null,
+          "negativeTransfers": 0,
+          "locked": false
+        }
+      },
+      "avatar": "https://play.fifa.com/media/image/gamezone/avatars/WC_2026/6.svg",
+      "level": 6,
+      "overallRank": 8,
+      "roundRank": 14,
+      "overallPoints": 327,
+      "roundPoints": 73
+    },
+    "4497197": {
+      "userName": "Pocik",
+      "rounds": {
+        "1": {
+          "captain": 500,
+          "vice": 517,
+          "lineup": {
+            "GK": [
+              757
+            ],
+            "DEF": [
+              1088,
+              1018,
+              542,
+              916
+            ],
+            "MID": [
+              939,
+              1366,
+              517,
+              1216
+            ],
+            "FWD": [
+              500,
+              468
+            ]
+          },
+          "bench": {
+            "GK": [
+              709
+            ],
+            "DEF": [
+              1529
+            ],
+            "MID": [
+              1092
+            ],
+            "FWD": [
+              151
+            ]
+          },
+          "benchOrder": [
+            709,
+            1529,
+            151,
+            1092
+          ],
+          "substitutions": [
+            {
+              "out": 939,
+              "in": 1092,
+              "isAuto": false
+            },
+            {
+              "out": 1529,
+              "in": 500,
+              "isAuto": false
+            },
+            {
+              "out": 1092,
+              "in": 939,
+              "isAuto": false
+            }
+          ],
+          "transfers": [],
+          "captainChanges": [
+            {
+              "out": 916,
+              "in": 1088,
+              "type": "vice"
+            },
+            {
+              "out": 757,
+              "in": 1092,
+              "type": "captain"
+            },
+            {
+              "out": 939,
+              "in": 500,
+              "type": "captain"
+            },
+            {
+              "out": 1088,
+              "in": 517,
+              "type": "vice"
+            }
+          ],
+          "value": 100,
+          "maxCaptain": null,
+          "maxCaptainBooster": null,
+          "twelfthMan": null,
+          "wildCard": null,
+          "qualification": null,
+          "cleanSheet": null,
+          "qualificationPlayerIds": [],
+          "cleanSheetPlayerIds": [],
+          "roundPoints": 87,
+          "overallPoints": 87,
+          "freeTransfers": 0,
+          "negativeTransfers": 0,
+          "locked": false
+        },
+        "2": {
+          "captain": 468,
+          "vice": 225,
+          "lineup": {
+            "GK": [
+              757
+            ],
+            "DEF": [
+              220,
+              542,
+              225
+            ],
+            "MID": [
+              491,
+              939,
+              1366,
+              517,
+              1092
+            ],
+            "FWD": [
+              468,
+              413
+            ]
+          },
+          "bench": {
+            "GK": [
+              423
+            ],
+            "DEF": [
+              404,
+              221
+            ],
+            "MID": [],
+            "FWD": [
+              500
+            ]
+          },
+          "benchOrder": [
+            423,
+            500,
+            404,
+            221
+          ],
+          "substitutions": [
+            {
+              "out": 404,
+              "in": 939,
+              "isAuto": false
+            },
+            {
+              "out": 221,
+              "in": 491,
+              "isAuto": false
+            }
+          ],
+          "transfers": [
+            {
+              "out": 151,
+              "in": 413,
+              "isNegative": false
+            },
+            {
+              "out": 1529,
+              "in": 220,
+              "isNegative": false
+            },
+            {
+              "out": 1018,
+              "in": 404,
+              "isNegative": true
+            },
+            {
+              "out": 709,
+              "in": 423,
+              "isNegative": true
+            },
+            {
+              "out": 916,
+              "in": 225,
+              "isNegative": true
+            },
+            {
+              "out": 1088,
+              "in": 221,
+              "isNegative": true
+            },
+            {
+              "out": 1216,
+              "in": 491,
+              "isNegative": true
+            }
+          ],
+          "captainChanges": [
+            {
+              "out": 757,
+              "in": 1366,
+              "type": "captain"
+            },
+            {
+              "out": 1366,
+              "in": 939,
+              "type": "captain"
+            },
+            {
+              "out": 939,
+              "in": 468,
+              "type": "captain"
+            }
+          ],
+          "value": 100,
+          "maxCaptain": null,
+          "maxCaptainBooster": null,
+          "twelfthMan": null,
+          "wildCard": null,
+          "qualification": null,
+          "cleanSheet": null,
+          "qualificationPlayerIds": [],
+          "cleanSheetPlayerIds": [],
+          "roundPoints": 46,
+          "overallPoints": 133,
+          "freeTransfers": 0,
+          "negativeTransfers": 0,
+          "locked": false
+        },
+        "3": {
+          "captain": 173,
+          "vice": 114,
+          "lineup": {
+            "GK": [
+              317
+            ],
+            "DEF": [
+              121,
+              2013,
+              114
+            ],
+            "MID": [
+              1696,
+              792,
+              173,
+              812
+            ],
+            "FWD": [
+              468,
+              804,
+              500
+            ]
+          },
+          "bench": {
+            "GK": [
+              809
+            ],
+            "DEF": [
+              300,
+              304
+            ],
+            "MID": [
+              2020
+            ],
+            "FWD": []
+          },
+          "benchOrder": [
+            809,
+            2020,
+            300,
+            304
+          ],
+          "substitutions": [
+            {
+              "out": 304,
+              "in": 1696,
+              "isAuto": false
+            },
+            {
+              "out": 300,
+              "in": 121,
+              "isAuto": false
+            },
+            {
+              "out": 2020,
+              "in": 500,
+              "isAuto": false
+            }
+          ],
+          "transfers": [
+            {
+              "out": 757,
+              "in": 317,
+              "isNegative": false
+            },
+            {
+              "out": 423,
+              "in": 809,
+              "isNegative": false
+            },
+            {
+              "out": 413,
+              "in": 804,
+              "isNegative": false
+            },
+            {
+              "out": 939,
+              "in": 792,
+              "isNegative": false
+            },
+            {
+              "out": 1092,
+              "in": 2020,
+              "isNegative": false
+            },
+            {
+              "out": 517,
+              "in": 812,
+              "isNegative": false
+            },
+            {
+              "out": 1366,
+              "in": 173,
+              "isNegative": false
+            },
+            {
+              "out": 221,
+              "in": 300,
+              "isNegative": false
+            },
+            {
+              "out": 404,
+              "in": 304,
+              "isNegative": false
+            },
+            {
+              "out": 220,
+              "in": 2013,
+              "isNegative": false
+            },
+            {
+              "out": 542,
+              "in": 121,
+              "isNegative": false
+            },
+            {
+              "out": 225,
+              "in": 114,
+              "isNegative": false
+            },
+            {
+              "out": 491,
+              "in": 1696,
+              "isNegative": false
+            }
+          ],
+          "captainChanges": [],
+          "value": 95,
+          "maxCaptain": null,
+          "maxCaptainBooster": null,
+          "twelfthMan": null,
+          "wildCard": 3,
+          "qualification": null,
+          "cleanSheet": null,
+          "qualificationPlayerIds": [],
+          "cleanSheetPlayerIds": [],
+          "roundPoints": 77,
+          "overallPoints": 210,
+          "freeTransfers": null,
+          "negativeTransfers": 0,
+          "locked": false
+        },
+        "4": {
+          "captain": 500,
+          "vice": 1086,
+          "lineup": {
+            "GK": [
+              757
+            ],
+            "DEF": [
+              494,
+              1320,
+              1088,
+              1086
+            ],
+            "MID": [
+              501,
+              266,
+              1361
+            ],
+            "FWD": [
+              500,
+              468,
+              38
+            ]
+          },
+          "bench": {
+            "GK": [
+              45
+            ],
+            "DEF": [
+              463
+            ],
+            "MID": [
+              491,
+              173
+            ],
+            "FWD": []
+          },
+          "benchOrder": [
+            45,
+            463,
+            491,
+            173
+          ],
+          "substitutions": [
+            {
+              "out": 468,
+              "in": 500,
+              "isAuto": false
+            },
+            {
+              "out": 1320,
+              "in": 494,
+              "isAuto": false
+            },
+            {
+              "out": 38,
+              "in": 468,
+              "isAuto": false
+            },
+            {
+              "out": 491,
+              "in": 38,
+              "isAuto": false
+            },
+            {
+              "out": 463,
+              "in": 1320,
+              "isAuto": false
+            },
+            {
+              "out": 173,
+              "in": 266,
+              "isAuto": false
+            }
+          ],
+          "transfers": [
+            {
+              "out": 317,
+              "in": 45,
+              "isNegative": false
+            },
+            {
+              "out": 809,
+              "in": 757,
+              "isNegative": false
+            },
+            {
+              "out": 300,
+              "in": 1320,
+              "isNegative": false
+            },
+            {
+              "out": 304,
+              "in": 463,
+              "isNegative": false
+            },
+            {
+              "out": 804,
+              "in": 38,
+              "isNegative": false
+            },
+            {
+              "out": 792,
+              "in": 501,
+              "isNegative": false
+            },
+            {
+              "out": 812,
+              "in": 491,
+              "isNegative": false
+            },
+            {
+              "out": 2020,
+              "in": 1361,
+              "isNegative": false
+            },
+            {
+              "out": 1696,
+              "in": 266,
+              "isNegative": false
+            },
+            {
+              "out": 121,
+              "in": 494,
+              "isNegative": false
+            },
+            {
+              "out": 114,
+              "in": 1086,
+              "isNegative": false
+            },
+            {
+              "out": 2013,
+              "in": 1088,
+              "isNegative": false
+            }
+          ],
+          "captainChanges": [
+            {
+              "out": 173,
+              "in": 500,
+              "type": "captain"
+            }
+          ],
+          "value": 105,
+          "maxCaptain": null,
+          "maxCaptainBooster": null,
+          "twelfthMan": null,
+          "wildCard": 3,
+          "qualification": 4,
+          "cleanSheet": null,
+          "qualificationPlayerIds": [
+            757,
+            494,
+            1088,
+            1086,
+            500,
+            468,
+            501,
+            1361
+          ],
+          "cleanSheetPlayerIds": [],
+          "roundPoints": 104,
+          "overallPoints": 314,
+          "freeTransfers": null,
+          "negativeTransfers": 0,
+          "locked": false
+        }
+      },
+      "avatar": "https://play.fifa.com/media/image/gamezone/avatars/WC_2026/2.svg",
+      "level": 2,
+      "overallRank": 9,
+      "roundRank": 3,
+      "overallPoints": 314,
+      "roundPoints": 104
+    },
+    "3104284": {
+      "userName": "artemovie",
+      "rounds": {
+        "1": {
+          "captain": 855,
+          "vice": 543,
+          "lineup": {
+            "GK": [
+              235
+            ],
+            "DEF": [
+              1086,
+              916,
+              542
+            ],
+            "MID": [
+              270,
+              529,
+              543,
+              939
+            ],
+            "FWD": [
+              804,
+              500,
+              855
+            ]
+          },
+          "bench": {
+            "GK": [
+              132
+            ],
+            "DEF": [
+              740,
+              847
+            ],
+            "MID": [
+              1216
+            ],
+            "FWD": []
+          },
+          "benchOrder": [
+            132,
+            740,
+            1216,
+            847
+          ],
+          "substitutions": [],
+          "transfers": [],
+          "captainChanges": [],
+          "value": 100,
+          "maxCaptain": null,
+          "maxCaptainBooster": null,
+          "twelfthMan": null,
+          "wildCard": null,
+          "qualification": null,
+          "cleanSheet": null,
+          "qualificationPlayerIds": [],
+          "cleanSheetPlayerIds": [],
+          "roundPoints": 83,
+          "overallPoints": 83,
+          "freeTransfers": 0,
+          "negativeTransfers": 0,
+          "locked": false
+        },
+        "2": {
+          "captain": 855,
+          "vice": 543,
+          "lineup": {
+            "GK": [
+              132
+            ],
+            "DEF": [
+              1086,
+              916,
+              542
+            ],
+            "MID": [
+              270,
+              1114,
+              543,
+              939
+            ],
+            "FWD": [
+              1520,
+              500,
+              855
+            ]
+          },
+          "bench": {
+            "GK": [
+              235
+            ],
+            "DEF": [
+              740,
+              847
+            ],
+            "MID": [
+              1216
+            ],
+            "FWD": []
+          },
+          "benchOrder": [
+            235,
+            740,
+            847,
+            1216
+          ],
+          "substitutions": [
+            {
+              "out": 132,
+              "in": 235,
+              "isAuto": true
+            }
+          ],
+          "transfers": [
+            {
+              "out": 529,
+              "in": 1114,
+              "isNegative": false
+            },
+            {
+              "out": 804,
+              "in": 1520,
+              "isNegative": false
+            }
+          ],
+          "captainChanges": [],
+          "value": 98,
+          "maxCaptain": null,
+          "maxCaptainBooster": null,
+          "twelfthMan": null,
+          "wildCard": null,
+          "qualification": null,
+          "cleanSheet": null,
+          "qualificationPlayerIds": [],
+          "cleanSheetPlayerIds": [],
+          "roundPoints": 95,
+          "overallPoints": 178,
+          "freeTransfers": 0,
+          "negativeTransfers": 0,
+          "locked": false
+        },
+        "3": {
+          "captain": 500,
+          "vice": 855,
+          "lineup": {
+            "GK": [
+              235
+            ],
+            "DEF": [
+              740,
+              916,
+              542
+            ],
+            "MID": [
+              270,
+              1114,
+              1597,
+              939
+            ],
+            "FWD": [
+              531,
+              500,
+              855
+            ]
+          },
+          "bench": {
+            "GK": [
+              132
+            ],
+            "DEF": [
+              1086,
+              847
+            ],
+            "MID": [
+              1216
+            ],
+            "FWD": []
+          },
+          "benchOrder": [
+            132,
+            1086,
+            847,
+            1216
+          ],
+          "substitutions": [
+            {
+              "out": 740,
+              "in": 1086,
+              "isAuto": true
+            }
+          ],
+          "transfers": [
+            {
+              "out": 1520,
+              "in": 531,
+              "isNegative": false
+            },
+            {
+              "out": 543,
+              "in": 1597,
+              "isNegative": false
+            }
+          ],
+          "captainChanges": [],
+          "value": 99,
+          "maxCaptain": null,
+          "maxCaptainBooster": null,
+          "twelfthMan": null,
+          "wildCard": null,
+          "qualification": null,
+          "cleanSheet": null,
+          "qualificationPlayerIds": [],
+          "cleanSheetPlayerIds": [],
+          "roundPoints": 45,
+          "overallPoints": 223,
+          "freeTransfers": 0,
+          "negativeTransfers": 0,
+          "locked": false
+        },
+        "4": {
+          "captain": 500,
+          "vice": 45,
+          "lineup": {
+            "GK": [
+              45
+            ],
+            "DEF": [
+              1086,
+              1088,
+              542
+            ],
+            "MID": [
+              270,
+              501,
+              491,
+              173
+            ],
+            "FWD": [
+              38,
+              500,
+              855
+            ]
+          },
+          "bench": {
+            "GK": [
+              235
+            ],
+            "DEF": [
+              740,
+              847
+            ],
+            "MID": [
+              482
+            ],
+            "FWD": []
+          },
+          "benchOrder": [
+            235,
+            740,
+            847,
+            482
+          ],
+          "substitutions": [],
+          "transfers": [
+            {
+              "out": 531,
+              "in": 38,
+              "isNegative": false
+            },
+            {
+              "out": 1114,
+              "in": 501,
+              "isNegative": false
+            },
+            {
+              "out": 1216,
+              "in": 173,
+              "isNegative": false
+            },
+            {
+              "out": 132,
+              "in": 45,
+              "isNegative": false
+            },
+            {
+              "out": 1597,
+              "in": 241,
+              "isNegative": false
+            },
+            {
+              "out": 939,
+              "in": 1158,
+              "isNegative": false
+            },
+            {
+              "out": 916,
+              "in": 1088,
+              "isNegative": false
+            },
+            {
+              "out": 241,
+              "in": 491,
+              "isNegative": false
+            },
+            {
+              "out": 1158,
+              "in": 482,
+              "isNegative": false
+            }
+          ],
+          "captainChanges": [],
+          "value": 104,
+          "maxCaptain": null,
+          "maxCaptainBooster": null,
+          "twelfthMan": null,
+          "wildCard": null,
+          "qualification": null,
+          "cleanSheet": 4,
+          "qualificationPlayerIds": [],
+          "cleanSheetPlayerIds": [
+            542,
+            491,
+            173
+          ],
+          "roundPoints": 74,
+          "overallPoints": 297,
+          "freeTransfers": null,
+          "negativeTransfers": 0,
+          "locked": false
+        }
+      },
+      "avatar": "https://play.fifa.com/media/image/gamezone/avatars/WC_2026/9.svg",
+      "level": 9,
+      "overallRank": 10,
+      "roundRank": 12,
+      "overallPoints": 297,
+      "roundPoints": 74
+    },
+    "2468665": {
+      "userName": "bucherino",
+      "rounds": {
+        "1": {
+          "captain": 468,
+          "vice": 38,
+          "lineup": {
+            "GK": [
+              506
+            ],
+            "DEF": [
+              526,
+              1570,
+              1536
+            ],
+            "MID": [
+              939,
+              517,
+              1274,
+              1027
+            ],
+            "FWD": [
+              333,
+              468,
+              38
+            ]
+          },
+          "bench": {
+            "GK": [
+              809
+            ],
+            "DEF": [
+              523,
+              1429
+            ],
+            "MID": [
+              1135
+            ],
+            "FWD": []
+          },
+          "benchOrder": [
+            809,
+            523,
+            1135,
+            1429
+          ],
+          "substitutions": [
+            {
+              "out": 1135,
+              "in": 517,
+              "isAuto": false
+            },
+            {
+              "out": 809,
+              "in": 506,
+              "isAuto": false
+            },
+            {
+              "out": 523,
+              "in": 1570,
+              "isAuto": false
+            },
+            {
+              "out": 1429,
+              "in": 1536,
+              "isAuto": false
+            }
+          ],
+          "transfers": [],
+          "captainChanges": [],
+          "value": 100,
+          "maxCaptain": null,
+          "maxCaptainBooster": null,
+          "twelfthMan": null,
+          "wildCard": null,
+          "qualification": null,
+          "cleanSheet": null,
+          "qualificationPlayerIds": [],
+          "cleanSheetPlayerIds": [],
+          "roundPoints": 75,
+          "overallPoints": 75,
+          "freeTransfers": 0,
+          "negativeTransfers": 0,
+          "locked": false
+        },
+        "2": {
+          "captain": 468,
+          "vice": 38,
+          "lineup": {
+            "GK": [
+              809
+            ],
+            "DEF": [
+              1570,
+              1429,
+              1536
+            ],
+            "MID": [
+              517,
+              1135,
+              939,
+              1027
+            ],
+            "FWD": [
+              1267,
+              468,
+              38
+            ]
+          },
+          "bench": {
+            "GK": [
+              506
+            ],
+            "DEF": [
+              526,
+              525
+            ],
+            "MID": [
+              1274
+            ],
+            "FWD": []
+          },
+          "benchOrder": [
+            506,
+            526,
+            525,
+            1274
+          ],
+          "substitutions": [
+            {
+              "out": 1274,
+              "in": 939,
+              "isAuto": false
+            },
+            {
+              "out": 526,
+              "in": 1570,
+              "isAuto": false
+            },
+            {
+              "out": 1429,
+              "in": 1536,
+              "isAuto": false
+            },
+            {
+              "out": 525,
+              "in": 1429,
+              "isAuto": false
+            }
+          ],
+          "transfers": [
+            {
+              "out": 523,
+              "in": 525,
+              "isNegative": false
+            },
+            {
+              "out": 333,
+              "in": 1267,
+              "isNegative": false
+            }
+          ],
+          "captainChanges": [],
+          "value": 99,
+          "maxCaptain": null,
+          "maxCaptainBooster": null,
+          "twelfthMan": {
+            "playerId": 855,
+            "roundId": 2
+          },
+          "wildCard": null,
+          "qualification": null,
+          "cleanSheet": null,
+          "qualificationPlayerIds": [],
+          "cleanSheetPlayerIds": [],
+          "roundPoints": 84,
+          "overallPoints": 159,
+          "freeTransfers": 0,
+          "negativeTransfers": 0,
+          "locked": false
+        },
+        "3": {
+          "captain": 468,
+          "vice": 38,
+          "lineup": {
+            "GK": [
+              809
+            ],
+            "DEF": [
+              1570,
+              1536,
+              1429
+            ],
+            "MID": [
+              517,
+              939,
+              792,
+              1027
+            ],
+            "FWD": [
+              531,
+              468,
+              38
+            ]
+          },
+          "bench": {
+            "GK": [
+              506
+            ],
+            "DEF": [
+              525,
+              526
+            ],
+            "MID": [
+              1135
+            ],
+            "FWD": []
+          },
+          "benchOrder": [
+            506,
+            1135,
+            525,
+            526
+          ],
+          "substitutions": [
+            {
+              "out": 1135,
+              "in": 939,
+              "isAuto": false
+            },
+            {
+              "out": 525,
+              "in": 1536,
+              "isAuto": false
+            }
+          ],
+          "transfers": [
+            {
+              "out": 1274,
+              "in": 792,
+              "isNegative": false
+            },
+            {
+              "out": 1267,
+              "in": 531,
+              "isNegative": false
+            }
+          ],
+          "captainChanges": [],
+          "value": 99,
+          "maxCaptain": null,
+          "maxCaptainBooster": null,
+          "twelfthMan": {
+            "playerId": 855,
+            "roundId": 2
+          },
+          "wildCard": null,
+          "qualification": null,
+          "cleanSheet": null,
+          "qualificationPlayerIds": [],
+          "cleanSheetPlayerIds": [],
+          "roundPoints": 52,
+          "overallPoints": 211,
+          "freeTransfers": 0,
+          "negativeTransfers": 0,
+          "locked": false
+        },
+        "4": {
+          "captain": 468,
+          "vice": 38,
+          "lineup": {
+            "GK": [
+              1099
+            ],
+            "DEF": [
+              916,
+              1088,
+              1429,
+              248,
+              1086
+            ],
+            "MID": [
+              517,
+              1133,
+              939
+            ],
+            "FWD": [
+              468,
+              38
+            ]
+          },
+          "bench": {
+            "GK": [
+              506
+            ],
+            "DEF": [],
+            "MID": [
+              792,
+              173
+            ],
+            "FWD": [
+              531
+            ]
+          },
+          "benchOrder": [
+            506,
+            531,
+            792,
+            173
+          ],
+          "substitutions": [
+            {
+              "out": 531,
+              "in": 248,
+              "isAuto": false
+            },
+            {
+              "out": 173,
+              "in": 939,
+              "isAuto": false
+            },
+            {
+              "out": 792,
+              "in": 1086,
+              "isAuto": false
+            }
+          ],
+          "transfers": [
+            {
+              "out": 809,
+              "in": 1099,
+              "isNegative": false
+            },
+            {
+              "out": 526,
+              "in": 1086,
+              "isNegative": false
+            },
+            {
+              "out": 1536,
+              "in": 248,
+              "isNegative": false
+            },
+            {
+              "out": 1570,
+              "in": 916,
+              "isNegative": false
+            },
+            {
+              "out": 525,
+              "in": 1088,
+              "isNegative": false
+            },
+            {
+              "out": 1027,
+              "in": 173,
+              "isNegative": false
+            },
+            {
+              "out": 1135,
+              "in": 1133,
+              "isNegative": false
+            }
+          ],
+          "captainChanges": [],
+          "value": 103,
+          "maxCaptain": null,
+          "maxCaptainBooster": null,
+          "twelfthMan": {
+            "playerId": 855,
+            "roundId": 2
+          },
+          "wildCard": null,
+          "qualification": null,
+          "cleanSheet": null,
+          "qualificationPlayerIds": [],
+          "cleanSheetPlayerIds": [],
+          "roundPoints": 80,
+          "overallPoints": 291,
+          "freeTransfers": null,
+          "negativeTransfers": 0,
+          "locked": false
+        }
+      },
+      "avatar": "https://play.fifa.com/media/image/gamezone/avatars/WC_2026/10.svg",
+      "level": 10,
+      "overallRank": 11,
+      "roundRank": 9,
+      "overallPoints": 291,
+      "roundPoints": 80
+    },
+    "4916573": {
+      "userName": "SRJ Team",
+      "rounds": {
+        "1": {
+          "captain": 1600,
+          "vice": 543,
+          "lineup": {
+            "GK": [
+              508
+            ],
+            "DEF": [
+              916,
+              795,
+              542,
+              1088
+            ],
+            "MID": [
+              543,
+              1106,
+              1600,
+              939,
+              1366
+            ],
+            "FWD": [
+              500
+            ]
+          },
+          "bench": {
+            "GK": [
+              1098
+            ],
+            "DEF": [
+              496
+            ],
+            "MID": [],
+            "FWD": [
+              923,
+              1209
+            ]
+          },
+          "benchOrder": [
+            1098,
+            496,
+            923,
+            1209
+          ],
+          "substitutions": [
+            {
+              "out": 1098,
+              "in": 508,
+              "isAuto": false
+            }
+          ],
+          "transfers": [],
+          "captainChanges": [
+            {
+              "out": 500,
+              "in": 1366,
+              "type": "captain"
+            },
+            {
+              "out": 939,
+              "in": 1600,
+              "type": "vice"
+            },
+            {
+              "out": 1600,
+              "in": 543,
+              "type": "vice"
+            },
+            {
+              "out": 1366,
+              "in": 1600,
+              "type": "captain"
+            }
+          ],
+          "value": 100,
+          "maxCaptain": null,
+          "maxCaptainBooster": null,
+          "twelfthMan": null,
+          "wildCard": null,
+          "qualification": null,
+          "cleanSheet": null,
+          "qualificationPlayerIds": [],
+          "cleanSheetPlayerIds": [],
+          "roundPoints": 62,
+          "overallPoints": 62,
+          "freeTransfers": 0,
+          "negativeTransfers": 0,
+          "locked": false
+        },
+        "2": {
+          "captain": 500,
+          "vice": 939,
+          "lineup": {
+            "GK": [
+              506
+            ],
+            "DEF": [
+              916,
+              795,
+              542,
+              1088
+            ],
+            "MID": [
+              543,
+              1106,
+              1600,
+              939,
+              1366
+            ],
+            "FWD": [
+              500
+            ]
+          },
+          "bench": {
+            "GK": [
+              859
+            ],
+            "DEF": [
+              496
+            ],
+            "MID": [],
+            "FWD": [
+              923,
+              1209
+            ]
+          },
+          "benchOrder": [
+            859,
+            496,
+            923,
+            1209
+          ],
+          "substitutions": [],
+          "transfers": [
+            {
+              "out": 1098,
+              "in": 506,
+              "isNegative": false
+            },
+            {
+              "out": 508,
+              "in": 859,
+              "isNegative": false
+            }
+          ],
+          "captainChanges": [],
+          "value": 99,
+          "maxCaptain": null,
+          "maxCaptainBooster": null,
+          "twelfthMan": null,
+          "wildCard": null,
+          "qualification": null,
+          "cleanSheet": null,
+          "qualificationPlayerIds": [],
+          "cleanSheetPlayerIds": [],
+          "roundPoints": 83,
+          "overallPoints": 145,
+          "freeTransfers": 0,
+          "negativeTransfers": 0,
+          "locked": false
+        },
+        "3": {
+          "captain": 500,
+          "vice": 939,
+          "lineup": {
+            "GK": [
+              506
+            ],
+            "DEF": [
+              916,
+              795,
+              542,
+              1088
+            ],
+            "MID": [
+              543,
+              1600,
+              939,
+              2044
+            ],
+            "FWD": [
+              500,
+              38
+            ]
+          },
+          "bench": {
+            "GK": [
+              859
+            ],
+            "DEF": [
+              496
+            ],
+            "MID": [
+              1106
+            ],
+            "FWD": [
+              1209
+            ]
+          },
+          "benchOrder": [
+            859,
+            496,
+            1106,
+            1209
+          ],
+          "substitutions": [],
+          "transfers": [
+            {
+              "out": 923,
+              "in": 38,
+              "isNegative": false
+            },
+            {
+              "out": 1366,
+              "in": 2044,
+              "isNegative": false
+            }
+          ],
+          "captainChanges": [],
+          "value": 99,
+          "maxCaptain": 3,
+          "maxCaptainBooster": {
+            "playerId": 500,
+            "roundId": 3
+          },
+          "twelfthMan": null,
+          "wildCard": null,
+          "qualification": null,
+          "cleanSheet": null,
+          "qualificationPlayerIds": [],
+          "cleanSheetPlayerIds": [],
+          "roundPoints": 63,
+          "overallPoints": 208,
+          "freeTransfers": 0,
+          "negativeTransfers": 0,
+          "locked": false
+        },
+        "4": {
+          "captain": 500,
+          "vice": 173,
+          "lineup": {
+            "GK": [
+              1099
+            ],
+            "DEF": [
+              916,
+              1320,
+              1088,
+              168
+            ],
+            "MID": [
+              939,
+              173,
+              1361
+            ],
+            "FWD": [
+              500,
+              38,
+              1094
+            ]
+          },
+          "bench": {
+            "GK": [
+              1569
+            ],
+            "DEF": [
+              1429
+            ],
+            "MID": [
+              1600,
+              543
+            ],
+            "FWD": []
+          },
+          "benchOrder": [
+            1569,
+            1429,
+            1600,
+            543
+          ],
+          "substitutions": [
+            {
+              "out": 1600,
+              "in": 1094,
+              "isAuto": false
+            }
+          ],
+          "transfers": [
+            {
+              "out": 506,
+              "in": 1099,
+              "isNegative": false
+            },
+            {
+              "out": 859,
+              "in": 1569,
+              "isNegative": false
+            },
+            {
+              "out": 795,
+              "in": 168,
+              "isNegative": false
+            },
+            {
+              "out": 542,
+              "in": 1320,
+              "isNegative": false
+            },
+            {
+              "out": 496,
+              "in": 921,
+              "isNegative": false
+            },
+            {
+              "out": 2044,
+              "in": 1361,
+              "isNegative": false
+            },
+            {
+              "out": 1106,
+              "in": 517,
+              "isNegative": false
+            },
+            {
+              "out": 1209,
+              "in": 1338,
+              "isNegative": false
+            },
+            {
+              "out": 939,
+              "in": 173,
+              "isNegative": false
+            },
+            {
+              "out": 517,
+              "in": 939,
+              "isNegative": false
+            },
+            {
+              "out": 921,
+              "in": 1429,
+              "isNegative": false
+            },
+            {
+              "out": 1338,
+              "in": 1094,
+              "isNegative": false
+            }
+          ],
+          "captainChanges": [],
+          "value": 103,
+          "maxCaptain": 3,
+          "maxCaptainBooster": {
+            "playerId": 500,
+            "roundId": 3
+          },
+          "twelfthMan": null,
+          "wildCard": null,
+          "qualification": null,
+          "cleanSheet": null,
+          "qualificationPlayerIds": [],
+          "cleanSheetPlayerIds": [],
+          "roundPoints": 77,
+          "overallPoints": 285,
+          "freeTransfers": null,
+          "negativeTransfers": 0,
+          "locked": false
+        }
+      },
+      "avatar": "https://play.fifa.com/media/image/gamezone/avatars/WC_2026/2.svg",
+      "level": 2,
+      "overallRank": 12,
+      "roundRank": 11,
+      "overallPoints": 285,
+      "roundPoints": 77
+    },
+    "3949297": {
+      "userName": "Oleksandr10",
+      "rounds": {
+        "1": {
+          "captain": 468,
+          "vice": 517,
+          "lineup": {
+            "GK": [
+              506
+            ],
+            "DEF": [
+              2012,
+              916,
+              1429,
+              461
+            ],
+            "MID": [
+              517,
+              1366,
+              543
+            ],
+            "FWD": [
+              468,
+              1338,
+              528
+            ]
+          },
+          "bench": {
+            "GK": [
+              1522
+            ],
+            "DEF": [
+              1714
+            ],
+            "MID": [
+              1215,
+              1476
+            ],
+            "FWD": []
+          },
+          "benchOrder": [
+            1522,
+            1714,
+            1215,
+            1476
+          ],
+          "substitutions": [],
+          "transfers": [],
+          "captainChanges": [],
+          "value": 99,
+          "maxCaptain": null,
+          "maxCaptainBooster": null,
+          "twelfthMan": null,
+          "wildCard": null,
+          "qualification": null,
+          "cleanSheet": null,
+          "qualificationPlayerIds": [],
+          "cleanSheetPlayerIds": [],
+          "roundPoints": 62,
+          "overallPoints": 62,
+          "freeTransfers": 0,
+          "negativeTransfers": 0,
+          "locked": false
+        },
+        "2": {
+          "captain": 468,
+          "vice": 517,
+          "lineup": {
+            "GK": [
+              506
+            ],
+            "DEF": [
+              2012,
+              916,
+              1429,
+              461
+            ],
+            "MID": [
+              517,
+              1366,
+              543
+            ],
+            "FWD": [
+              468,
+              1338,
+              528
+            ]
+          },
+          "bench": {
+            "GK": [
+              1522
+            ],
+            "DEF": [
+              1714
+            ],
+            "MID": [
+              1215,
+              1476
+            ],
+            "FWD": []
+          },
+          "benchOrder": [
+            1522,
+            1714,
+            1215,
+            1476
+          ],
+          "substitutions": [],
+          "transfers": [],
+          "captainChanges": [],
+          "value": 99,
+          "maxCaptain": null,
+          "maxCaptainBooster": null,
+          "twelfthMan": null,
+          "wildCard": null,
+          "qualification": null,
+          "cleanSheet": null,
+          "qualificationPlayerIds": [],
+          "cleanSheetPlayerIds": [],
+          "roundPoints": 65,
+          "overallPoints": 127,
+          "freeTransfers": 0,
+          "negativeTransfers": 0,
+          "locked": false
+        },
+        "3": {
+          "captain": 468,
+          "vice": 517,
+          "lineup": {
+            "GK": [
+              506
+            ],
+            "DEF": [
+              2012,
+              916,
+              1429,
+              461
+            ],
+            "MID": [
+              517,
+              1366,
+              543
+            ],
+            "FWD": [
+              468,
+              1338,
+              528
+            ]
+          },
+          "bench": {
+            "GK": [
+              1522
+            ],
+            "DEF": [
+              1714
+            ],
+            "MID": [
+              1215,
+              1476
+            ],
+            "FWD": []
+          },
+          "benchOrder": [
+            1522,
+            1714,
+            1215,
+            1476
+          ],
+          "substitutions": [
+            {
+              "out": 1429,
+              "in": 1714,
+              "isAuto": true
+            },
+            {
+              "out": 1366,
+              "in": 1215,
+              "isAuto": true
+            }
+          ],
+          "transfers": [],
+          "captainChanges": [],
+          "value": 99,
+          "maxCaptain": null,
+          "maxCaptainBooster": null,
+          "twelfthMan": null,
+          "wildCard": null,
+          "qualification": null,
+          "cleanSheet": null,
+          "qualificationPlayerIds": [],
+          "cleanSheetPlayerIds": [],
+          "roundPoints": 76,
+          "overallPoints": 203,
+          "freeTransfers": 0,
+          "negativeTransfers": 0,
+          "locked": false
+        },
+        "4": {
+          "captain": 500,
+          "vice": 38,
+          "lineup": {
+            "GK": [
+              1099
+            ],
+            "DEF": [
+              2012,
+              916,
+              1429,
+              1264
+            ],
+            "MID": [
+              517,
+              1366,
+              1092
+            ],
+            "FWD": [
+              500,
+              38,
+              855
+            ]
+          },
+          "bench": {
+            "GK": [
+              317
+            ],
+            "DEF": [
+              1714
+            ],
+            "MID": [
+              1215,
+              1476
+            ],
+            "FWD": []
+          },
+          "benchOrder": [
+            317,
+            1714,
+            1215,
+            1476
+          ],
+          "substitutions": [],
+          "transfers": [
+            {
+              "out": 1338,
+              "in": 38,
+              "isNegative": false
+            },
+            {
+              "out": 528,
+              "in": 855,
+              "isNegative": false
+            },
+            {
+              "out": 461,
+              "in": 1086,
+              "isNegative": false
+            },
+            {
+              "out": 468,
+              "in": 500,
+              "isNegative": false
+            },
+            {
+              "out": 543,
+              "in": 1092,
+              "isNegative": false
+            },
+            {
+              "out": 1522,
+              "in": 1099,
+              "isNegative": false
+            },
+            {
+              "out": 506,
+              "in": 317,
+              "isNegative": false
+            },
+            {
+              "out": 1086,
+              "in": 1264,
+              "isNegative": false
+            }
+          ],
+          "captainChanges": [],
+          "value": 104,
+          "maxCaptain": null,
+          "maxCaptainBooster": null,
+          "twelfthMan": null,
+          "wildCard": null,
+          "qualification": null,
+          "cleanSheet": null,
+          "qualificationPlayerIds": [],
+          "cleanSheetPlayerIds": [],
+          "roundPoints": 74,
+          "overallPoints": 277,
+          "freeTransfers": null,
+          "negativeTransfers": 0,
+          "locked": false
+        }
+      },
+      "avatar": "https://play.fifa.com/media/image/gamezone/avatars/WC_2026/10.svg",
+      "level": 10,
+      "overallRank": 13,
+      "roundRank": 13,
+      "overallPoints": 277,
+      "roundPoints": 74
+    },
+    "4581314": {
+      "userName": "OleksiiTim",
+      "rounds": {
+        "1": {
+          "captain": 1573,
+          "vice": 796,
+          "lineup": {
+            "GK": [
+              45
+            ],
+            "DEF": [
+              916,
+              2012,
+              796,
+              520
+            ],
+            "MID": [
+              937,
+              2020,
+              517,
+              1366
+            ],
+            "FWD": [
+              1573,
+              1338
+            ]
+          },
+          "bench": {
+            "GK": [
+              1098
+            ],
+            "DEF": [
+              542
+            ],
+            "MID": [
+              1998
+            ],
+            "FWD": [
+              181
+            ]
+          },
+          "benchOrder": [
+            1098,
+            542,
+            181,
+            1998
+          ],
+          "substitutions": [],
+          "transfers": [],
+          "captainChanges": [],
+          "value": 100,
+          "maxCaptain": null,
+          "maxCaptainBooster": null,
+          "twelfthMan": null,
+          "wildCard": null,
+          "qualification": null,
+          "cleanSheet": null,
+          "qualificationPlayerIds": [],
+          "cleanSheetPlayerIds": [],
+          "roundPoints": 50,
+          "overallPoints": 50,
+          "freeTransfers": 0,
+          "negativeTransfers": 0,
+          "locked": false
+        },
+        "2": {
+          "captain": 1573,
+          "vice": 796,
+          "lineup": {
+            "GK": [
+              45
+            ],
+            "DEF": [
+              916,
+              2012,
+              796,
+              520
+            ],
+            "MID": [
+              937,
+              2020,
+              517,
+              1366
+            ],
+            "FWD": [
+              1573,
+              1338
+            ]
+          },
+          "bench": {
+            "GK": [
+              1098
+            ],
+            "DEF": [
+              542
+            ],
+            "MID": [
+              1998
+            ],
+            "FWD": [
+              181
+            ]
+          },
+          "benchOrder": [
+            1098,
+            542,
+            181,
+            1998
+          ],
+          "substitutions": [],
+          "transfers": [],
+          "captainChanges": [],
+          "value": 100,
+          "maxCaptain": null,
+          "maxCaptainBooster": null,
+          "twelfthMan": null,
+          "wildCard": null,
+          "qualification": null,
+          "cleanSheet": null,
+          "qualificationPlayerIds": [],
+          "cleanSheetPlayerIds": [],
+          "roundPoints": 85,
+          "overallPoints": 135,
+          "freeTransfers": 0,
+          "negativeTransfers": 0,
+          "locked": false
+        },
+        "3": {
+          "captain": 1573,
+          "vice": 796,
+          "lineup": {
+            "GK": [
+              45
+            ],
+            "DEF": [
+              916,
+              2012,
+              796,
+              1086
+            ],
+            "MID": [
+              937,
+              2020,
+              517,
+              1998
+            ],
+            "FWD": [
+              1573,
+              1338
+            ]
+          },
+          "bench": {
+            "GK": [
+              677
+            ],
+            "DEF": [
+              542
+            ],
+            "MID": [
+              1366
+            ],
+            "FWD": [
+              807
+            ]
+          },
+          "benchOrder": [
+            677,
+            542,
+            807,
+            1366
+          ],
+          "substitutions": [
+            {
+              "out": 1366,
+              "in": 1998,
+              "isAuto": false
+            }
+          ],
+          "transfers": [
+            {
+              "out": 520,
+              "in": 1086,
+              "isNegative": false
+            },
+            {
+              "out": 181,
+              "in": 807,
+              "isNegative": false
+            },
+            {
+              "out": 1098,
+              "in": 677,
+              "isNegative": false
+            }
+          ],
+          "captainChanges": [],
+          "value": 99,
+          "maxCaptain": null,
+          "maxCaptainBooster": null,
+          "twelfthMan": null,
+          "wildCard": null,
+          "qualification": null,
+          "cleanSheet": null,
+          "qualificationPlayerIds": [],
+          "cleanSheetPlayerIds": [],
+          "roundPoints": 51,
+          "overallPoints": 186,
+          "freeTransfers": 0,
+          "negativeTransfers": 0,
+          "locked": false
+        },
+        "4": {
+          "captain": 1573,
+          "vice": 796,
+          "lineup": {
+            "GK": [
+              1099
+            ],
+            "DEF": [
+              916,
+              795,
+              796,
+              1088
+            ],
+            "MID": [
+              505,
+              501,
+              517,
+              256
+            ],
+            "FWD": [
+              1573,
+              855
+            ]
+          },
+          "bench": {
+            "GK": [
+              677
+            ],
+            "DEF": [
+              542
+            ],
+            "MID": [
+              1998
+            ],
+            "FWD": [
+              807
+            ]
+          },
+          "benchOrder": [
+            677,
+            542,
+            807,
+            1998
+          ],
+          "substitutions": [],
+          "transfers": [
+            {
+              "out": 1338,
+              "in": 855,
+              "isNegative": false
+            },
+            {
+              "out": 45,
+              "in": 1099,
+              "isNegative": false
+            },
+            {
+              "out": 2020,
+              "in": 501,
+              "isNegative": false
+            },
+            {
+              "out": 1086,
+              "in": 1088,
+              "isNegative": false
+            },
+            {
+              "out": 1366,
+              "in": 256,
+              "isNegative": false
+            },
+            {
+              "out": 937,
+              "in": 475,
+              "isNegative": false
+            },
+            {
+              "out": 2012,
+              "in": 795,
+              "isNegative": false
+            },
+            {
+              "out": 475,
+              "in": 505,
+              "isNegative": false
+            }
+          ],
+          "captainChanges": [],
+          "value": 105,
+          "maxCaptain": null,
+          "maxCaptainBooster": null,
+          "twelfthMan": null,
+          "wildCard": null,
+          "qualification": 4,
+          "cleanSheet": null,
+          "qualificationPlayerIds": [
+            1099,
+            916,
+            1088,
+            1573,
+            855,
+            505,
+            501,
+            517
+          ],
+          "cleanSheetPlayerIds": [],
+          "roundPoints": 81,
+          "overallPoints": 267,
+          "freeTransfers": null,
+          "negativeTransfers": 0,
+          "locked": false
+        }
+      },
+      "avatar": "https://play.fifa.com/media/image/gamezone/avatars/WC_2026/7.svg",
+      "level": 7,
+      "overallRank": 14,
+      "roundRank": 8,
+      "overallPoints": 267,
+      "roundPoints": 81
+    },
+    "5166213": {
+      "userName": "Anna B01",
+      "rounds": {
+        "1": {
+          "captain": 1092,
+          "vice": 501,
+          "lineup": {
+            "GK": [
+              1522
+            ],
+            "DEF": [
+              2012,
+              1086,
+              796,
+              795
+            ],
+            "MID": [
+              501,
+              173,
+              1092,
+              1366
+            ],
+            "FWD": [
+              1338,
+              2023
+            ]
+          },
+          "bench": {
+            "GK": [
+              1598
+            ],
+            "DEF": [
+              1102
+            ],
+            "MID": [
+              21
+            ],
+            "FWD": [
+              995
+            ]
+          },
+          "benchOrder": [
+            1598,
+            1102,
+            21,
+            995
+          ],
+          "substitutions": [],
+          "transfers": [],
+          "captainChanges": [],
+          "value": 99,
+          "maxCaptain": null,
+          "maxCaptainBooster": null,
+          "twelfthMan": null,
+          "wildCard": null,
+          "qualification": null,
+          "cleanSheet": null,
+          "qualificationPlayerIds": [],
+          "cleanSheetPlayerIds": [],
+          "roundPoints": 39,
+          "overallPoints": 39,
+          "freeTransfers": 0,
+          "negativeTransfers": 0,
+          "locked": false
+        },
+        "2": {
+          "captain": 1092,
+          "vice": 501,
+          "lineup": {
+            "GK": [
+              1522
+            ],
+            "DEF": [
+              2012,
+              1086,
+              796,
+              795
+            ],
+            "MID": [
+              501,
+              173,
+              1092,
+              1366
+            ],
+            "FWD": [
+              1338,
+              2023
+            ]
+          },
+          "bench": {
+            "GK": [
+              1598
+            ],
+            "DEF": [
+              1102
+            ],
+            "MID": [
+              21
+            ],
+            "FWD": [
+              995
+            ]
+          },
+          "benchOrder": [
+            1598,
+            1102,
+            21,
+            995
+          ],
+          "substitutions": [],
+          "transfers": [],
+          "captainChanges": [],
+          "value": 99,
+          "maxCaptain": null,
+          "maxCaptainBooster": null,
+          "twelfthMan": null,
+          "wildCard": null,
+          "qualification": null,
+          "cleanSheet": null,
+          "qualificationPlayerIds": [],
+          "cleanSheetPlayerIds": [],
+          "roundPoints": 81,
+          "overallPoints": 120,
+          "freeTransfers": 0,
+          "negativeTransfers": 0,
+          "locked": false
+        },
+        "3": {
+          "captain": 1092,
+          "vice": 501,
+          "lineup": {
+            "GK": [
+              1522
+            ],
+            "DEF": [
+              2012,
+              1086,
+              796,
+              795
+            ],
+            "MID": [
+              501,
+              173,
+              1092,
+              1366
+            ],
+            "FWD": [
+              1338,
+              2023
+            ]
+          },
+          "bench": {
+            "GK": [
+              1598
+            ],
+            "DEF": [
+              1102
+            ],
+            "MID": [
+              21
+            ],
+            "FWD": [
+              995
+            ]
+          },
+          "benchOrder": [
+            1598,
+            1102,
+            21,
+            995
+          ],
+          "substitutions": [
+            {
+              "out": 1366,
+              "in": 1102,
+              "isAuto": true
+            }
+          ],
+          "transfers": [],
+          "captainChanges": [],
+          "value": 99,
+          "maxCaptain": null,
+          "maxCaptainBooster": null,
+          "twelfthMan": null,
+          "wildCard": null,
+          "qualification": null,
+          "cleanSheet": null,
+          "qualificationPlayerIds": [],
+          "cleanSheetPlayerIds": [],
+          "roundPoints": 103,
+          "overallPoints": 223,
+          "freeTransfers": 0,
+          "negativeTransfers": 0,
+          "locked": false
+        },
+        "4": {
+          "captain": 256,
+          "vice": 501,
+          "lineup": {
+            "GK": [
+              1569
+            ],
+            "DEF": [
+              1088,
+              1318,
+              494,
+              795
+            ],
+            "MID": [
+              501,
+              491,
+              256,
+              505
+            ],
+            "FWD": [
+              38,
+              855
+            ]
+          },
+          "bench": {
+            "GK": [
+              1099
+            ],
+            "DEF": [
+              916
+            ],
+            "MID": [
+              939
+            ],
+            "FWD": [
+              807
+            ]
+          },
+          "benchOrder": [
+            1099,
+            916,
+            807,
+            939
+          ],
+          "substitutions": [],
+          "transfers": [
+            {
+              "out": 1522,
+              "in": 1569,
+              "isNegative": false
+            },
+            {
+              "out": 1598,
+              "in": 1099,
+              "isNegative": false
+            },
+            {
+              "out": 2012,
+              "in": 1088,
+              "isNegative": false
+            },
+            {
+              "out": 1086,
+              "in": 1318,
+              "isNegative": false
+            },
+            {
+              "out": 796,
+              "in": 494,
+              "isNegative": false
+            },
+            {
+              "out": 1102,
+              "in": 916,
+              "isNegative": false
+            },
+            {
+              "out": 173,
+              "in": 491,
+              "isNegative": false
+            },
+            {
+              "out": 1092,
+              "in": 256,
+              "isNegative": false
+            },
+            {
+              "out": 1366,
+              "in": 505,
+              "isNegative": false
+            },
+            {
+              "out": 21,
+              "in": 939,
+              "isNegative": false
+            },
+            {
+              "out": 1338,
+              "in": 38,
+              "isNegative": false
+            },
+            {
+              "out": 2023,
+              "in": 855,
+              "isNegative": false
+            },
+            {
+              "out": 995,
+              "in": 807,
+              "isNegative": false
+            }
+          ],
+          "captainChanges": [],
+          "value": 105,
+          "maxCaptain": null,
+          "maxCaptainBooster": null,
+          "twelfthMan": null,
+          "wildCard": null,
+          "qualification": null,
+          "cleanSheet": null,
+          "qualificationPlayerIds": [],
+          "cleanSheetPlayerIds": [],
+          "roundPoints": 41,
+          "overallPoints": 264,
+          "freeTransfers": null,
+          "negativeTransfers": 0,
+          "locked": false
+        }
+      },
+      "avatar": "https://play.fifa.com/media/image/gamezone/avatars/WC_2026/7.svg",
+      "level": 7,
+      "overallRank": 15,
+      "roundRank": 19,
+      "overallPoints": 264,
+      "roundPoints": 41
+    },
+    "4592310": {
+      "userName": "TymofiiMC",
+      "rounds": {
+        "1": {
+          "captain": 855,
+          "vice": 468,
+          "lineup": {
+            "GK": [
+              477
+            ],
+            "DEF": [
+              494,
+              796,
+              1430,
+              145
+            ],
+            "MID": [
+              1092,
+              1157,
+              1431,
+              1105
+            ],
+            "FWD": [
+              468,
+              855
+            ]
+          },
+          "bench": {
+            "GK": [
+              1098
+            ],
+            "DEF": [
+              225
+            ],
+            "MID": [
+              682
+            ],
+            "FWD": [
+              1124
+            ]
+          },
+          "benchOrder": [
+            1098,
+            225,
+            682,
+            1124
+          ],
+          "substitutions": [
+            {
+              "out": 1098,
+              "in": 477,
+              "isAuto": false
+            }
+          ],
+          "transfers": [],
+          "captainChanges": [],
+          "value": 99,
+          "maxCaptain": null,
+          "maxCaptainBooster": null,
+          "twelfthMan": null,
+          "wildCard": null,
+          "qualification": null,
+          "cleanSheet": null,
+          "qualificationPlayerIds": [],
+          "cleanSheetPlayerIds": [],
+          "roundPoints": 74,
+          "overallPoints": 74,
+          "freeTransfers": 0,
+          "negativeTransfers": 0,
+          "locked": false
+        },
+        "2": {
+          "captain": 855,
+          "vice": 468,
+          "lineup": {
+            "GK": [
+              477
+            ],
+            "DEF": [
+              494,
+              796,
+              1430
+            ],
+            "MID": [
+              1092,
+              682,
+              1431,
+              1105
+            ],
+            "FWD": [
+              1124,
+              468,
+              855
+            ]
+          },
+          "bench": {
+            "GK": [
+              1098
+            ],
+            "DEF": [
+              225,
+              145
+            ],
+            "MID": [
+              1157
+            ],
+            "FWD": []
+          },
+          "benchOrder": [
+            1098,
+            225,
+            1157,
+            145
+          ],
+          "substitutions": [],
+          "transfers": [],
+          "captainChanges": [],
+          "value": 99,
+          "maxCaptain": null,
+          "maxCaptainBooster": null,
+          "twelfthMan": null,
+          "wildCard": null,
+          "qualification": null,
+          "cleanSheet": null,
+          "qualificationPlayerIds": [],
+          "cleanSheetPlayerIds": [],
+          "roundPoints": 85,
+          "overallPoints": 159,
+          "freeTransfers": 0,
+          "negativeTransfers": 0,
+          "locked": false
+        },
+        "3": {
+          "captain": 855,
+          "vice": 468,
+          "lineup": {
+            "GK": [
+              45
+            ],
+            "DEF": [
+              494,
+              796,
+              1430
+            ],
+            "MID": [
+              1092,
+              682,
+              939,
+              1105
+            ],
+            "FWD": [
+              1124,
+              468,
+              855
+            ]
+          },
+          "bench": {
+            "GK": [
+              477
+            ],
+            "DEF": [
+              225,
+              145
+            ],
+            "MID": [
+              1157
+            ],
+            "FWD": []
+          },
+          "benchOrder": [
+            477,
+            225,
+            145,
+            1157
+          ],
+          "substitutions": [
+            {
+              "out": 855,
+              "in": 225,
+              "isAuto": true
+            }
+          ],
+          "transfers": [
+            {
+              "out": 1431,
+              "in": 1366,
+              "isNegative": false
+            },
+            {
+              "out": 1098,
+              "in": 45,
+              "isNegative": false
+            },
+            {
+              "out": 1366,
+              "in": 939,
+              "isNegative": false
+            }
+          ],
+          "captainChanges": [],
+          "value": 99,
+          "maxCaptain": 3,
+          "maxCaptainBooster": {
+            "playerId": 468,
+            "roundId": 3
+          },
+          "twelfthMan": null,
+          "wildCard": null,
+          "qualification": null,
+          "cleanSheet": null,
+          "qualificationPlayerIds": [],
+          "cleanSheetPlayerIds": [],
+          "roundPoints": 41,
+          "overallPoints": 200,
+          "freeTransfers": 0,
+          "negativeTransfers": 0,
+          "locked": false
+        },
+        "4": {
+          "captain": 855,
+          "vice": 468,
+          "lineup": {
+            "GK": [
+              45
+            ],
+            "DEF": [
+              494,
+              796,
+              1430
+            ],
+            "MID": [
+              1092,
+              682,
+              939,
+              1105
+            ],
+            "FWD": [
+              1124,
+              468,
+              855
+            ]
+          },
+          "bench": {
+            "GK": [
+              477
+            ],
+            "DEF": [
+              225,
+              145
+            ],
+            "MID": [
+              1157
+            ],
+            "FWD": []
+          },
+          "benchOrder": [
+            477,
+            225,
+            145,
+            1157
+          ],
+          "substitutions": [],
+          "transfers": [],
+          "captainChanges": [],
+          "value": 99,
+          "maxCaptain": 3,
+          "maxCaptainBooster": {
+            "playerId": 468,
+            "roundId": 3
+          },
+          "twelfthMan": null,
+          "wildCard": null,
+          "qualification": null,
+          "cleanSheet": null,
+          "qualificationPlayerIds": [],
+          "cleanSheetPlayerIds": [],
+          "roundPoints": 57,
+          "overallPoints": 257,
+          "freeTransfers": null,
+          "negativeTransfers": 0,
+          "locked": false
+        }
+      },
+      "avatar": "https://play.fifa.com/media/image/gamezone/avatars/WC_2026/10.svg",
+      "level": 10,
+      "overallRank": 16,
+      "roundRank": 16,
+      "overallPoints": 257,
+      "roundPoints": 57
+    },
+    "4963205": {
+      "userName": "Ob1one",
+      "rounds": {
+        "1": {
+          "captain": 855,
+          "vice": 517,
+          "lineup": {
+            "GK": [
+              1153
+            ],
+            "DEF": [
+              542,
+              1429,
+              916,
+              796
+            ],
+            "MID": [
+              517,
+              1572,
+              1999,
+              1105
+            ],
+            "FWD": [
+              855,
+              39
+            ]
+          },
+          "bench": {
+            "GK": [
+              859
+            ],
+            "DEF": [
+              2032
+            ],
+            "MID": [
+              1526
+            ],
+            "FWD": [
+              1093
+            ]
+          },
+          "benchOrder": [
+            859,
+            2032,
+            1526,
+            1093
+          ],
+          "substitutions": [],
+          "transfers": [],
+          "captainChanges": [],
+          "value": 100,
+          "maxCaptain": null,
+          "maxCaptainBooster": null,
+          "twelfthMan": null,
+          "wildCard": null,
+          "qualification": null,
+          "cleanSheet": null,
+          "qualificationPlayerIds": [],
+          "cleanSheetPlayerIds": [],
+          "roundPoints": 69,
+          "overallPoints": 69,
+          "freeTransfers": 0,
+          "negativeTransfers": 0,
+          "locked": false
+        },
+        "2": {
+          "captain": 517,
+          "vice": 855,
+          "lineup": {
+            "GK": [
+              1153
+            ],
+            "DEF": [
+              542,
+              1429,
+              744,
+              796
+            ],
+            "MID": [
+              517,
+              1572,
+              1999,
+              1105
+            ],
+            "FWD": [
+              855,
+              528
+            ]
+          },
+          "bench": {
+            "GK": [
+              859
+            ],
+            "DEF": [
+              916
+            ],
+            "MID": [
+              1526
+            ],
+            "FWD": [
+              39
+            ]
+          },
+          "benchOrder": [
+            859,
+            916,
+            39,
+            1526
+          ],
+          "substitutions": [
+            {
+              "out": 1999,
+              "in": 916,
+              "isAuto": true
+            }
+          ],
+          "transfers": [
+            {
+              "out": 1093,
+              "in": 528,
+              "isNegative": false
+            },
+            {
+              "out": 2032,
+              "in": 744,
+              "isNegative": false
+            }
+          ],
+          "captainChanges": [],
+          "value": 100,
+          "maxCaptain": null,
+          "maxCaptainBooster": null,
+          "twelfthMan": null,
+          "wildCard": null,
+          "qualification": null,
+          "cleanSheet": null,
+          "qualificationPlayerIds": [],
+          "cleanSheetPlayerIds": [],
+          "roundPoints": 71,
+          "overallPoints": 140,
+          "freeTransfers": 0,
+          "negativeTransfers": 0,
+          "locked": false
+        },
+        "3": {
+          "captain": 38,
+          "vice": 517,
+          "lineup": {
+            "GK": [
+              1153
+            ],
+            "DEF": [
+              542,
+              916,
+              744,
+              796
+            ],
+            "MID": [
+              517,
+              510,
+              1999,
+              1684
+            ],
+            "FWD": [
+              38,
+              1124
+            ]
+          },
+          "bench": {
+            "GK": [
+              859
+            ],
+            "DEF": [
+              1429
+            ],
+            "MID": [
+              1526
+            ],
+            "FWD": [
+              855
+            ]
+          },
+          "benchOrder": [
+            859,
+            1429,
+            855,
+            1526
+          ],
+          "substitutions": [
+            {
+              "out": 855,
+              "in": 38,
+              "isAuto": false
+            },
+            {
+              "out": 1429,
+              "in": 916,
+              "isAuto": false
+            }
+          ],
+          "transfers": [
+            {
+              "out": 39,
+              "in": 38,
+              "isNegative": false
+            },
+            {
+              "out": 528,
+              "in": 1124,
+              "isNegative": false
+            },
+            {
+              "out": 1105,
+              "in": 1684,
+              "isNegative": false
+            },
+            {
+              "out": 1572,
+              "in": 510,
+              "isNegative": false
+            }
+          ],
+          "captainChanges": [
+            {
+              "out": 1124,
+              "in": 855,
+              "type": "captain"
+            },
+            {
+              "out": 1124,
+              "in": 517,
+              "type": "vice"
+            }
+          ],
+          "value": 100,
+          "maxCaptain": null,
+          "maxCaptainBooster": null,
+          "twelfthMan": null,
+          "wildCard": 3,
+          "qualification": null,
+          "cleanSheet": null,
+          "qualificationPlayerIds": [],
+          "cleanSheetPlayerIds": [],
+          "roundPoints": 47,
+          "overallPoints": 187,
+          "freeTransfers": null,
+          "negativeTransfers": 0,
+          "locked": false
+        },
+        "4": {
+          "captain": 38,
+          "vice": 855,
+          "lineup": {
+            "GK": [
+              1153
+            ],
+            "DEF": [
+              542,
+              1429,
+              744,
+              796,
+              916
+            ],
+            "MID": [
+              517,
+              1526,
+              1684
+            ],
+            "FWD": [
+              855,
+              38
+            ]
+          },
+          "bench": {
+            "GK": [
+              859
+            ],
+            "DEF": [],
+            "MID": [
+              1999,
+              510
+            ],
+            "FWD": [
+              1124
+            ]
+          },
+          "benchOrder": [
+            859,
+            1999,
+            1124,
+            510
+          ],
+          "substitutions": [
+            {
+              "out": 510,
+              "in": 1526,
+              "isAuto": false
+            },
+            {
+              "out": 1124,
+              "in": 38,
+              "isAuto": false
+            },
+            {
+              "out": 1999,
+              "in": 916,
+              "isAuto": false
+            }
+          ],
+          "transfers": [],
+          "captainChanges": [],
+          "value": 100,
+          "maxCaptain": null,
+          "maxCaptainBooster": null,
+          "twelfthMan": null,
+          "wildCard": 3,
+          "qualification": null,
+          "cleanSheet": null,
+          "qualificationPlayerIds": [],
+          "cleanSheetPlayerIds": [],
+          "roundPoints": 56,
+          "overallPoints": 243,
+          "freeTransfers": null,
+          "negativeTransfers": 0,
+          "locked": false
+        }
+      },
+      "avatar": "https://play.fifa.com/media/image/gamezone/avatars/WC_2026/10.svg",
+      "level": 10,
+      "overallRank": 17,
+      "roundRank": 17,
+      "overallPoints": 243,
+      "roundPoints": 56
+    },
+    "4589585": {
+      "userName": "antonishen21",
+      "rounds": {
+        "1": {
+          "captain": 468,
+          "vice": 517,
+          "lineup": {
+            "GK": [
+              931
+            ],
+            "DEF": [
+              916,
+              164,
+              542,
+              1089
+            ],
+            "MID": [
+              517,
+              516,
+              543,
+              1104
+            ],
+            "FWD": [
+              39,
+              468
+            ]
+          },
+          "bench": {
+            "GK": [
+              1098
+            ],
+            "DEF": [
+              849
+            ],
+            "MID": [
+              488
+            ],
+            "FWD": [
+              1125
+            ]
+          },
+          "benchOrder": [
+            1098,
+            849,
+            488,
+            1125
+          ],
+          "substitutions": [
+            {
+              "out": 1098,
+              "in": 931,
+              "isAuto": false
+            }
+          ],
+          "transfers": [],
+          "captainChanges": [],
+          "value": 100,
+          "maxCaptain": null,
+          "maxCaptainBooster": null,
+          "twelfthMan": null,
+          "wildCard": null,
+          "qualification": null,
+          "cleanSheet": null,
+          "qualificationPlayerIds": [],
+          "cleanSheetPlayerIds": [],
+          "roundPoints": 61,
+          "overallPoints": 61,
+          "freeTransfers": 0,
+          "negativeTransfers": 0,
+          "locked": false
+        },
+        "2": {
+          "captain": 468,
+          "vice": 517,
+          "lineup": {
+            "GK": [
+              931
+            ],
+            "DEF": [
+              916,
+              164,
+              542,
+              1089
+            ],
+            "MID": [
+              517,
+              488,
+              543,
+              1104
+            ],
+            "FWD": [
+              805,
+              468
+            ]
+          },
+          "bench": {
+            "GK": [
+              1098
+            ],
+            "DEF": [
+              849
+            ],
+            "MID": [
+              516
+            ],
+            "FWD": [
+              1125
+            ]
+          },
+          "benchOrder": [
+            1098,
+            849,
+            1125,
+            516
+          ],
+          "substitutions": [
+            {
+              "out": 516,
+              "in": 488,
+              "isAuto": false
+            }
+          ],
+          "transfers": [
+            {
+              "out": 39,
+              "in": 805,
+              "isNegative": false
+            }
+          ],
+          "captainChanges": [],
+          "value": 97,
+          "maxCaptain": null,
+          "maxCaptainBooster": null,
+          "twelfthMan": null,
+          "wildCard": null,
+          "qualification": null,
+          "cleanSheet": null,
+          "qualificationPlayerIds": [],
+          "cleanSheetPlayerIds": [],
+          "roundPoints": 52,
+          "overallPoints": 113,
+          "freeTransfers": 0,
+          "negativeTransfers": 0,
+          "locked": false
+        },
+        "3": {
+          "captain": 468,
+          "vice": 517,
+          "lineup": {
+            "GK": [
+              931
+            ],
+            "DEF": [
+              916,
+              164,
+              542,
+              1089
+            ],
+            "MID": [
+              517,
+              816,
+              543,
+              1104
+            ],
+            "FWD": [
+              1573,
+              468
+            ]
+          },
+          "bench": {
+            "GK": [
+              1098
+            ],
+            "DEF": [
+              849
+            ],
+            "MID": [
+              488
+            ],
+            "FWD": [
+              1125
+            ]
+          },
+          "benchOrder": [
+            1098,
+            849,
+            1125,
+            488
+          ],
+          "substitutions": [],
+          "transfers": [
+            {
+              "out": 516,
+              "in": 816,
+              "isNegative": false
+            },
+            {
+              "out": 805,
+              "in": 1573,
+              "isNegative": false
+            }
+          ],
+          "captainChanges": [],
+          "value": 99,
+          "maxCaptain": null,
+          "maxCaptainBooster": null,
+          "twelfthMan": null,
+          "wildCard": null,
+          "qualification": null,
+          "cleanSheet": null,
+          "qualificationPlayerIds": [],
+          "cleanSheetPlayerIds": [],
+          "roundPoints": 59,
+          "overallPoints": 172,
+          "freeTransfers": 0,
+          "negativeTransfers": 0,
+          "locked": false
+        },
+        "4": {
+          "captain": 468,
+          "vice": 517,
+          "lineup": {
+            "GK": [
+              931
+            ],
+            "DEF": [
+              916,
+              164,
+              542,
+              1089
+            ],
+            "MID": [
+              517,
+              816,
+              543,
+              1104
+            ],
+            "FWD": [
+              1573,
+              468
+            ]
+          },
+          "bench": {
+            "GK": [
+              1098
+            ],
+            "DEF": [
+              849
+            ],
+            "MID": [
+              488
+            ],
+            "FWD": [
+              1125
+            ]
+          },
+          "benchOrder": [
+            1098,
+            849,
+            1125,
+            488
+          ],
+          "substitutions": [],
+          "transfers": [],
+          "captainChanges": [],
+          "value": 99,
+          "maxCaptain": null,
+          "maxCaptainBooster": null,
+          "twelfthMan": null,
+          "wildCard": null,
+          "qualification": null,
+          "cleanSheet": null,
+          "qualificationPlayerIds": [],
+          "cleanSheetPlayerIds": [],
+          "roundPoints": 68,
+          "overallPoints": 240,
+          "freeTransfers": null,
+          "negativeTransfers": 0,
+          "locked": false
+        }
+      },
+      "avatar": "https://play.fifa.com/media/image/gamezone/avatars/WC_2026/6.svg",
+      "level": 6,
+      "overallRank": 18,
+      "roundRank": 15,
+      "overallPoints": 240,
+      "roundPoints": 68
+    },
+    "4784313": {
+      "userName": "Coolelyk",
+      "rounds": {
+        "1": {
+          "captain": 855,
+          "vice": 1092,
+          "lineup": {
+            "GK": [
+              506
+            ],
+            "DEF": [
+              542,
+              917,
+              496,
+              684
+            ],
+            "MID": [
+              1092,
+              1600,
+              1710,
+              1684
+            ],
+            "FWD": [
+              855,
+              1306
+            ]
+          },
+          "bench": {
+            "GK": [
+              755
+            ],
+            "DEF": [
+              492
+            ],
+            "MID": [
+              939
+            ],
+            "FWD": [
+              1075
+            ]
+          },
+          "benchOrder": [
+            755,
+            492,
+            939,
+            1075
+          ],
+          "substitutions": [
+            {
+              "out": 496,
+              "in": 492,
+              "isAuto": true
+            },
+            {
+              "out": 1710,
+              "in": 939,
+              "isAuto": true
+            }
+          ],
+          "transfers": [],
+          "captainChanges": [],
+          "value": 99,
+          "maxCaptain": null,
+          "maxCaptainBooster": null,
+          "twelfthMan": null,
+          "wildCard": null,
+          "qualification": null,
+          "cleanSheet": null,
+          "qualificationPlayerIds": [],
+          "cleanSheetPlayerIds": [],
+          "roundPoints": 74,
+          "overallPoints": 74,
+          "freeTransfers": 0,
+          "negativeTransfers": 0,
+          "locked": false
+        },
+        "2": {
+          "captain": 855,
+          "vice": 1092,
+          "lineup": {
+            "GK": [
+              506
+            ],
+            "DEF": [
+              542,
+              917,
+              496,
+              684
+            ],
+            "MID": [
+              1092,
+              1600,
+              1710,
+              1684
+            ],
+            "FWD": [
+              855,
+              1306
+            ]
+          },
+          "bench": {
+            "GK": [
+              755
+            ],
+            "DEF": [
+              492
+            ],
+            "MID": [
+              939
+            ],
+            "FWD": [
+              1075
+            ]
+          },
+          "benchOrder": [
+            755,
+            492,
+            939,
+            1075
+          ],
+          "substitutions": [
+            {
+              "out": 496,
+              "in": 939,
+              "isAuto": true
+            }
+          ],
+          "transfers": [],
+          "captainChanges": [],
+          "value": 99,
+          "maxCaptain": null,
+          "maxCaptainBooster": null,
+          "twelfthMan": null,
+          "wildCard": null,
+          "qualification": null,
+          "cleanSheet": null,
+          "qualificationPlayerIds": [],
+          "cleanSheetPlayerIds": [],
+          "roundPoints": 74,
+          "overallPoints": 148,
+          "freeTransfers": 0,
+          "negativeTransfers": 0,
+          "locked": false
+        },
+        "3": {
+          "captain": 855,
+          "vice": 1092,
+          "lineup": {
+            "GK": [
+              506
+            ],
+            "DEF": [
+              542,
+              917,
+              496,
+              684
+            ],
+            "MID": [
+              1092,
+              1600,
+              1710,
+              1684
+            ],
+            "FWD": [
+              855,
+              1306
+            ]
+          },
+          "bench": {
+            "GK": [
+              755
+            ],
+            "DEF": [
+              492
+            ],
+            "MID": [
+              939
+            ],
+            "FWD": [
+              1075
+            ]
+          },
+          "benchOrder": [
+            755,
+            492,
+            939,
+            1075
+          ],
+          "substitutions": [
+            {
+              "out": 496,
+              "in": 492,
+              "isAuto": true
+            },
+            {
+              "out": 855,
+              "in": 939,
+              "isAuto": true
+            },
+            {
+              "out": 1684,
+              "in": 1075,
+              "isAuto": true
+            }
+          ],
+          "transfers": [],
+          "captainChanges": [],
+          "value": 99,
+          "maxCaptain": null,
+          "maxCaptainBooster": null,
+          "twelfthMan": null,
+          "wildCard": null,
+          "qualification": null,
+          "cleanSheet": null,
+          "qualificationPlayerIds": [],
+          "cleanSheetPlayerIds": [],
+          "roundPoints": 40,
+          "overallPoints": 188,
+          "freeTransfers": 0,
+          "negativeTransfers": 0,
+          "locked": false
+        },
+        "4": {
+          "captain": 855,
+          "vice": 1092,
+          "lineup": {
+            "GK": [
+              506
+            ],
+            "DEF": [
+              542,
+              917,
+              496,
+              684
+            ],
+            "MID": [
+              1092,
+              1600,
+              1710,
+              1684
+            ],
+            "FWD": [
+              855,
+              1306
+            ]
+          },
+          "bench": {
+            "GK": [
+              755
+            ],
+            "DEF": [
+              492
+            ],
+            "MID": [
+              939
+            ],
+            "FWD": [
+              1075
+            ]
+          },
+          "benchOrder": [
+            755,
+            492,
+            939,
+            1075
+          ],
+          "substitutions": [],
+          "transfers": [],
+          "captainChanges": [],
+          "value": 99,
+          "maxCaptain": null,
+          "maxCaptainBooster": null,
+          "twelfthMan": null,
+          "wildCard": null,
+          "qualification": null,
+          "cleanSheet": null,
+          "qualificationPlayerIds": [],
+          "cleanSheetPlayerIds": [],
+          "roundPoints": 42,
+          "overallPoints": 230,
+          "freeTransfers": null,
+          "negativeTransfers": 0,
+          "locked": false
+        }
+      },
+      "avatar": "https://play.fifa.com/media/image/gamezone/avatars/WC_2026/3.svg",
+      "level": 3,
+      "overallRank": 19,
+      "roundRank": 18,
+      "overallPoints": 230,
+      "roundPoints": 42
+    },
+    "5339304": {
+      "userName": "Oranje Wereldkampioen",
+      "rounds": {
+        "1": {
+          "captain": 256,
+          "vice": 252,
+          "lineup": {
+            "GK": [
+              1153
+            ],
+            "DEF": [
+              252,
+              1009,
+              1143
+            ],
+            "MID": [
+              1597,
+              256,
+              1248,
+              1027
+            ],
+            "FWD": [
+              445,
+              748,
+              723
+            ]
+          },
+          "bench": {
+            "GK": [
+              423
+            ],
+            "DEF": [
+              2012,
+              1536
+            ],
+            "MID": [
+              107
+            ],
+            "FWD": []
+          },
+          "benchOrder": [
+            423,
+            2012,
+            107,
+            1536
+          ],
+          "substitutions": [
+            {
+              "out": 2012,
+              "in": 1536,
+              "isAuto": false
+            },
+            {
+              "out": 256,
+              "in": 107,
+              "isAuto": false
+            },
+            {
+              "out": 107,
+              "in": 256,
+              "isAuto": false
+            },
+            {
+              "out": 1536,
+              "in": 252,
+              "isAuto": false
+            }
+          ],
+          "transfers": [],
+          "captainChanges": [
+            {
+              "out": 1597,
+              "in": 1248,
+              "type": "vice"
+            },
+            {
+              "out": 748,
+              "in": 1597,
+              "type": "captain"
+            },
+            {
+              "out": 1248,
+              "in": 256,
+              "type": "vice"
+            },
+            {
+              "out": 1597,
+              "in": 1248,
+              "type": "captain"
+            },
+            {
+              "out": 107,
+              "in": 1536,
+              "type": "vice"
+            },
+            {
+              "out": 1248,
+              "in": 107,
+              "type": "captain"
+            },
+            {
+              "out": 256,
+              "in": 1536,
+              "type": "captain"
+            },
+            {
+              "out": 256,
+              "in": 256,
+              "type": "vice"
+            },
+            {
+              "out": 252,
+              "in": 256,
+              "type": "captain"
+            },
+            {
+              "out": 252,
+              "in": 252,
+              "type": "vice"
+            }
+          ],
+          "value": 94,
+          "maxCaptain": null,
+          "maxCaptainBooster": null,
+          "twelfthMan": null,
+          "wildCard": null,
+          "qualification": null,
+          "cleanSheet": null,
+          "qualificationPlayerIds": [],
+          "cleanSheetPlayerIds": [],
+          "roundPoints": 63,
+          "overallPoints": 63,
+          "freeTransfers": 0,
+          "negativeTransfers": 0,
+          "locked": false
+        },
+        "2": {
+          "captain": 792,
+          "vice": 423,
+          "lineup": {
+            "GK": [
+              423
+            ],
+            "DEF": [
+              2012,
+              1536,
+              252
+            ],
+            "MID": [
+              1597,
+              256,
+              1248,
+              792
+            ],
+            "FWD": [
+              445,
+              748,
+              723
+            ]
+          },
+          "bench": {
+            "GK": [
+              1153
+            ],
+            "DEF": [
+              1009,
+              1143
+            ],
+            "MID": [
+              1223
+            ],
+            "FWD": []
+          },
+          "benchOrder": [
+            1153,
+            1009,
+            1143,
+            1223
+          ],
+          "substitutions": [
+            {
+              "out": 1223,
+              "in": 792,
+              "isAuto": false
+            },
+            {
+              "out": 1153,
+              "in": 423,
+              "isAuto": false
+            },
+            {
+              "out": 1009,
+              "in": 1536,
+              "isAuto": false
+            },
+            {
+              "out": 1143,
+              "in": 252,
+              "isAuto": false
+            }
+          ],
+          "transfers": [
+            {
+              "out": 107,
+              "in": 792,
+              "isNegative": false
+            },
+            {
+              "out": 1027,
+              "in": 1223,
+              "isNegative": false
+            }
+          ],
+          "captainChanges": [
+            {
+              "out": 1143,
+              "in": 748,
+              "type": "captain"
+            },
+            {
+              "out": 748,
+              "in": 2012,
+              "type": "captain"
+            },
+            {
+              "out": 2012,
+              "in": 792,
+              "type": "captain"
+            }
+          ],
+          "value": 94,
+          "maxCaptain": null,
+          "maxCaptainBooster": null,
+          "twelfthMan": null,
+          "wildCard": null,
+          "qualification": null,
+          "cleanSheet": null,
+          "qualificationPlayerIds": [],
+          "cleanSheetPlayerIds": [],
+          "roundPoints": 69,
+          "overallPoints": 132,
+          "freeTransfers": 0,
+          "negativeTransfers": 0,
+          "locked": false
+        },
+        "3": {
+          "captain": 1520,
+          "vice": 1153,
+          "lineup": {
+            "GK": [
+              1153
+            ],
+            "DEF": [
+              2012,
+              1536,
+              1143,
+              252
+            ],
+            "MID": [
+              792,
+              256,
+              1248,
+              1223
+            ],
+            "FWD": [
+              1520,
+              723
+            ]
+          },
+          "bench": {
+            "GK": [
+              423
+            ],
+            "DEF": [
+              1009
+            ],
+            "MID": [
+              1597
+            ],
+            "FWD": [
+              1267
+            ]
+          },
+          "benchOrder": [
+            423,
+            1009,
+            1267,
+            1597
+          ],
+          "substitutions": [
+            {
+              "out": 1009,
+              "in": 1536,
+              "isAuto": false
+            },
+            {
+              "out": 1267,
+              "in": 252,
+              "isAuto": false
+            }
+          ],
+          "transfers": [
+            {
+              "out": 748,
+              "in": 1267,
+              "isNegative": false
+            },
+            {
+              "out": 445,
+              "in": 1520,
+              "isNegative": false
+            }
+          ],
+          "captainChanges": [
+            {
+              "out": 1143,
+              "in": 1520,
+              "type": "captain"
+            }
+          ],
+          "value": 93,
+          "maxCaptain": null,
+          "maxCaptainBooster": null,
+          "twelfthMan": null,
+          "wildCard": null,
+          "qualification": null,
+          "cleanSheet": null,
+          "qualificationPlayerIds": [],
+          "cleanSheetPlayerIds": [],
+          "roundPoints": 39,
+          "overallPoints": 171,
+          "freeTransfers": 0,
+          "negativeTransfers": 0,
+          "locked": false
+        },
+        "4": {
+          "captain": 1143,
+          "vice": 1153,
+          "lineup": {
+            "GK": [
+              1153
+            ],
+            "DEF": [
+              2012,
+              1009,
+              1143
+            ],
+            "MID": [
+              792,
+              256,
+              1248,
+              1223
+            ],
+            "FWD": [
+              1520,
+              1267,
+              723
+            ]
+          },
+          "bench": {
+            "GK": [
+              423
+            ],
+            "DEF": [
+              1536,
+              252
+            ],
+            "MID": [
+              1597
+            ],
+            "FWD": []
+          },
+          "benchOrder": [
+            423,
+            1536,
+            252,
+            1597
+          ],
+          "substitutions": [],
+          "transfers": [],
+          "captainChanges": [],
+          "value": 93,
+          "maxCaptain": null,
+          "maxCaptainBooster": null,
+          "twelfthMan": null,
+          "wildCard": null,
+          "qualification": null,
+          "cleanSheet": null,
+          "qualificationPlayerIds": [],
+          "cleanSheetPlayerIds": [],
+          "roundPoints": 40,
+          "overallPoints": 211,
+          "freeTransfers": null,
+          "negativeTransfers": 0,
+          "locked": false
+        }
+      },
+      "avatar": "https://play.fifa.com/media/image/gamezone/avatars/WC_2026/1.svg",
+      "level": 1,
+      "overallRank": 20,
+      "roundRank": 20,
+      "overallPoints": 211,
+      "roundPoints": 40
+    }
+  },
+  "current_round": 4,
+  "league_id": "248321",
+  "updated_at": "2026-07-03T20:56:37Z"
+}
