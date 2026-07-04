@@ -561,7 +561,7 @@ function renderFreeKick3D() {
     <div class="card fk-wrap">
       <div class="fk-stage" id="fkStage">
         <svg class="fk-aim-svg" id="fkAimSvg" style="position:absolute;inset:0;pointer-events:none;z-index:2;display:none;">
-          <line id="fkAimLineEl" x1="0" y1="0" x2="0" y2="0" stroke="#d9b44a" stroke-width="3" stroke-linecap="round" opacity="0.85"></line>
+          <polyline id="fkAimLineEl" points="" fill="none" stroke="#d9b44a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity="0.85"></polyline>
         </svg>
         <div class="fk-hud">
           <span>Голи: <span id="fkScore">0</span></span>
@@ -577,7 +577,7 @@ function renderFreeKick3D() {
           <button id="fkAgainBtn">Ще раз</button>
         </div>
       </div>
-      <div class="fk-hint">Що ширше тягнеш вбік — то ширше приціл і сильніша закрутка назад до воріт. Тягни вгору — сильніший і вищий удар.</div>
+      <div class="fk-hint">Малюй дугою: потягни вбік і поверни назад до центру — м'яч полетить саме за цією дугою. Тягни вгору — сильніший і вищий удар.</div>
     </div>`;
 }
 
@@ -590,11 +590,11 @@ function initFreeKick3D() {
 
   const GOAL_WIDTH = 7.32, GOAL_HEIGHT = 2.44, BALL_RADIUS = 0.14;
   const GRAVITY = 9.8, MAGNUS_K = 0.15, DRAG_K = 0.12;
-  const WALL_COUNT = 5, WALL_PLAYER_RADIUS = 0.29, WALL_PLAYER_HEIGHT = 1.85;
+  const WALL_COUNT = 4, WALL_PLAYER_RADIUS = 0.27, WALL_PLAYER_HEIGHT = 1.8;
   const GAME_TIME = 60;
   const WALL_JUMP_DURATION = 0.5, WALL_JUMP_HEIGHT = 0.34;
-  const KEEPER_REACT_MIN = 0.16, KEEPER_REACT_MAX = 0.30;
-  const KEEPER_MAX_SPEED = 5.6, KEEPER_ERROR = 1.15, KEEPER_REACH = 0.95;
+  const KEEPER_REACT_MIN = 0.24, KEEPER_REACT_MAX = 0.42;
+  const KEEPER_MAX_SPEED = 4.0, KEEPER_ERROR = 1.7, KEEPER_REACH = 0.78;
 
   const scene = new THREE.Scene();
   scene.background = new THREE.Color(0x0b2a1a);
@@ -718,10 +718,25 @@ function initFreeKick3D() {
   }
   const ballMesh = new THREE.Mesh(
     new THREE.SphereGeometry(BALL_RADIUS, 24, 24),
-    new THREE.MeshStandardMaterial({ map: createBallTexture(), roughness: 0.5 })
+    new THREE.MeshStandardMaterial({ map: createBallTexture(), roughness: 0.5, emissive: 0x333333, emissiveIntensity: 0.4 })
   );
   ballMesh.castShadow = true;
   scene.add(ballMesh);
+
+  // a bright ground marker that always sits under the ball so it's easy to
+  // spot where the free kick is being taken from, even at a distance
+  const ballMarker = new THREE.Mesh(
+    new THREE.RingGeometry(BALL_RADIUS * 1.8, BALL_RADIUS * 3.2, 24),
+    new THREE.MeshBasicMaterial({ color: 0xffd400, transparent: true, opacity: 0.75, side: THREE.DoubleSide })
+  );
+  ballMarker.rotation.x = -Math.PI / 2;
+  ballMarker.position.y = 0.015;
+  scene.add(ballMarker);
+
+  // small point light that follows the ball so it stays bright against the turf
+  const ballLight = new THREE.PointLight(0xffffff, 0.6, 4);
+  ballLight.position.y = 0.6;
+  scene.add(ballLight);
 
   // ---- Human figure factory (jointed limbs: torso/hips cylinders, spherical
   // head, hinged arm/leg cylinders with hand/foot caps) — used for both the
@@ -857,7 +872,7 @@ function initFreeKick3D() {
     const lateralShift = (Math.random() * 2 - 1) * 0.6;
     wallPositions = [];
     for (let i = 0; i < WALL_COUNT; i++) {
-      const off = (i - (WALL_COUNT - 1) / 2) * 0.46 + lateralShift;
+      const off = (i - (WALL_COUNT - 1) / 2) * 0.56 + lateralShift;
       const pos = wallCenter.clone().addScaledVector(perp, off);
       wallPositions.push(pos);
       wallPlayers[i].position.set(pos.x, 0, pos.z);
@@ -870,13 +885,14 @@ function initFreeKick3D() {
     keeperDecided = false;
     keeperReactDelay = KEEPER_REACT_MIN + Math.random() * (KEEPER_REACT_MAX - KEEPER_REACT_MIN);
 
-    // camera behind and above the ball, raised enough to see over the wall to the keeper
+    // camera close behind and above the ball (so the ball reads clearly in the
+    // foreground) but still elevated enough to see the keeper over the wall
     const ballPos3 = new THREE.Vector3(offsetX, BALL_RADIUS, distanceZ);
-    const camPos = ballPos3.clone().addScaledVector(baseForward, -1.8);
-    camPos.y += 2.0;
+    const camPos = ballPos3.clone().addScaledVector(baseForward, -1.35);
+    camPos.y += 1.55;
     camera.position.copy(camPos);
-    const lookTarget = ballPos3.clone().addScaledVector(baseForward, 4.2);
-    lookTarget.y = 0.85;
+    const lookTarget = ballPos3.clone().addScaledVector(baseForward, 4.0);
+    lookTarget.y = 0.7;
     camera.lookAt(lookTarget);
 
     state = "idle";
@@ -982,13 +998,24 @@ function initFreeKick3D() {
     return false;
   }
 
-  // ---- Drag input: horizontal = aim+curve, vertical = power ----
+  // ---- Drag input: draw the actual swipe path, then read its shape ----
+  // Instead of only looking at start->end displacement, we track every point
+  // of the gesture. The point furthest from the straight line (the "bow" of
+  // the swipe) sets how wide you aimed, and how far the finger curls back
+  // in from that peak toward the release point sets the curve — so a shot
+  // drawn as a real banana-shaped swipe actually bends like the drawn arc,
+  // while a plain straight drag still behaves like a simple aim+power shot.
   let dragging = false;
   let dragStart = { x: 0, y: 0 };
+  let dragPath = [];
 
   function stagePoint(clientX, clientY) {
     const rect = stage.getBoundingClientRect();
     return { x: clientX - rect.left, y: clientY - rect.top };
+  }
+
+  function updatePathLine() {
+    aimLine.setAttribute("points", dragPath.map((p) => `${p.x},${p.y}`).join(" "));
   }
 
   stage.addEventListener("pointerdown", (e) => {
@@ -997,14 +1024,15 @@ function initFreeKick3D() {
     stage.classList.add("dragging");
     const p = stagePoint(e.clientX, e.clientY);
     dragStart = p;
+    dragPath = [p];
     aimSvg.style.display = "block";
-    aimLine.setAttribute("x1", p.x); aimLine.setAttribute("y1", p.y);
-    aimLine.setAttribute("x2", p.x); aimLine.setAttribute("y2", p.y);
+    updatePathLine();
   });
   window.addEventListener("pointermove", (e) => {
     if (!dragging) return;
     const p = stagePoint(e.clientX, e.clientY);
-    aimLine.setAttribute("x2", p.x); aimLine.setAttribute("y2", p.y);
+    dragPath.push(p);
+    updatePathLine();
   });
   window.addEventListener("pointerup", (e) => {
     if (!dragging) return;
@@ -1013,21 +1041,33 @@ function initFreeKick3D() {
     aimSvg.style.display = "none";
     if (state !== "idle") return;
     const p = stagePoint(e.clientX, e.clientY);
+    dragPath.push(p);
     const dx = p.x - dragStart.x;
     const dy = p.y - dragStart.y;
     const stageW = stage.clientWidth || 400;
     const stageH = stage.clientHeight || 225;
+    if (Math.abs(dx) < 4 && Math.abs(dy) < 4 && dragPath.length < 4) return; // too small, ignore accidental clicks
 
-    const curveInput = Math.max(-1, Math.min(1, dx / (stageW * 0.35)));
+    // find the point of the swipe furthest out horizontally from the start —
+    // that's how wide you aimed before curling the shot back in
+    let peakOffsetX = dx;
+    for (const pt of dragPath) {
+      const off = pt.x - dragStart.x;
+      if (Math.abs(off) > Math.abs(peakOffsetX)) peakOffsetX = off;
+    }
+
+    const aimNorm = Math.max(-1, Math.min(1, peakOffsetX / (stageW * 0.35)));
+    // total curve = how far out you aimed + how much you curled it back in
+    // from that peak toward the release point (0 for a plain straight drag)
+    const curveNorm = Math.max(-1, Math.min(1, (2 * peakOffsetX - dx) / (stageW * 0.35)));
     const powerInput = Math.max(0.25, Math.min(1, -dy / (stageH * 0.45)));
-    if (Math.abs(dx) < 4 && Math.abs(dy) < 4) return; // too small, ignore accidental clicks
 
     const MAX_AIM_ANGLE = (24 * Math.PI) / 180;
     const MAX_SPIN = 5.5;
     const MIN_SPEED = 15, MAX_SPEED = 24;
 
-    const aimAngle = curveInput * MAX_AIM_ANGLE;
-    spinY = -curveInput * MAX_SPIN;
+    const aimAngle = aimNorm * MAX_AIM_ANGLE;
+    spinY = -curveNorm * MAX_SPIN;
     const speed = MIN_SPEED + powerInput * (MAX_SPEED - MIN_SPEED);
     const elevationDeg = 7 + powerInput * 9;
     const elevation = (elevationDeg * Math.PI) / 180;
@@ -1073,6 +1113,13 @@ function initFreeKick3D() {
         timeEl.textContent = String(Math.ceil(timeLeft));
       }
     }
+
+    ballMarker.position.x = ballMesh.position.x;
+    ballMarker.position.z = ballMesh.position.z;
+    ballMarker.visible = state === "idle";
+    ballLight.position.x = ballMesh.position.x;
+    ballLight.position.z = ballMesh.position.z;
+    ballLight.position.y = ballMesh.position.y + 0.5;
 
     renderer.render(scene, camera);
   }
