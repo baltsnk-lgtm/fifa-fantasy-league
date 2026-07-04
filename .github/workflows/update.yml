@@ -2,7 +2,7 @@ name: Update FIFA Fantasy Standings
 
 on:
   schedule:
-    - cron: "0 * * * *"   # every hour, on the hour (UTC)
+        - cron: "7 * * * *" # every hour, 7 min past — avoids the top-of-hour GitHub Actions congestion
   workflow_dispatch:        # allows manual "Run workflow" button
 
 permissions:
