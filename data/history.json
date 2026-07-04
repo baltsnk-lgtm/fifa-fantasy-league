@@ -2276,10 +2276,10 @@
       },
       "avatar": "https://play.fifa.com/media/image/gamezone/avatars/WC_2026/2.svg",
       "level": 2,
-      "overallRank": 8,
-      "roundRank": 12,
-      "overallPoints": 338,
-      "roundPoints": 86
+      "overallRank": 7,
+      "roundRank": 9,
+      "overallPoints": 348,
+      "roundPoints": 96
     },
     "3166273": {
       "userName": "bltsnk",
@@ -4386,8 +4386,8 @@
       },
       "avatar": "https://play.fifa.com/media/image/gamezone/avatars/WC_2026/6.svg",
       "level": 6,
-      "overallRank": 7,
-      "roundRank": 9,
+      "overallRank": 8,
+      "roundRank": 10,
       "overallPoints": 347,
       "roundPoints": 93
     },
@@ -5274,7 +5274,7 @@
       "avatar": "https://play.fifa.com/media/image/gamezone/avatars/WC_2026/10.svg",
       "level": 10,
       "overallRank": 10,
-      "roundRank": 11,
+      "roundRank": 12,
       "overallPoints": 310,
       "roundPoints": 87
     },
@@ -6043,7 +6043,7 @@
       "avatar": "https://play.fifa.com/media/image/gamezone/avatars/WC_2026/2.svg",
       "level": 2,
       "overallRank": 12,
-      "roundRank": 10,
+      "roundRank": 11,
       "overallPoints": 297,
       "roundPoints": 89
     },
@@ -6357,8 +6357,8 @@
       "level": 11,
       "overallRank": 14,
       "roundRank": 14,
-      "overallPoints": 287,
-      "roundPoints": 84
+      "overallPoints": 288,
+      "roundPoints": 85
     },
     "4581314": {
       "userName": "OleksiiTim",
@@ -7938,8 +7938,8 @@
       "level": 6,
       "overallRank": 18,
       "roundRank": 16,
-      "overallPoints": 240,
-      "roundPoints": 68
+      "overallPoints": 242,
+      "roundPoints": 70
     },
     "4784313": {
       "userName": "Coolelyk",
@@ -8241,8 +8241,8 @@
       "level": 3,
       "overallRank": 19,
       "roundRank": 20,
-      "overallPoints": 230,
-      "roundPoints": 42
+      "overallPoints": 233,
+      "roundPoints": 45
     },
     "5339304": {
       "userName": "Oranje Wereldkampioen",
@@ -8661,11 +8661,11 @@
       "level": 2,
       "overallRank": 20,
       "roundRank": 19,
-      "overallPoints": 214,
-      "roundPoints": 43
+      "overallPoints": 226,
+      "roundPoints": 55
     }
   },
   "current_round": 4,
   "league_id": "248321",
-  "updated_at": "2026-07-04T04:16:05Z"
+  "updated_at": "2026-07-04T06:36:54Z"
 }
