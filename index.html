@@ -597,7 +597,7 @@ function initFreeKick3D() {
   scene.background = new THREE.Color(0x0b2a1a);
   scene.fog = new THREE.Fog(0x0b2a1a, 20, 55);
 
-  const camera = new THREE.PerspectiveCamera(58, 16 / 9, 0.1, 100);
+  const camera = new THREE.PerspectiveCamera(64, 16 / 9, 0.1, 100);
   const renderer = new THREE.WebGLRenderer({ antialias: true });
   renderer.shadowMap.enabled = true;
   stage.appendChild(renderer.domElement);
@@ -797,11 +797,14 @@ function initFreeKick3D() {
       wallPlayers[i].lookAt(offsetX, 0, distanceZ);
     }
 
-    // camera behind the ball, looking toward goal
-    const camPos = new THREE.Vector3(offsetX, BALL_RADIUS, distanceZ).addScaledVector(baseForward, -1.4);
-    camPos.y += 0.95;
+    // camera behind and above the ball, looking down-field over it toward the goal
+    const ballPos3 = new THREE.Vector3(offsetX, BALL_RADIUS, distanceZ);
+    const camPos = ballPos3.clone().addScaledVector(baseForward, -1.8);
+    camPos.y += 1.2;
     camera.position.copy(camPos);
-    camera.lookAt(0, 1.05, 0);
+    const lookTarget = ballPos3.clone().addScaledVector(baseForward, 3.5);
+    lookTarget.y = 0.35;
+    camera.lookAt(lookTarget);
 
     state = "idle";
   }
