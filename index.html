@@ -967,6 +967,12 @@ function initFreeKick3D() {
     }
 
     renderer.render(scene, camera);
+    window.__fkDebug = {
+      ballPos: ballMesh.position.toArray(),
+      camPos: camera.position.toArray(),
+      camRot: camera.rotation.toArray(),
+      state,
+    };
   }
   let fkTimerPaused = true;
   requestAnimationFrame(tick);
