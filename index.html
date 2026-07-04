@@ -557,7 +557,7 @@ function sparkline(values, w, h) {
 function renderFreeKick3D() {
   return `
     <h2 class="panel-title">Штрафний 3D</h2>
-    <p class="panel-sub">Затисни на м'ячі та потягни вбік — приціл і закрутка (ефект Магнуса), вгору — сила. Відпусти, щоб вдарити. 60 секунд, кожен штрафний з нової точки — обходь стінку закрученим ударом.</p>
+    <p class="panel-sub">Затисни на м'ячі та потягни вбік — приціл і закрутка (ефект Магнуса), вгору — сила. Відпусти, щоб вдарити. 60 секунд, кожен штрафний з нової точки. Стінка кожен другий удар підстрибує, а на воротах — воротар: обходь стінку закрученим ударом і цілься в кут, куди він не встигне.</p>
     <div class="card fk-wrap">
       <div class="fk-stage" id="fkStage">
         <svg class="fk-aim-svg" id="fkAimSvg" style="position:absolute;inset:0;pointer-events:none;z-index:2;display:none;">
@@ -590,8 +590,11 @@ function initFreeKick3D() {
 
   const GOAL_WIDTH = 7.32, GOAL_HEIGHT = 2.44, BALL_RADIUS = 0.14;
   const GRAVITY = 9.8, MAGNUS_K = 0.15, DRAG_K = 0.12;
-  const WALL_COUNT = 4, WALL_PLAYER_RADIUS = 0.28, WALL_PLAYER_HEIGHT = 1.85;
+  const WALL_COUNT = 5, WALL_PLAYER_RADIUS = 0.29, WALL_PLAYER_HEIGHT = 1.85;
   const GAME_TIME = 60;
+  const WALL_JUMP_DURATION = 0.5, WALL_JUMP_HEIGHT = 0.34;
+  const KEEPER_REACT_MIN = 0.16, KEEPER_REACT_MAX = 0.30;
+  const KEEPER_MAX_SPEED = 5.6, KEEPER_ERROR = 1.15, KEEPER_REACH = 0.95;
 
   const scene = new THREE.Scene();
   scene.background = new THREE.Color(0x0b2a1a);
@@ -720,34 +723,57 @@ function initFreeKick3D() {
   ballMesh.castShadow = true;
   scene.add(ballMesh);
 
-  // ---- Wall players ----
+  // ---- Wall players (footballer kit: navy shirt, white shorts, hands guarding) ----
   const wallGroup = new THREE.Group();
   const wallPlayers = [];
+  const wallShirtMat = new THREE.MeshStandardMaterial({ color: 0x1d3557, roughness: 0.65 });
+  const wallShortsMat = new THREE.MeshStandardMaterial({ color: 0xf3f1e8, roughness: 0.7 });
+  const wallSkinMat = new THREE.MeshStandardMaterial({ color: 0xd8a878, roughness: 0.7 });
   for (let i = 0; i < WALL_COUNT; i++) {
     const g = new THREE.Group();
-    const body = new THREE.Mesh(
-      new THREE.BoxGeometry(0.48, 1.05, 0.28),
-      new THREE.MeshStandardMaterial({ color: 0x8a2e2e, roughness: 0.7 })
-    );
+    const body = new THREE.Mesh(new THREE.BoxGeometry(0.48, 1.05, 0.28), wallShirtMat);
     body.position.y = 0.78;
     body.castShadow = true;
-    const head = new THREE.Mesh(
-      new THREE.SphereGeometry(0.16, 12, 12),
-      new THREE.MeshStandardMaterial({ color: 0xd8a878, roughness: 0.7 })
-    );
+    const head = new THREE.Mesh(new THREE.SphereGeometry(0.16, 12, 12), wallSkinMat);
     head.position.y = 1.46;
     head.castShadow = true;
-    const shorts = new THREE.Mesh(
-      new THREE.BoxGeometry(0.46, 0.35, 0.26),
-      new THREE.MeshStandardMaterial({ color: 0xf3f1e8, roughness: 0.7 })
-    );
+    const shorts = new THREE.Mesh(new THREE.BoxGeometry(0.46, 0.35, 0.26), wallShortsMat);
     shorts.position.y = 0.18;
     shorts.castShadow = true;
-    g.add(body, head, shorts);
+    const armL = new THREE.Mesh(new THREE.BoxGeometry(0.11, 0.34, 0.11), wallShirtMat);
+    armL.position.set(-0.15, 0.52, 0.14);
+    armL.rotation.x = -0.5;
+    armL.castShadow = true;
+    const armR = armL.clone();
+    armR.position.x = 0.15;
+    g.add(body, head, shorts, armL, armR);
     wallGroup.add(g);
     wallPlayers.push(g);
   }
   scene.add(wallGroup);
+
+  // ---- Goalkeeper (medium-difficulty AI, distinct GK kit) ----
+  const keeperGroup = new THREE.Group();
+  {
+    const gkBody = new THREE.Mesh(
+      new THREE.BoxGeometry(0.5, 1.1, 0.3),
+      new THREE.MeshStandardMaterial({ color: 0xffd400, roughness: 0.6 })
+    );
+    gkBody.position.y = 0.8;
+    gkBody.castShadow = true;
+    const gkHead = new THREE.Mesh(new THREE.SphereGeometry(0.16, 12, 12), wallSkinMat);
+    gkHead.position.y = 1.5;
+    gkHead.castShadow = true;
+    const gkShorts = new THREE.Mesh(
+      new THREE.BoxGeometry(0.48, 0.35, 0.28),
+      new THREE.MeshStandardMaterial({ color: 0x1a1a1a, roughness: 0.7 })
+    );
+    gkShorts.position.y = 0.18;
+    gkShorts.castShadow = true;
+    keeperGroup.add(gkBody, gkHead, gkShorts);
+  }
+  keeperGroup.position.set(0, 0, 0.2);
+  scene.add(keeperGroup);
 
   // ---- Game state ----
   let score = 0;
@@ -758,6 +784,11 @@ function initFreeKick3D() {
   let baseForward = new THREE.Vector3(0, 0, -1);
   let wallPositions = [];
   let flightElapsed = 0;
+  let shotIndex = 0;
+  let wallWillJump = false;
+  let keeperTargetX = 0;
+  let keeperDecided = false;
+  let keeperReactDelay = 0.2;
 
   const scoreEl = document.getElementById("fkScore");
   const timeEl = document.getElementById("fkTime");
@@ -776,6 +807,10 @@ function initFreeKick3D() {
   }
 
   function setupShot() {
+    shotIndex += 1;
+    wallWillJump = shotIndex % 2 === 0;
+    wallGroup.position.y = 0;
+
     const offsetX = (Math.random() * 2 - 1) * 7;
     const distanceZ = 17 + Math.random() * 8;
     ballMesh.position.set(offsetX, BALL_RADIUS, distanceZ);
@@ -790,12 +825,18 @@ function initFreeKick3D() {
     const lateralShift = (Math.random() * 2 - 1) * 0.6;
     wallPositions = [];
     for (let i = 0; i < WALL_COUNT; i++) {
-      const off = (i - (WALL_COUNT - 1) / 2) * 0.52 + lateralShift;
+      const off = (i - (WALL_COUNT - 1) / 2) * 0.46 + lateralShift;
       const pos = wallCenter.clone().addScaledVector(perp, off);
       wallPositions.push(pos);
       wallPlayers[i].position.set(pos.x, 0, pos.z);
       wallPlayers[i].lookAt(offsetX, 0, distanceZ);
     }
+
+    // goalkeeper reset: centered, will react after a randomized delay (medium difficulty)
+    keeperGroup.position.x = 0;
+    keeperTargetX = 0;
+    keeperDecided = false;
+    keeperReactDelay = KEEPER_REACT_MIN + Math.random() * (KEEPER_REACT_MAX - KEEPER_REACT_MIN);
 
     // camera behind and above the ball, looking down-field over it toward the goal
     const ballPos3 = new THREE.Vector3(offsetX, BALL_RADIUS, distanceZ);
@@ -819,6 +860,8 @@ function initFreeKick3D() {
       showMsg("ГОООЛ! ⚽", "var(--up)");
     } else if (kind === "wall") {
       showMsg("СТІНКА! 🧱", "var(--down)");
+    } else if (kind === "keeper") {
+      showMsg("ВРАТАР! 🧤", "var(--down)");
     } else {
       showMsg("МИМО", "var(--down)");
     }
@@ -838,15 +881,44 @@ function initFreeKick3D() {
     ballMesh.rotation.x += ballVel.length() * dt * 1.4;
     ballMesh.rotation.y += spinY * dt * 0.6;
 
-    // wall collision
+    // wall jump animation (every 2nd free kick) — raises the whole wall group
+    if (wallWillJump) {
+      const t = flightElapsed;
+      wallGroup.position.y = t <= WALL_JUMP_DURATION
+        ? WALL_JUMP_HEIGHT * Math.sin(Math.PI * (t / WALL_JUMP_DURATION))
+        : 0;
+    }
+    const wallFeetY = wallGroup.position.y;
+
+    // wall collision (offset by jump height — a low shot can sneak under a jumping wall)
     for (const p of wallPositions) {
       const dx = ballMesh.position.x - p.x;
       const dz = ballMesh.position.z - p.z;
       const dist = Math.sqrt(dx * dx + dz * dz);
-      if (dist < WALL_PLAYER_RADIUS + BALL_RADIUS && ballMesh.position.y < WALL_PLAYER_HEIGHT && ballMesh.position.y > -0.1) {
+      if (
+        dist < WALL_PLAYER_RADIUS + BALL_RADIUS &&
+        ballMesh.position.y < wallFeetY + WALL_PLAYER_HEIGHT &&
+        ballMesh.position.y > wallFeetY - 0.15
+      ) {
         endShot("wall");
         return true;
       }
+    }
+
+    // goalkeeper AI: after a reaction delay, predicts the crossing point (imperfect —
+    // ignores further Magnus drift, so well-curved shots can beat it) and dives there
+    // at a capped speed (medium difficulty).
+    if (!keeperDecided && flightElapsed >= keeperReactDelay && ballVel.z < 0) {
+      const timeToGoal = ballMesh.position.z / -ballVel.z;
+      let predictedX = ballMesh.position.x + ballVel.x * timeToGoal;
+      predictedX += (Math.random() * 2 - 1) * KEEPER_ERROR;
+      keeperTargetX = Math.max(-GOAL_WIDTH / 2 - 0.6, Math.min(GOAL_WIDTH / 2 + 0.6, predictedX));
+      keeperDecided = true;
+    }
+    if (keeperDecided) {
+      const dx = keeperTargetX - keeperGroup.position.x;
+      const maxStep = KEEPER_MAX_SPEED * dt;
+      keeperGroup.position.x += Math.max(-maxStep, Math.min(maxStep, dx));
     }
 
     // ground contact before reaching the goal line
@@ -861,7 +933,11 @@ function initFreeKick3D() {
       const xAtLine = prevPos.x + (ballMesh.position.x - prevPos.x) * t;
       const yAtLine = prevPos.y + (ballMesh.position.y - prevPos.y) * t;
       if (Math.abs(xAtLine) <= GOAL_WIDTH / 2 && yAtLine >= 0 && yAtLine <= GOAL_HEIGHT) {
-        endShot("goal");
+        if (Math.abs(xAtLine - keeperGroup.position.x) < KEEPER_REACH) {
+          endShot("keeper");
+        } else {
+          endShot("goal");
+        }
       } else {
         endShot("miss");
       }
