@@ -723,55 +723,87 @@ function initFreeKick3D() {
   ballMesh.castShadow = true;
   scene.add(ballMesh);
 
-  // ---- Wall players (footballer kit: navy shirt, white shorts, hands guarding) ----
+  // ---- Human figure factory (jointed limbs: torso/hips cylinders, spherical
+  // head, hinged arm/leg cylinders with hand/foot caps) — used for both the
+  // wall players and the goalkeeper so they read as actual footballers. ----
+  const wallSkinMat = new THREE.MeshStandardMaterial({ color: 0xd8a878, roughness: 0.7 });
+
+  // A limb is a small group whose pivot is at the joint (shoulder/hip) so
+  // rotating the group swings the whole limb naturally.
+  function buildLimb(radiusTop, radiusBottom, length, limbMat, capRadius, capMat) {
+    const g = new THREE.Group();
+    const geo = new THREE.CylinderGeometry(radiusTop, radiusBottom, length, 8);
+    geo.translate(0, -length / 2, 0);
+    const mesh = new THREE.Mesh(geo, limbMat);
+    mesh.castShadow = true;
+    g.add(mesh);
+    if (capRadius) {
+      const cap = new THREE.Mesh(new THREE.SphereGeometry(capRadius, 8, 8), capMat);
+      cap.position.y = -length;
+      cap.castShadow = true;
+      g.add(cap);
+    }
+    return g;
+  }
+
+  function buildFigure(kit, pose) {
+    const g = new THREE.Group();
+    const shirtMat = new THREE.MeshStandardMaterial({ color: kit.shirt, roughness: 0.65 });
+    const shortsMat = new THREE.MeshStandardMaterial({ color: kit.shorts, roughness: 0.7 });
+    const sockMat = new THREE.MeshStandardMaterial({ color: kit.socks, roughness: 0.7 });
+    const shoeMat = new THREE.MeshStandardMaterial({ color: 0x151515, roughness: 0.6 });
+
+    const torso = new THREE.Mesh(new THREE.CylinderGeometry(0.155, 0.135, 0.5, 10), shirtMat);
+    torso.position.y = 1.15;
+    torso.castShadow = true;
+
+    const hips = new THREE.Mesh(new THREE.CylinderGeometry(0.14, 0.125, 0.24, 10), shortsMat);
+    hips.position.y = 0.83;
+    hips.castShadow = true;
+
+    const head = new THREE.Mesh(new THREE.SphereGeometry(0.125, 14, 14), wallSkinMat);
+    head.position.y = 1.56;
+    head.castShadow = true;
+
+    g.add(torso, hips, head);
+
+    // legs: hip-hinged, mostly straight down with a slight athletic stance
+    [-1, 1].forEach((side) => {
+      const leg = buildLimb(0.072, 0.055, 0.82, sockMat, 0.09, shoeMat);
+      leg.position.set(side * (pose.stance ?? 0.09), 0.71, 0);
+      leg.rotation.x = pose.legTilt ?? 0.03;
+      leg.rotation.z = side * (pose.legSplay ?? 0.03);
+      g.add(leg);
+    });
+
+    // arms: shoulder-hinged, angle/spread comes from the pose
+    [-1, 1].forEach((side) => {
+      const arm = buildLimb(0.052, 0.042, 0.5, shirtMat, 0.055, wallSkinMat);
+      arm.position.set(side * 0.17, 1.38, 0);
+      arm.rotation.x = pose.armX ?? -0.4;
+      arm.rotation.z = side * (pose.armZ ?? 0.4);
+      g.add(arm);
+    });
+
+    return g;
+  }
+
+  // ---- Wall players (navy shirt, white shorts, navy socks — hands guarding) ----
   const wallGroup = new THREE.Group();
   const wallPlayers = [];
-  const wallShirtMat = new THREE.MeshStandardMaterial({ color: 0x1d3557, roughness: 0.65 });
-  const wallShortsMat = new THREE.MeshStandardMaterial({ color: 0xf3f1e8, roughness: 0.7 });
-  const wallSkinMat = new THREE.MeshStandardMaterial({ color: 0xd8a878, roughness: 0.7 });
+  const wallKit = { shirt: 0x1d3557, shorts: 0xf3f1e8, socks: 0x1d3557 };
+  const wallPose = { armX: -2.35, armZ: 0.32, legTilt: 0.02, legSplay: 0.02, stance: 0.09 };
   for (let i = 0; i < WALL_COUNT; i++) {
-    const g = new THREE.Group();
-    const body = new THREE.Mesh(new THREE.BoxGeometry(0.48, 1.05, 0.28), wallShirtMat);
-    body.position.y = 0.78;
-    body.castShadow = true;
-    const head = new THREE.Mesh(new THREE.SphereGeometry(0.16, 12, 12), wallSkinMat);
-    head.position.y = 1.46;
-    head.castShadow = true;
-    const shorts = new THREE.Mesh(new THREE.BoxGeometry(0.46, 0.35, 0.26), wallShortsMat);
-    shorts.position.y = 0.18;
-    shorts.castShadow = true;
-    const armL = new THREE.Mesh(new THREE.BoxGeometry(0.11, 0.34, 0.11), wallShirtMat);
-    armL.position.set(-0.15, 0.52, 0.14);
-    armL.rotation.x = -0.5;
-    armL.castShadow = true;
-    const armR = armL.clone();
-    armR.position.x = 0.15;
-    g.add(body, head, shorts, armL, armR);
+    const g = buildFigure(wallKit, wallPose);
     wallGroup.add(g);
     wallPlayers.push(g);
   }
   scene.add(wallGroup);
 
-  // ---- Goalkeeper (medium-difficulty AI, distinct GK kit) ----
-  const keeperGroup = new THREE.Group();
-  {
-    const gkBody = new THREE.Mesh(
-      new THREE.BoxGeometry(0.5, 1.1, 0.3),
-      new THREE.MeshStandardMaterial({ color: 0xffd400, roughness: 0.6 })
-    );
-    gkBody.position.y = 0.8;
-    gkBody.castShadow = true;
-    const gkHead = new THREE.Mesh(new THREE.SphereGeometry(0.16, 12, 12), wallSkinMat);
-    gkHead.position.y = 1.5;
-    gkHead.castShadow = true;
-    const gkShorts = new THREE.Mesh(
-      new THREE.BoxGeometry(0.48, 0.35, 0.28),
-      new THREE.MeshStandardMaterial({ color: 0x1a1a1a, roughness: 0.7 })
-    );
-    gkShorts.position.y = 0.18;
-    gkShorts.castShadow = true;
-    keeperGroup.add(gkBody, gkHead, gkShorts);
-  }
+  // ---- Goalkeeper (medium-difficulty AI, distinct GK kit, ready stance) ----
+  const keeperKit = { shirt: 0xffd400, shorts: 0x1a1a1a, socks: 0xffd400 };
+  const keeperPose = { armX: -0.35, armZ: 1.15, legTilt: -0.05, legSplay: 0.12, stance: 0.13 };
+  const keeperGroup = buildFigure(keeperKit, keeperPose);
   keeperGroup.position.set(0, 0, 0.2);
   scene.add(keeperGroup);
 
@@ -838,13 +870,13 @@ function initFreeKick3D() {
     keeperDecided = false;
     keeperReactDelay = KEEPER_REACT_MIN + Math.random() * (KEEPER_REACT_MAX - KEEPER_REACT_MIN);
 
-    // camera behind and above the ball, looking down-field over it toward the goal
+    // camera behind and above the ball, raised enough to see over the wall to the keeper
     const ballPos3 = new THREE.Vector3(offsetX, BALL_RADIUS, distanceZ);
     const camPos = ballPos3.clone().addScaledVector(baseForward, -1.8);
-    camPos.y += 1.2;
+    camPos.y += 2.0;
     camera.position.copy(camPos);
-    const lookTarget = ballPos3.clone().addScaledVector(baseForward, 3.5);
-    lookTarget.y = 0.35;
+    const lookTarget = ballPos3.clone().addScaledVector(baseForward, 4.2);
+    lookTarget.y = 0.85;
     camera.lookAt(lookTarget);
 
     state = "idle";
@@ -859,7 +891,7 @@ function initFreeKick3D() {
     } else if (kind === "wall") {
       showMsg("СТІНКА! 🧱", "var(--down)");
     } else if (kind === "keeper") {
-      showMsg("ВРАТАР! 🧤", "var(--down)");
+      showMsg("ВОРОТАР! 🧤", "var(--down)");
     } else {
       showMsg("МИМО", "var(--down)");
     }
