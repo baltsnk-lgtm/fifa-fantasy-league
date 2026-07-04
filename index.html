@@ -600,7 +600,7 @@ function initFreeKick3D() {
   scene.background = new THREE.Color(0x0b2a1a);
   scene.fog = new THREE.Fog(0x0b2a1a, 20, 55);
 
-  const camera = new THREE.PerspectiveCamera(64, 16 / 9, 0.1, 100);
+  const camera = new THREE.PerspectiveCamera(70, 16 / 9, 0.1, 100);
   const renderer = new THREE.WebGLRenderer({ antialias: true });
   renderer.shadowMap.enabled = true;
   stage.appendChild(renderer.domElement);
@@ -888,11 +888,11 @@ function initFreeKick3D() {
     // camera close behind and above the ball (so the ball reads clearly in the
     // foreground) but still elevated enough to see the keeper over the wall
     const ballPos3 = new THREE.Vector3(offsetX, BALL_RADIUS, distanceZ);
-    const camPos = ballPos3.clone().addScaledVector(baseForward, -1.35);
-    camPos.y += 1.55;
+    const camPos = ballPos3.clone().addScaledVector(baseForward, -1.7);
+    camPos.y += 1.35;
     camera.position.copy(camPos);
-    const lookTarget = ballPos3.clone().addScaledVector(baseForward, 4.0);
-    lookTarget.y = 0.7;
+    const lookTarget = ballPos3.clone().addScaledVector(baseForward, 2.6);
+    lookTarget.y = 0.4;
     camera.lookAt(lookTarget);
 
     state = "idle";
