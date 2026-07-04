@@ -316,9 +316,116 @@
   .mini-card .l { font-size: 10px; text-transform: uppercase; letter-spacing: .5px; color: var(--muted); }
   .mini-card .n { font-weight: 600; margin-top: 3px; }
   .mini-card .p { font-size: 12px; color: var(--muted); }
+
+  /* ---------- Cursor glow / micro-interactions ---------- */
+  html { scroll-behavior: smooth; }
+  #cursorGlow {
+    position: fixed;
+    width: 420px; height: 420px;
+    border-radius: 50%;
+    pointer-events: none;
+    background: radial-gradient(circle, rgba(217,180,74,0.12) 0%, rgba(217,180,74,0) 68%);
+    transform: translate(-50%,-50%);
+    left: -500px; top: -500px;
+    z-index: 3;
+    will-change: left, top;
+  }
+  @media (hover: none), (pointer: coarse) { #cursorGlow { display: none; } }
+  .card { transition: box-shadow .2s, transform .2s; }
+  tbody tr { transition: background .12s, transform .12s; }
+  tbody tr:hover { transform: translateX(2px); }
+  nav.tabs button, .round-picker button, .modal-close, .quiz-opt, .filter-row button {
+    transition: background .15s, color .15s, border-color .15s, transform .1s;
+  }
+  nav.tabs button:active, .round-picker button:active, .modal-close:active, .quiz-opt:active, .filter-row button:active {
+    transform: scale(0.95);
+  }
+  .modal-card { animation: modalPop .18s cubic-bezier(.2,.8,.3,1); }
+  @keyframes modalPop { from { opacity: 0; transform: scale(0.96) translateY(6px); } to { opacity: 1; transform: none; } }
+
+  /* ---------- Chip filter row ---------- */
+  .filter-row { display: flex; gap: 6px; flex-wrap: wrap; margin: 4px 0 16px; }
+  .filter-row button {
+    font-family: var(--font-display);
+    font-size: 12px;
+    font-weight: 600;
+    border: 1px solid var(--line);
+    background: transparent;
+    color: var(--muted);
+    padding: 6px 13px;
+    border-radius: 999px;
+    cursor: pointer;
+  }
+  .filter-row button:hover { color: var(--white); border-color: var(--gold); }
+  .filter-row button.active { background: var(--gold); color: #0c2417; border-color: var(--gold); }
+
+  /* ---------- Football pitch formation view ---------- */
+  .pitch-wrap { margin-top: 14px; }
+  .pitch {
+    position: relative;
+    background: repeating-linear-gradient(180deg, #123f28 0px, #123f28 38px, #0e3722 38px, #0e3722 76px);
+    border: 1px solid rgba(255,255,255,0.14);
+    border-radius: 16px;
+    padding: 20px 6px 16px;
+    overflow: hidden;
+  }
+  .pitch::before {
+    content: ""; position: absolute; left: 50%; top: 50%;
+    width: 92px; height: 92px; border: 1px solid rgba(255,255,255,0.18);
+    border-radius: 50%; transform: translate(-50%,-50%); pointer-events: none;
+  }
+  .pitch::after {
+    content: ""; position: absolute; left: 0; right: 0; top: 50%; height: 1px;
+    background: rgba(255,255,255,0.18); pointer-events: none;
+  }
+  .pitch-row { display: flex; justify-content: space-evenly; gap: 4px; margin: 9px 0; position: relative; z-index: 1; }
+  .pitch-card { display: flex; flex-direction: column; align-items: center; width: 64px; text-align: center; }
+  .pitch-card .dot {
+    width: 36px; height: 36px; border-radius: 50%; background: var(--gold); color: #0c2417;
+    font-weight: 700; font-size: 10.5px; display: flex; align-items: center; justify-content: center;
+    position: relative; box-shadow: 0 2px 8px rgba(0,0,0,.35); transition: transform .15s;
+  }
+  .pitch-card:hover .dot { transform: scale(1.08); }
+  .pitch-card .badge2 {
+    position: absolute; top: -5px; right: -5px; background: #0c2417; border: 1px solid var(--gold);
+    color: var(--gold); font-size: 8px; font-weight: 700; border-radius: 4px; padding: 0 3px; line-height: 1.3;
+  }
+  .pitch-card .pname2 {
+    font-size: 10px; margin-top: 4px; font-weight: 600; line-height: 1.2; max-width: 64px;
+    overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+  }
+  .pitch-card .pts2 { font-size: 10px; color: var(--gold); font-weight: 700; margin-top: 1px; }
+
+  /* ---------- Big form chart ---------- */
+  .big-chart { display: block; }
+
+  /* ---------- Transfer history list ---------- */
+  .transfer-item {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 8px 10px; border-radius: 8px; font-size: 12.5px;
+  }
+  .transfer-item:nth-child(odd) { background: rgba(255,255,255,0.025); }
+  .transfer-item .tout { color: var(--down); }
+  .transfer-item .tin { color: var(--up); }
+
+  /* ---------- Mini-game ---------- */
+  .quiz-clues { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 16px; }
+  .quiz-options { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+  .quiz-opt {
+    font-family: var(--font-body); font-size: 13.5px; font-weight: 600; padding: 13px 10px;
+    border-radius: 10px; border: 1px solid var(--line); background: rgba(255,255,255,0.03);
+    color: var(--white); cursor: pointer;
+  }
+  .quiz-opt:hover { background: rgba(217,180,74,0.12); border-color: var(--gold); transform: translateY(-1px); }
+  .quiz-opt.correct { background: rgba(87,192,122,0.18); border-color: var(--up); color: var(--up); }
+  .quiz-opt.wrong { background: rgba(226,104,95,0.18); border-color: var(--down); color: var(--down); }
+  .quiz-result { margin-top: 14px; font-size: 13px; min-height: 18px; font-weight: 600; }
+  .quiz-stats { display: flex; gap: 18px; margin-top: 16px; font-size: 12.5px; color: var(--muted); }
+  .quiz-stats b { color: var(--gold); font-family: var(--font-display); }
 </style>
 </head>
 <body>
+  <div id="cursorGlow"></div>
   <header>
     <div class="eyebrow">Закрита ліга · FIFA World Cup 2026</div>
     <h1>Fantasy Leaderboard</h1>
@@ -356,7 +463,18 @@ const TABS = [
   { id: "ownership", label: "Шаблон" },
   { id: "diffs", label: "Диференціали" },
   { id: "duels", label: "Дуелі" },
+  { id: "game", label: "Гра" },
 ];
+
+// Ambient cursor glow — purely cosmetic, follows the pointer across the page.
+(function initCursorGlow() {
+  const glow = document.getElementById("cursorGlow");
+  if (!glow) return;
+  window.addEventListener("pointermove", (e) => {
+    glow.style.left = e.clientX + "px";
+    glow.style.top = e.clientY + "px";
+  }, { passive: true });
+})();
 
 function esc(str) {
   const d = document.createElement("div");
@@ -464,12 +582,37 @@ async function main() {
     ids.forEach((id) => ownership.set(id, (ownership.get(id) || 0) + 1));
   });
   const numTeams = teams.length;
+  let chipFilterState = "all";
+
+  function chipsUsedCount(t) {
+    const { data } = latestRoundData(t);
+    return CHIP_FIELDS.filter(([f]) => data && data[f] != null).length;
+  }
 
   // =========================================================================
   // TAB: Leaderboard
   // =========================================================================
   function renderTable() {
-    const rows = teams.map((t, i) => {
+    const chipButtons = [
+      ["all", "Усі"], ["0", "0 чіпів"], ["1", "1 чіп"], ["2", "2 чіпи"], ["3+", "3+ чіпи"],
+    ].map(([val, label]) => `<button data-chipfilter="${val}" class="${chipFilterState === val ? "active" : ""}">${esc(label)}</button>`).join("");
+
+    const filteredTeams = teams.filter((t) => {
+      if (chipFilterState === "all") return true;
+      const used = chipsUsedCount(t);
+      if (chipFilterState === "3+") return used >= 3;
+      return used === Number(chipFilterState);
+    });
+
+    if (!filteredTeams.length) {
+      return `
+        <h2 class="panel-title">Таблиця ліги</h2>
+        <p class="panel-sub">Тур ${currentRound}. Фільтр за кількістю використаних чіпів — як на f1fantasyleagues.com/leaderboard.</p>
+        <div class="filter-row">${chipButtons}</div>
+        <div class="state">Немає команд, що відповідають фільтру.</div>`;
+    }
+
+    const rows = filteredTeams.map((t, i) => {
       const rank = t.overallRank ?? (i + 1);
       const top3 = rank <= 3 ? " top3" : "";
       const cr = currRankMap.get(t.id);
@@ -512,6 +655,7 @@ async function main() {
     return `
       <h2 class="panel-title">Таблиця ліги</h2>
       <p class="panel-sub">Тур ${currentRound}. Стрілка — зміна місця відносно попереднього туру. 🔥/📉 — найкращий і найгірший тур учасника.</p>
+      <div class="filter-row">${chipButtons}</div>
       <div class="card scrollx"><table>
         <thead><tr><th>#</th><th>Гравець</th><th>Форма</th><th class="num">Тур</th><th class="num">Очки</th></tr></thead>
         <tbody>${rows}</tbody>
@@ -730,6 +874,69 @@ async function main() {
       <div class="card">${items.join("")}</div>`;
   }
 
+  // =========================================================================
+  // TAB: Mini-game — "Вгадай гравця" quiz
+  // =========================================================================
+  const POSITION_UA = { GK: "Воротар", DEF: "Захисник", MID: "Півзахисник", FWD: "Нападник" };
+  let quizScore = Number(localStorage.getItem("ffl_quiz_score") || 0);
+  let quizStreak = Number(localStorage.getItem("ffl_quiz_streak") || 0);
+  let quizBest = Number(localStorage.getItem("ffl_quiz_best") || 0);
+  let quizCurrent = null;
+  let quizLocked = false;
+
+  function pickQuizQuestion() {
+    const pool = (players || []).filter((p) => (p.knownName || p.firstName || p.lastName) && p.squadId && p.position);
+    if (pool.length < 4) return null;
+    const answer = pool[Math.floor(Math.random() * pool.length)];
+    let distractorPool = pool.filter((p) => p.id !== answer.id && p.position === answer.position);
+    if (distractorPool.length < 3) distractorPool = pool.filter((p) => p.id !== answer.id);
+    const distractors = [];
+    const used = new Set([answer.id]);
+    const bag = distractorPool.slice();
+    while (distractors.length < 3 && bag.length) {
+      const idx = Math.floor(Math.random() * bag.length);
+      const cand = bag.splice(idx, 1)[0];
+      if (!used.has(cand.id)) { distractors.push(cand); used.add(cand.id); }
+    }
+    const options = [answer, ...distractors].sort(() => Math.random() - 0.5);
+    return { answer, options };
+  }
+
+  function quizPlayerLabel(p) {
+    return p.knownName || [p.firstName, p.lastName].filter(Boolean).join(" ") || ("#" + p.id);
+  }
+
+  function renderGame() {
+    if (!quizCurrent) quizCurrent = pickQuizQuestion();
+    if (!quizCurrent) {
+      return `<h2 class="panel-title">Гра: Вгадай гравця</h2><div class="state">Недостатньо даних для гри.</div>`;
+    }
+    quizLocked = false;
+    const a = quizCurrent.answer;
+    const squad = squadMap.get(a.squadId);
+    const optionsHtml = quizCurrent.options.map((o) =>
+      `<button class="quiz-opt" data-quiz-id="${o.id}">${esc(quizPlayerLabel(o))}</button>`
+    ).join("");
+    return `
+      <h2 class="panel-title">Гра: Вгадай гравця</h2>
+      <p class="panel-sub">Впізнай гравця за підказками. Очки та серія перемог зберігаються в браузері.</p>
+      <div class="card" style="padding:18px;">
+        <div class="quiz-clues">
+          <span class="pill">${esc(POSITION_UA[a.position] || a.position)}</span>
+          <span class="pill">${esc(squad ? squad.name : "?")}</span>
+          <span class="pill">${a.price != null ? a.price + "М" : "?"}</span>
+          <span class="pill">${a.stats ? (a.stats.totalPoints || 0) + " очок за сезон" : "?"}</span>
+        </div>
+        <div class="quiz-options">${optionsHtml}</div>
+        <div id="quizResult" class="quiz-result"></div>
+        <div class="quiz-stats">
+          <span>Очки: <b id="quizScoreVal">${quizScore}</b></span>
+          <span>Серія: <b id="quizStreakVal">${quizStreak}</b></span>
+          <span>Рекорд: <b id="quizBestVal">${quizBest}</b></span>
+        </div>
+      </div>`;
+  }
+
   const renderers = {
     table: renderTable,
     chips: renderChips,
@@ -739,6 +946,7 @@ async function main() {
     ownership: renderOwnership,
     diffs: renderDiffs,
     duels: renderDuels,
+    game: renderGame,
   };
 
   // Build tab bar
@@ -790,6 +998,92 @@ async function main() {
       </div>`;
   }
 
+  // ---- Football-pitch formation view for the starting XI ----
+  function pitchCard(id, round, opts) {
+    opts = opts || {};
+    const pts = playerRoundPoints(id, round);
+    const abbr = playerSquadAbbr(id);
+    const name = playerName(id);
+    const shortName = name.split(" ").pop();
+    let badge = "";
+    if (opts.captain) badge = `<span class="badge2" title="Капітан">C</span>`;
+    else if (opts.vice) badge = `<span class="badge2" title="Віце-капітан">V</span>`;
+    return `
+      <div class="pitch-card" title="${esc(name)}">
+        <div class="dot">${esc(abbr || "")}${badge}</div>
+        <div class="pname2">${esc(shortName)}</div>
+        <div class="pts2">${pts}</div>
+      </div>`;
+  }
+
+  function pitchHtml(rd, round) {
+    const order = ["FWD", "MID", "DEF", "GK"];
+    const rowsHtml = order.filter((pos) => rd.lineup && rd.lineup[pos] && rd.lineup[pos].length).map((pos) => {
+      const cards = rd.lineup[pos].map((id) => pitchCard(id, round, { captain: id === rd.captain, vice: id === rd.vice })).join("");
+      return `<div class="pitch-row">${cards}</div>`;
+    }).join("");
+    return `<div class="pitch-wrap"><div class="pitch">${rowsHtml}</div></div>`;
+  }
+
+  // ---- Bigger round-by-round form chart ----
+  function bigChart(team) {
+    const values = rounds.map((r) => (team.rounds && team.rounds[String(r)] ? (team.rounds[String(r)].roundPoints || 0) : 0));
+    const w = 560, h = 150, padL = 10, padR = 10, padT = 20, padB = 20;
+    const max = Math.max(...values, 1);
+    const min = Math.min(...values, 0);
+    const range = (max - min) || 1;
+    const innerW = w - padL - padR;
+    const innerH = h - padT - padB;
+    const stepX = innerW / Math.max(values.length - 1, 1);
+    const pts = values.map((v, i) => ({
+      x: padL + i * stepX,
+      y: padT + innerH - ((v - min) / range) * innerH,
+      v, r: rounds[i],
+    }));
+    const line = pts.map((p) => `${p.x.toFixed(1)},${p.y.toFixed(1)}`).join(" ");
+    const area = `${padL},${(padT + innerH).toFixed(1)} ${line} ${(padL + innerW).toFixed(1)},${(padT + innerH).toFixed(1)}`;
+    const dots = pts.map((p) => `
+      <circle cx="${p.x.toFixed(1)}" cy="${p.y.toFixed(1)}" r="3.4" fill="#d9b44a"/>
+      <text x="${p.x.toFixed(1)}" y="${(p.y - 8).toFixed(1)}" font-size="9" fill="#f3f1e8" text-anchor="middle">${p.v}</text>
+      <text x="${p.x.toFixed(1)}" y="${h - 6}" font-size="9" fill="rgba(243,241,232,0.45)" text-anchor="middle">Т${p.r}</text>`).join("");
+    return `
+      <svg viewBox="0 0 ${w} ${h}" class="big-chart" preserveAspectRatio="none" style="width:100%;height:150px;">
+        <defs><linearGradient id="chartFill" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#d9b44a" stop-opacity="0.35"/>
+          <stop offset="100%" stop-color="#d9b44a" stop-opacity="0"/>
+        </linearGradient></defs>
+        <polygon points="${area}" fill="url(#chartFill)"/>
+        <polyline points="${line}" fill="none" stroke="#d9b44a" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+        ${dots}
+      </svg>`;
+  }
+
+  // ---- Transfer history (diffs the cumulative per-round transfer list) ----
+  function buildTransferHistory(team) {
+    const events = [];
+    let prevLen = 0;
+    for (let r = 1; r <= currentRound; r++) {
+      const rd = team.rounds && team.rounds[String(r)];
+      if (!rd) continue;
+      const list = rd.transfers || [];
+      if (list.length > prevLen) {
+        list.slice(prevLen).forEach((tr) => events.push({ round: r, out: tr.out, in: tr.in, isNegative: tr.isNegative }));
+      }
+      prevLen = Math.max(prevLen, list.length);
+    }
+    return events;
+  }
+
+  function transferHistoryHtml(team) {
+    const events = buildTransferHistory(team);
+    if (!events.length) return `<div class="psub">Трансферів ще не було.</div>`;
+    return events.slice().reverse().map((ev) => `
+      <div class="transfer-item">
+        <span><span class="tout">${esc(playerName(ev.out))}</span> → <span class="tin">${esc(playerName(ev.in))}</span></span>
+        <span class="psub">Тур ${ev.round}${ev.isNegative ? ` · <span class="pill bad">хіт</span>` : ""}</span>
+      </div>`).join("");
+  }
+
   function buildTeamDetail(teamId, round) {
     const team = teams.find((t) => t.id === teamId);
     if (!team) return `<div class="state error">Команду не знайдено.</div>`;
@@ -813,11 +1107,7 @@ async function main() {
 
     const autoIn = new Set((rd.substitutions || []).filter((s) => s.isAuto).map((s) => s.in));
 
-    const lineupHtml = POSITION_ORDER.filter((pos) => rd.lineup && rd.lineup[pos] && rd.lineup[pos].length).map((pos) => `
-      <div class="squad-group">
-        <h4>${POSITION_LABELS[pos]}</h4>
-        ${rd.lineup[pos].map((id) => squadPlayerRow(id, round, { captain: id === rd.captain, vice: id === rd.vice })).join("")}
-      </div>`).join("");
+    const lineupHtml = pitchHtml(rd, round);
 
     const benchIds = flattenRoster(rd.bench);
     const benchHtml = benchIds.length ? `
@@ -866,6 +1156,11 @@ async function main() {
         <div class="stat"><div class="v">${hits}</div><div class="l">Хіти</div></div>
       </div>
 
+      <div class="squad-group">
+        <h4>Форма по турах</h4>
+        ${bigChart(team)}
+      </div>
+
       <div class="round-picker">${roundButtons}</div>
 
       ${lineupHtml}
@@ -887,6 +1182,11 @@ async function main() {
       <div class="squad-group">
         <h4>Чіпи цієї команди</h4>
         <div style="display:flex; flex-wrap:wrap; gap:6px;">${chipsHtml}</div>
+      </div>
+
+      <div class="squad-group">
+        <h4>Історія трансферів</h4>
+        ${transferHistoryHtml(team)}
       </div>`;
   }
 
@@ -921,6 +1221,53 @@ async function main() {
     if (roundBtn && !modalOverlay.hidden) {
       modalRound = Number(roundBtn.dataset.round);
       renderModal();
+      return;
+    }
+    const chipFilterBtn = e.target.closest(".filter-row button[data-chipfilter]");
+    if (chipFilterBtn) {
+      chipFilterState = chipFilterBtn.dataset.chipfilter;
+      const panel = document.getElementById("panel-table");
+      if (panel) panel.innerHTML = renderTable();
+      return;
+    }
+    const quizBtn = e.target.closest(".quiz-opt[data-quiz-id]");
+    if (quizBtn && !quizLocked) {
+      quizLocked = true;
+      const chosenId = Number(quizBtn.dataset.quizId);
+      const correctId = quizCurrent.answer.id;
+      document.querySelectorAll(".quiz-opt").forEach((b) => {
+        const bid = Number(b.dataset.quizId);
+        if (bid === correctId) b.classList.add("correct");
+        else if (bid === chosenId) b.classList.add("wrong");
+      });
+      const resultEl = document.getElementById("quizResult");
+      if (chosenId === correctId) {
+        quizScore += 10;
+        quizStreak += 1;
+        quizBest = Math.max(quizBest, quizStreak);
+        if (resultEl) { resultEl.textContent = "Правильно! +10 очок."; resultEl.style.color = "var(--up)"; }
+      } else {
+        quizStreak = 0;
+        if (resultEl) {
+          resultEl.textContent = `Неправильно. Це був ${quizPlayerLabel(quizCurrent.answer)}.`;
+          resultEl.style.color = "var(--down)";
+        }
+      }
+      localStorage.setItem("ffl_quiz_score", String(quizScore));
+      localStorage.setItem("ffl_quiz_streak", String(quizStreak));
+      localStorage.setItem("ffl_quiz_best", String(quizBest));
+      const sv = document.getElementById("quizScoreVal");
+      const stv = document.getElementById("quizStreakVal");
+      const bv = document.getElementById("quizBestVal");
+      if (sv) sv.textContent = quizScore;
+      if (stv) stv.textContent = quizStreak;
+      if (bv) bv.textContent = quizBest;
+      setTimeout(() => {
+        quizCurrent = pickQuizQuestion();
+        const panel = document.getElementById("panel-game");
+        if (panel) panel.innerHTML = renderGame();
+      }, 1400);
+      return;
     }
   });
 
