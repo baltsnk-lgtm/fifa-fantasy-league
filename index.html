@@ -358,6 +358,16 @@
   }
   .filter-row button:hover { color: var(--white); border-color: var(--gold); }
   .filter-row button.active { background: var(--gold); color: #0c2417; border-color: var(--gold); }
+  .filter-row button.filter-reset { border-color: rgba(226,104,95,0.4); color: var(--down); }
+  .filter-row button.filter-reset:hover { background: rgba(226,104,95,0.14); border-color: var(--down); }
+  .chip-mode-row { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin: -8px 0 16px; }
+  .chip-mode-label { font-size: 11.5px; color: var(--muted-2); }
+  .chip-mode-row button {
+    font-family: var(--font-display); font-size: 11px; font-weight: 600;
+    border: 1px solid var(--line); background: transparent; color: var(--muted);
+    padding: 4px 11px; border-radius: 999px; cursor: pointer;
+  }
+  .chip-mode-row button.active { background: rgba(217,180,74,0.18); color: var(--gold); border-color: var(--gold); }
 
   /* ---------- Football pitch formation view ---------- */
   .pitch-wrap { margin-top: 14px; }
@@ -408,20 +418,17 @@
   .transfer-item .tout { color: var(--down); }
   .transfer-item .tin { color: var(--up); }
 
-  /* ---------- Mini-game ---------- */
-  .quiz-clues { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 16px; }
-  .quiz-options { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
-  .quiz-opt {
-    font-family: var(--font-body); font-size: 13.5px; font-weight: 600; padding: 13px 10px;
-    border-radius: 10px; border: 1px solid var(--line); background: rgba(255,255,255,0.03);
-    color: var(--white); cursor: pointer;
+  /* ---------- Mini-game: penalty shootout ---------- */
+  .pen-card { padding: 18px; text-align: center; }
+  #penCanvas {
+    width: 100%; max-width: 560px; height: auto; border-radius: 14px;
+    cursor: crosshair; touch-action: none; background: #123f28;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
   }
-  .quiz-opt:hover { background: rgba(217,180,74,0.12); border-color: var(--gold); transform: translateY(-1px); }
-  .quiz-opt.correct { background: rgba(87,192,122,0.18); border-color: var(--up); color: var(--up); }
-  .quiz-opt.wrong { background: rgba(226,104,95,0.18); border-color: var(--down); color: var(--down); }
-  .quiz-result { margin-top: 14px; font-size: 13px; min-height: 18px; font-weight: 600; }
-  .quiz-stats { display: flex; gap: 18px; margin-top: 16px; font-size: 12.5px; color: var(--muted); }
-  .quiz-stats b { color: var(--gold); font-family: var(--font-display); }
+  .pen-stats { display: flex; justify-content: center; gap: 22px; margin-top: 14px; font-size: 12.5px; color: var(--muted); flex-wrap: wrap; }
+  .pen-stats b { color: var(--gold); font-family: var(--font-display); font-size: 14px; }
+  .pen-msg { margin-top: 12px; font-size: 15px; font-weight: 700; min-height: 22px; font-family: var(--font-display); }
+  .pen-hint { font-size: 11.5px; color: var(--muted-2); margin-top: 6px; }
 </style>
 </head>
 <body>
@@ -463,7 +470,7 @@ const TABS = [
   { id: "ownership", label: "Шаблон" },
   { id: "diffs", label: "Диференціали" },
   { id: "duels", label: "Дуелі" },
-  { id: "game", label: "Гра" },
+  { id: "game", label: "Пенальті" },
 ];
 
 // Ambient cursor glow — purely cosmetic, follows the pointer across the page.
@@ -582,33 +589,46 @@ async function main() {
     ids.forEach((id) => ownership.set(id, (ownership.get(id) || 0) + 1));
   });
   const numTeams = teams.length;
-  let chipFilterState = "all";
+  let chipFilterSelected = new Set();
+  let chipFilterMode = "any"; // "any" = used at least one selected chip, "all" = used every selected chip
 
-  function chipsUsedCount(t) {
+  function teamUsedChips(t) {
     const { data } = latestRoundData(t);
-    return CHIP_FIELDS.filter(([f]) => data && data[f] != null).length;
+    return new Set(CHIP_FIELDS.filter(([f]) => data && data[f] != null).map(([f]) => f));
   }
 
   // =========================================================================
   // TAB: Leaderboard
   // =========================================================================
   function renderTable() {
-    const chipButtons = [
-      ["all", "Усі"], ["0", "0 чіпів"], ["1", "1 чіп"], ["2", "2 чіпи"], ["3+", "3+ чіпи"],
-    ].map(([val, label]) => `<button data-chipfilter="${val}" class="${chipFilterState === val ? "active" : ""}">${esc(label)}</button>`).join("");
+    const chipButtons = CHIP_FIELDS.map(([field, label]) =>
+      `<button data-chiptoggle="${esc(field)}" class="${chipFilterSelected.has(field) ? "active" : ""}">${esc(label)}</button>`
+    ).join("");
+    const resetBtn = chipFilterSelected.size
+      ? `<button data-chipreset class="filter-reset">Скинути ✕</button>`
+      : "";
+    const modeRow = chipFilterSelected.size > 1 ? `
+      <div class="chip-mode-row">
+        <span class="chip-mode-label">Показати тих, хто зіграв:</span>
+        <button data-chipmode="any" class="${chipFilterMode === "any" ? "active" : ""}">будь-який з обраних</button>
+        <button data-chipmode="all" class="${chipFilterMode === "all" ? "active" : ""}">усі обрані одразу</button>
+      </div>` : "";
 
     const filteredTeams = teams.filter((t) => {
-      if (chipFilterState === "all") return true;
-      const used = chipsUsedCount(t);
-      if (chipFilterState === "3+") return used >= 3;
-      return used === Number(chipFilterState);
+      if (!chipFilterSelected.size) return true;
+      const used = teamUsedChips(t);
+      const selectedArr = Array.from(chipFilterSelected);
+      return chipFilterMode === "all"
+        ? selectedArr.every((f) => used.has(f))
+        : selectedArr.some((f) => used.has(f));
     });
 
     if (!filteredTeams.length) {
       return `
         <h2 class="panel-title">Таблиця ліги</h2>
-        <p class="panel-sub">Тур ${currentRound}. Фільтр за кількістю використаних чіпів — як на f1fantasyleagues.com/leaderboard.</p>
-        <div class="filter-row">${chipButtons}</div>
+        <p class="panel-sub">Тур ${currentRound}. Обери конкретні чіпи, щоб відфільтрувати команди, які їх зіграли.</p>
+        <div class="filter-row">${chipButtons}${resetBtn}</div>
+        ${modeRow}
         <div class="state">Немає команд, що відповідають фільтру.</div>`;
     }
 
@@ -654,8 +674,9 @@ async function main() {
     }).join("");
     return `
       <h2 class="panel-title">Таблиця ліги</h2>
-      <p class="panel-sub">Тур ${currentRound}. Стрілка — зміна місця відносно попереднього туру. 🔥/📉 — найкращий і найгірший тур учасника.</p>
-      <div class="filter-row">${chipButtons}</div>
+      <p class="panel-sub">Тур ${currentRound}. Стрілка — зміна місця відносно попереднього туру. 🔥/📉 — найкращий і найгірший тур учасника. Обери конкретні чіпи нижче, щоб відфільтрувати.</p>
+      <div class="filter-row">${chipButtons}${resetBtn}</div>
+      ${modeRow}
       <div class="card scrollx"><table>
         <thead><tr><th>#</th><th>Гравець</th><th>Форма</th><th class="num">Тур</th><th class="num">Очки</th></tr></thead>
         <tbody>${rows}</tbody>
@@ -875,66 +896,182 @@ async function main() {
   }
 
   // =========================================================================
-  // TAB: Mini-game — "Вгадай гравця" quiz
+  // TAB: Mini-game — Penalty shootout (arcade, own canvas interface)
   // =========================================================================
-  const POSITION_UA = { GK: "Воротар", DEF: "Захисник", MID: "Півзахисник", FWD: "Нападник" };
-  let quizScore = Number(localStorage.getItem("ffl_quiz_score") || 0);
-  let quizStreak = Number(localStorage.getItem("ffl_quiz_streak") || 0);
-  let quizBest = Number(localStorage.getItem("ffl_quiz_best") || 0);
-  let quizCurrent = null;
-  let quizLocked = false;
-
-  function pickQuizQuestion() {
-    const pool = (players || []).filter((p) => (p.knownName || p.firstName || p.lastName) && p.squadId && p.position);
-    if (pool.length < 4) return null;
-    const answer = pool[Math.floor(Math.random() * pool.length)];
-    let distractorPool = pool.filter((p) => p.id !== answer.id && p.position === answer.position);
-    if (distractorPool.length < 3) distractorPool = pool.filter((p) => p.id !== answer.id);
-    const distractors = [];
-    const used = new Set([answer.id]);
-    const bag = distractorPool.slice();
-    while (distractors.length < 3 && bag.length) {
-      const idx = Math.floor(Math.random() * bag.length);
-      const cand = bag.splice(idx, 1)[0];
-      if (!used.has(cand.id)) { distractors.push(cand); used.add(cand.id); }
-    }
-    const options = [answer, ...distractors].sort(() => Math.random() - 0.5);
-    return { answer, options };
-  }
-
-  function quizPlayerLabel(p) {
-    return p.knownName || [p.firstName, p.lastName].filter(Boolean).join(" ") || ("#" + p.id);
-  }
+  let penShots = Number(localStorage.getItem("ffl_pen_shots") || 0);
+  let penGoals = Number(localStorage.getItem("ffl_pen_goals") || 0);
+  let penStreak = Number(localStorage.getItem("ffl_pen_streak") || 0);
+  let penBest = Number(localStorage.getItem("ffl_pen_best") || 0);
+  let penAnimating = false;
+  let penInitialized = false;
 
   function renderGame() {
-    if (!quizCurrent) quizCurrent = pickQuizQuestion();
-    if (!quizCurrent) {
-      return `<h2 class="panel-title">Гра: Вгадай гравця</h2><div class="state">Недостатньо даних для гри.</div>`;
-    }
-    quizLocked = false;
-    const a = quizCurrent.answer;
-    const squad = squadMap.get(a.squadId);
-    const optionsHtml = quizCurrent.options.map((o) =>
-      `<button class="quiz-opt" data-quiz-id="${o.id}">${esc(quizPlayerLabel(o))}</button>`
-    ).join("");
     return `
-      <h2 class="panel-title">Гра: Вгадай гравця</h2>
-      <p class="panel-sub">Впізнай гравця за підказками. Очки та серія перемог зберігаються в браузері.</p>
-      <div class="card" style="padding:18px;">
-        <div class="quiz-clues">
-          <span class="pill">${esc(POSITION_UA[a.position] || a.position)}</span>
-          <span class="pill">${esc(squad ? squad.name : "?")}</span>
-          <span class="pill">${a.price != null ? a.price + "М" : "?"}</span>
-          <span class="pill">${a.stats ? (a.stats.totalPoints || 0) + " очок за сезон" : "?"}</span>
+      <h2 class="panel-title">Пенальті-шутаут</h2>
+      <p class="panel-sub">Клікни у ворота, щоб пробити пенальті. Цілься в кут — воротар намагається вгадати напрямок. Рекорд серії зберігається в браузері.</p>
+      <div class="card pen-card">
+        <canvas id="penCanvas" width="560" height="300"></canvas>
+        <div class="pen-stats">
+          <span>Голи: <b id="penGoalsVal">${penGoals}</b>/<b id="penShotsVal">${penShots}</b></span>
+          <span>Серія: <b id="penStreakVal">${penStreak}</b></span>
+          <span>Рекорд серії: <b id="penBestVal">${penBest}</b></span>
         </div>
-        <div class="quiz-options">${optionsHtml}</div>
-        <div id="quizResult" class="quiz-result"></div>
-        <div class="quiz-stats">
-          <span>Очки: <b id="quizScoreVal">${quizScore}</b></span>
-          <span>Серія: <b id="quizStreakVal">${quizStreak}</b></span>
-          <span>Рекорд: <b id="quizBestVal">${quizBest}</b></span>
-        </div>
+        <div id="penMsg" class="pen-msg">Клікни у ворота, щоб почати</div>
+        <div class="pen-hint">Порада: кути й дальні точки складніше відбити, ніж центр.</div>
       </div>`;
+  }
+
+  function initPenaltyGame() {
+    if (penInitialized) return;
+    const canvas = document.getElementById("penCanvas");
+    if (!canvas) return;
+    penInitialized = true;
+    const ctx = canvas.getContext("2d");
+    const W = canvas.width, H = canvas.height;
+    const goal = { x0: 70, x1: W - 70, y0: 40, y1: 160 };
+    const ballStart = { x: W / 2, y: H - 20 };
+    const keeperHome = { x: W / 2, y: (goal.y0 + goal.y1) / 2 };
+    let ball = { ...ballStart };
+    let keeper = { ...keeperHome };
+
+    function drawPitch() {
+      ctx.fillStyle = "#123f28";
+      ctx.fillRect(0, 0, W, H);
+      ctx.strokeStyle = "rgba(255,255,255,0.22)";
+      ctx.lineWidth = 2;
+      ctx.beginPath();
+      ctx.arc(W / 2, H + 60, 140, Math.PI * 1.18, Math.PI * 1.82);
+      ctx.stroke();
+      ctx.strokeStyle = "#f3f1e8";
+      ctx.lineWidth = 5;
+      ctx.strokeRect(goal.x0, goal.y0, goal.x1 - goal.x0, goal.y1 - goal.y0);
+      ctx.strokeStyle = "rgba(243,241,232,0.22)";
+      ctx.lineWidth = 1;
+      for (let x = goal.x0; x <= goal.x1; x += 22) {
+        ctx.beginPath(); ctx.moveTo(x, goal.y0); ctx.lineTo(x, goal.y1); ctx.stroke();
+      }
+      for (let y = goal.y0; y <= goal.y1; y += 20) {
+        ctx.beginPath(); ctx.moveTo(goal.x0, y); ctx.lineTo(goal.x1, y); ctx.stroke();
+      }
+    }
+
+    function drawKeeper() {
+      ctx.fillStyle = "#d9b44a";
+      if (ctx.roundRect) {
+        ctx.beginPath();
+        ctx.roundRect(keeper.x - 18, keeper.y - 24, 36, 48, 8);
+        ctx.fill();
+      } else {
+        ctx.fillRect(keeper.x - 18, keeper.y - 24, 36, 48);
+      }
+      ctx.fillStyle = "#0c2417";
+      ctx.font = "bold 10px 'Space Grotesk', sans-serif";
+      ctx.textAlign = "center";
+      ctx.fillText("GK", keeper.x, keeper.y + 3);
+    }
+
+    function drawBall() {
+      ctx.beginPath();
+      ctx.arc(ball.x, ball.y, 9, 0, Math.PI * 2);
+      ctx.fillStyle = "#f3f1e8";
+      ctx.fill();
+      ctx.strokeStyle = "rgba(0,0,0,0.3)";
+      ctx.lineWidth = 1;
+      ctx.stroke();
+    }
+
+    function draw() {
+      drawPitch();
+      drawKeeper();
+      drawBall();
+    }
+
+    function animate(fromBall, toBall, fromKeeper, toKeeper, duration, onDone) {
+      const t0 = performance.now();
+      function step(t) {
+        const p = Math.min(1, (t - t0) / duration);
+        const ease = 1 - Math.pow(1 - p, 2);
+        ball.x = fromBall.x + (toBall.x - fromBall.x) * ease;
+        ball.y = fromBall.y + (toBall.y - fromBall.y) * ease;
+        keeper.x = fromKeeper.x + (toKeeper.x - fromKeeper.x) * ease;
+        keeper.y = fromKeeper.y + (toKeeper.y - fromKeeper.y) * ease;
+        draw();
+        if (p < 1) requestAnimationFrame(step);
+        else onDone();
+      }
+      requestAnimationFrame(step);
+    }
+
+    function resetBallSoon() {
+      setTimeout(() => {
+        animate({ ...ball }, ballStart, { ...keeper }, keeperHome, 350, () => {
+          ball = { ...ballStart };
+          keeper = { ...keeperHome };
+          draw();
+          penAnimating = false;
+        });
+      }, 700);
+    }
+
+    function shoot(targetX, targetY) {
+      if (penAnimating) return;
+      penAnimating = true;
+      const msgEl = document.getElementById("penMsg");
+      if (msgEl) { msgEl.textContent = "…"; msgEl.style.color = ""; }
+
+      const zones = [
+        { x: goal.x0 + 38, y: goal.y0 + 25 },
+        { x: goal.x1 - 38, y: goal.y0 + 25 },
+        { x: (goal.x0 + goal.x1) / 2, y: goal.y0 + 22 },
+        { x: goal.x0 + 38, y: goal.y1 - 22 },
+        { x: goal.x1 - 38, y: goal.y1 - 22 },
+      ];
+      const pick = zones[Math.floor(Math.random() * zones.length)];
+      const diveTarget = { x: pick.x + (Math.random() * 20 - 10), y: pick.y + (Math.random() * 14 - 7) };
+
+      const fromBall = { ...ball };
+      const fromKeeper = { ...keeper };
+      animate(fromBall, { x: targetX, y: targetY }, fromKeeper, diveTarget, 420, () => {
+        const dist = Math.hypot(targetX - diveTarget.x, targetY - diveTarget.y);
+        const saved = dist < 46;
+        penShots += 1;
+        if (saved) {
+          penStreak = 0;
+          if (msgEl) { msgEl.textContent = "Воротар відбив! 🧤"; msgEl.style.color = "var(--down)"; }
+        } else {
+          penGoals += 1;
+          penStreak += 1;
+          penBest = Math.max(penBest, penStreak);
+          if (msgEl) { msgEl.textContent = "ГОООЛ! ⚽"; msgEl.style.color = "var(--up)"; }
+        }
+        localStorage.setItem("ffl_pen_shots", String(penShots));
+        localStorage.setItem("ffl_pen_goals", String(penGoals));
+        localStorage.setItem("ffl_pen_streak", String(penStreak));
+        localStorage.setItem("ffl_pen_best", String(penBest));
+        const g = document.getElementById("penGoalsVal");
+        const s = document.getElementById("penShotsVal");
+        const st = document.getElementById("penStreakVal");
+        const b = document.getElementById("penBestVal");
+        if (g) g.textContent = penGoals;
+        if (s) s.textContent = penShots;
+        if (st) st.textContent = penStreak;
+        if (b) b.textContent = penBest;
+        resetBallSoon();
+      });
+    }
+
+    canvas.addEventListener("click", (e) => {
+      const rect = canvas.getBoundingClientRect();
+      const scaleX = W / rect.width;
+      const scaleY = H / rect.height;
+      const x = (e.clientX - rect.left) * scaleX;
+      const y = (e.clientY - rect.top) * scaleY;
+      const tx = Math.min(goal.x1 - 12, Math.max(goal.x0 + 12, x));
+      const ty = Math.min(goal.y1 - 12, Math.max(goal.y0 + 12, y));
+      shoot(tx, ty);
+    });
+
+    draw();
   }
 
   const renderers = {
@@ -963,6 +1100,7 @@ async function main() {
       document.getElementById("panel-" + t.id).innerHTML = `<div class="state error">Помилка відображення: ${esc(e.message)}</div>`;
     }
   });
+  initPenaltyGame();
 
   tabsNav.addEventListener("click", (e) => {
     const btn = e.target.closest("button[data-tab]");
@@ -1223,50 +1361,28 @@ async function main() {
       renderModal();
       return;
     }
-    const chipFilterBtn = e.target.closest(".filter-row button[data-chipfilter]");
-    if (chipFilterBtn) {
-      chipFilterState = chipFilterBtn.dataset.chipfilter;
+    const chipToggleBtn = e.target.closest(".filter-row button[data-chiptoggle]");
+    if (chipToggleBtn) {
+      const field = chipToggleBtn.dataset.chiptoggle;
+      if (chipFilterSelected.has(field)) chipFilterSelected.delete(field);
+      else chipFilterSelected.add(field);
       const panel = document.getElementById("panel-table");
       if (panel) panel.innerHTML = renderTable();
       return;
     }
-    const quizBtn = e.target.closest(".quiz-opt[data-quiz-id]");
-    if (quizBtn && !quizLocked) {
-      quizLocked = true;
-      const chosenId = Number(quizBtn.dataset.quizId);
-      const correctId = quizCurrent.answer.id;
-      document.querySelectorAll(".quiz-opt").forEach((b) => {
-        const bid = Number(b.dataset.quizId);
-        if (bid === correctId) b.classList.add("correct");
-        else if (bid === chosenId) b.classList.add("wrong");
-      });
-      const resultEl = document.getElementById("quizResult");
-      if (chosenId === correctId) {
-        quizScore += 10;
-        quizStreak += 1;
-        quizBest = Math.max(quizBest, quizStreak);
-        if (resultEl) { resultEl.textContent = "Правильно! +10 очок."; resultEl.style.color = "var(--up)"; }
-      } else {
-        quizStreak = 0;
-        if (resultEl) {
-          resultEl.textContent = `Неправильно. Це був ${quizPlayerLabel(quizCurrent.answer)}.`;
-          resultEl.style.color = "var(--down)";
-        }
-      }
-      localStorage.setItem("ffl_quiz_score", String(quizScore));
-      localStorage.setItem("ffl_quiz_streak", String(quizStreak));
-      localStorage.setItem("ffl_quiz_best", String(quizBest));
-      const sv = document.getElementById("quizScoreVal");
-      const stv = document.getElementById("quizStreakVal");
-      const bv = document.getElementById("quizBestVal");
-      if (sv) sv.textContent = quizScore;
-      if (stv) stv.textContent = quizStreak;
-      if (bv) bv.textContent = quizBest;
-      setTimeout(() => {
-        quizCurrent = pickQuizQuestion();
-        const panel = document.getElementById("panel-game");
-        if (panel) panel.innerHTML = renderGame();
-      }, 1400);
+    const chipModeBtn = e.target.closest(".chip-mode-row button[data-chipmode]");
+    if (chipModeBtn) {
+      chipFilterMode = chipModeBtn.dataset.chipmode;
+      const panel = document.getElementById("panel-table");
+      if (panel) panel.innerHTML = renderTable();
+      return;
+    }
+    const chipResetBtn = e.target.closest("[data-chipreset]");
+    if (chipResetBtn) {
+      chipFilterSelected.clear();
+      chipFilterMode = "any";
+      const panel = document.getElementById("panel-table");
+      if (panel) panel.innerHTML = renderTable();
       return;
     }
   });
