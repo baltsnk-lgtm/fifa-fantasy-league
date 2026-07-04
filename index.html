@@ -998,13 +998,16 @@ function initFreeKick3D() {
     return false;
   }
 
-  // ---- Drag input: draw the actual swipe path, then read its shape ----
-  // Instead of only looking at start->end displacement, we track every point
-  // of the gesture. The point furthest from the straight line (the "bow" of
-  // the swipe) sets how wide you aimed, and how far the finger curls back
-  // in from that peak toward the release point sets the curve — so a shot
-  // drawn as a real banana-shaped swipe actually bends like the drawn arc,
-  // while a plain straight drag still behaves like a simple aim+power shot.
+  // ---- Drag input: works from anywhere on the stage, ball flies the way you swiped ----
+  // We read the actual shape of the gesture, not just where it started/ended:
+  //  - aim comes from the overall left/right displacement (small, fixed pixel
+  //    reference, so it's reachable from anywhere — no need to start in a
+  //    particular spot or reach the edge of the stage)
+  //  - curve comes from how much the path itself turned/bent during the
+  //    swipe (comparing the direction you started moving in vs. the
+  //    direction you were moving in right at release) — draw a pronounced
+  //    arc and the ball bends hard in that same rotational sense after you
+  //    release it; drag in a straight line and it flies straight (no spin).
   let dragging = false;
   let dragStart = { x: 0, y: 0 };
   let dragPath = [];
@@ -1044,23 +1047,35 @@ function initFreeKick3D() {
     dragPath.push(p);
     const dx = p.x - dragStart.x;
     const dy = p.y - dragStart.y;
-    const stageW = stage.clientWidth || 400;
     const stageH = stage.clientHeight || 225;
     if (Math.abs(dx) < 4 && Math.abs(dy) < 4 && dragPath.length < 4) return; // too small, ignore accidental clicks
 
-    // find the point of the swipe furthest out horizontally from the start —
-    // that's how wide you aimed before curling the shot back in
-    let peakOffsetX = dx;
-    for (const pt of dragPath) {
-      const off = pt.x - dragStart.x;
-      if (Math.abs(off) > Math.abs(peakOffsetX)) peakOffsetX = off;
+    // average direction of travel over the first ~30% and last ~30% of the
+    // gesture — comparing them tells us how much the path itself curved
+    function avgDir(points) {
+      if (points.length < 2) return null;
+      const a = points[0], b = points[points.length - 1];
+      const vx = b.x - a.x, vy = b.y - a.y;
+      const len = Math.hypot(vx, vy);
+      return len < 1 ? null : { x: vx / len, y: vy / len };
     }
+    const n = dragPath.length;
+    const cutA = Math.max(1, Math.floor(n * 0.3));
+    const cutB = Math.min(n - 2, Math.floor(n * 0.7));
+    const dirWhole = avgDir(dragPath) || { x: 0, y: -1 };
+    const dirEarly = avgDir(dragPath.slice(0, cutA + 1)) || dirWhole;
+    const dirLate = avgDir(dragPath.slice(cutB)) || dirWhole;
+    const cross = dirEarly.x * dirLate.y - dirEarly.y * dirLate.x;
+    const dot = dirEarly.x * dirLate.x + dirEarly.y * dirLate.y;
+    const turningAngle = Math.atan2(cross, dot); // signed radians the path bent by
 
-    const aimNorm = Math.max(-1, Math.min(1, peakOffsetX / (stageW * 0.35)));
-    // total curve = how far out you aimed + how much you curled it back in
-    // from that peak toward the release point (0 for a plain straight drag)
-    const curveNorm = Math.max(-1, Math.min(1, (2 * peakOffsetX - dx) / (stageW * 0.35)));
-    const powerInput = Math.max(0.25, Math.min(1, -dy / (stageH * 0.45)));
+    // fixed pixel references (not tied to stage size or edges) so the shot
+    // reads the same no matter where on the stage you start the swipe
+    const AIM_REF_PX = 85;
+    const MAX_TURN = (150 * Math.PI) / 180;
+    const aimNorm = Math.max(-1, Math.min(1, dx / AIM_REF_PX));
+    const curveNorm = Math.max(-1, Math.min(1, turningAngle / MAX_TURN));
+    const powerInput = Math.max(0.25, Math.min(1, -dy / (stageH * 0.35)));
 
     const MAX_AIM_ANGLE = (24 * Math.PI) / 180;
     const MAX_SPIN = 5.5;
