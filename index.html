@@ -852,8 +852,6 @@ function initFreeKick3D() {
 
   function endShot(kind) {
     state = "result";
-    window.__fkLog = window.__fkLog || [];
-    window.__fkLog.push({ result: kind, ballAt: ballMesh.position.toArray() });
     if (kind === "goal") {
       score += 1;
       scoreEl.textContent = String(score);
@@ -1010,8 +1008,6 @@ function initFreeKick3D() {
     );
     flightElapsed = 0;
     state = "flight";
-    window.__fkLog = window.__fkLog || [];
-    window.__fkLog.push({ shot: { curveInput, powerInput, offsetX: ballMesh.position.x, distanceZ: ballMesh.position.z } });
   });
 
   // ---- Timer + render loop ----
@@ -1047,12 +1043,6 @@ function initFreeKick3D() {
     }
 
     renderer.render(scene, camera);
-    window.__fkDebug = {
-      ballPos: ballMesh.position.toArray(),
-      camPos: camera.position.toArray(),
-      camRot: camera.rotation.toArray(),
-      state,
-    };
   }
   let fkTimerPaused = true;
   requestAnimationFrame(tick);
