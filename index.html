@@ -162,6 +162,8 @@
   .player-row { display: flex; align-items: center; gap: 10px; }
   .avatar { width: 26px; height: 26px; border-radius: 50%; background: rgba(255,255,255,0.08); flex: none; }
   .pname { font-weight: 600; }
+  .team-link { cursor: pointer; }
+  .team-link:hover .pname { color: var(--gold); text-decoration: underline; }
   .psub { font-size: 11px; color: var(--muted); margin-top: 1px; }
   .points-big {
     font-family: var(--font-display);
@@ -210,6 +212,110 @@
   }
   ::-webkit-scrollbar { height: 6px; width: 6px; }
   ::-webkit-scrollbar-thumb { background: rgba(243,241,232,0.15); border-radius: 4px; }
+
+  /* ---------- Team detail modal ---------- */
+  .modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(3,12,7,0.72);
+    backdrop-filter: blur(2px);
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 24px 14px;
+    overflow-y: auto;
+    z-index: 100;
+  }
+  .modal-overlay[hidden] { display: none; }
+  .modal-card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    width: 100%;
+    max-width: 640px;
+    padding: 22px 20px 26px;
+    animation: fade .15s ease;
+  }
+  .modal-close {
+    float: right;
+    background: rgba(255,255,255,0.06);
+    border: none;
+    color: var(--muted);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    font-size: 16px;
+    cursor: pointer;
+    line-height: 1;
+  }
+  .modal-close:hover { color: var(--white); background: rgba(255,255,255,0.12); }
+  .modal-head { display: flex; align-items: center; gap: 12px; margin-bottom: 4px; }
+  .modal-head img.avatar { width: 40px; height: 40px; }
+  .modal-head h3 { font-family: var(--font-display); margin: 0; font-size: 20px; }
+  .modal-head .psub { font-size: 12.5px; }
+  .modal-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+    margin: 16px 0;
+  }
+  .modal-stats .stat {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 10px;
+    text-align: center;
+  }
+  .modal-stats .stat .v { font-family: var(--font-display); font-weight: 700; font-size: 17px; }
+  .modal-stats .stat .l { font-size: 10px; color: var(--muted); text-transform: uppercase; letter-spacing: .5px; margin-top: 2px; }
+  .round-picker { display: flex; gap: 4px; flex-wrap: wrap; margin: 14px 0; }
+  .round-picker button {
+    font-family: var(--font-display);
+    font-size: 12px;
+    font-weight: 600;
+    border: 1px solid var(--line);
+    background: transparent;
+    color: var(--muted);
+    padding: 5px 11px;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  .round-picker button.active { background: var(--gold); color: #0c2417; border-color: var(--gold); }
+  .squad-group { margin-top: 14px; }
+  .squad-group h4 {
+    font-family: var(--font-display);
+    font-size: 11px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin: 0 0 6px;
+  }
+  .squad-player {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 7px 10px;
+    border-radius: 8px;
+    font-size: 13.5px;
+  }
+  .squad-player:nth-child(odd) { background: rgba(255,255,255,0.025); }
+  .squad-player .badge {
+    display: inline-block;
+    font-size: 9.5px;
+    font-weight: 700;
+    color: #0c2417;
+    background: var(--gold);
+    border-radius: 5px;
+    padding: 1px 4px;
+    margin-left: 6px;
+  }
+  .squad-player .badge.v { background: rgba(217,180,74,0.35); color: var(--gold); }
+  .squad-player .out { opacity: 0.4; text-decoration: line-through; }
+  .mini-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 14px; }
+  .mini-card { border: 1px solid var(--line); border-radius: 12px; padding: 10px 12px; }
+  .mini-card .l { font-size: 10px; text-transform: uppercase; letter-spacing: .5px; color: var(--muted); }
+  .mini-card .n { font-weight: 600; margin-top: 3px; }
+  .mini-card .p { font-size: 12px; color: var(--muted); }
 </style>
 </head>
 <body>
@@ -226,6 +332,10 @@
   </main>
 
   <footer>Оновлюється автоматично щогодини · FIFA World Cup 2026 Fantasy</footer>
+
+  <div class="modal-overlay" id="teamModal" hidden>
+    <div class="modal-card" id="teamModalCard"></div>
+  </div>
 
 <script>
 const CHIP_FIELDS = [
@@ -386,7 +496,7 @@ async function main() {
         <tr class="${top3.trim()}">
           <td><span class="rank-num">${rank}</span>${deltaHtml}</td>
           <td class="name-cell">
-            <div class="player-row">
+            <div class="player-row team-link" data-team="${esc(t.id)}">
               <img class="avatar" src="${esc(t.avatar || "")}" alt="" onerror="this.style.visibility='hidden'">
               <div>
                 <div class="pname">${esc(t.userName)}</div>
@@ -429,7 +539,7 @@ async function main() {
       }).join("");
       return `
         <tr>
-          <td class="name-cell"><div class="pname">${esc(t.userName)}</div></td>
+          <td class="name-cell"><div class="pname team-link" data-team="${esc(t.id)}">${esc(t.userName)}</div></td>
           ${cells}
           <td class="ctr">${used}/${CHIP_FIELDS.length}</td>
         </tr>`;
@@ -460,7 +570,7 @@ async function main() {
         return `<td class="ctr"><div class="pname" style="font-size:12.5px">${esc(name)}</div><div class="points-sm">${pts} очок</div></td>`;
       }).join("");
       totals.set(t.id, total);
-      return { html: `<tr><td class="name-cell"><div class="pname">${esc(t.userName)}</div></td>${cells}<td class="ctr points-big">${total}</td></tr>`, total };
+      return { html: `<tr><td class="name-cell"><div class="pname team-link" data-team="${esc(t.id)}">${esc(t.userName)}</div></td>${cells}<td class="ctr points-big">${total}</td></tr>`, total };
     });
     rows.sort((a, b) => b.total - a.total);
     const headers = rounds.map((r) => `<th class="ctr">Тур ${r}</th>`).join("");
@@ -482,11 +592,11 @@ async function main() {
       const transfers = (data && data.transfers) || [];
       const hits = transfers.filter((x) => x.isNegative).length;
       const free = data ? data.freeTransfers : "—";
-      return { userName: t.userName, total: transfers.length, hits, free: free ?? "—" };
+      return { id: t.id, userName: t.userName, total: transfers.length, hits, free: free ?? "—" };
     }).sort((a, b) => b.hits - a.hits || b.total - a.total);
     const rowsHtml = rows.map((r) => `
       <tr>
-        <td class="name-cell"><div class="pname">${esc(r.userName)}</div></td>
+        <td class="name-cell"><div class="pname team-link" data-team="${esc(r.id)}">${esc(r.userName)}</div></td>
         <td class="num">${r.total}</td>
         <td class="ctr">${r.hits ? `<span class="pill bad">${r.hits}</span>` : `<span class="pill off">0</span>`}</td>
         <td class="num">${r.free}</td>
@@ -515,11 +625,11 @@ async function main() {
         total += pts;
         if (worst === null || pts > worst.pts) worst = { round: r, pts };
       });
-      return { userName: t.userName, total, worst };
+      return { id: t.id, userName: t.userName, total, worst };
     }).sort((a, b) => b.total - a.total);
     const rowsHtml = rows.map((r) => `
       <tr>
-        <td class="name-cell"><div class="pname">${esc(r.userName)}</div></td>
+        <td class="name-cell"><div class="pname team-link" data-team="${esc(r.id)}">${esc(r.userName)}</div></td>
         <td class="num points-big">${r.total}</td>
         <td class="num points-sm">${r.worst ? `${r.worst.pts} (тур ${r.worst.round})` : "—"}</td>
       </tr>`).join("");
@@ -652,6 +762,170 @@ async function main() {
     const id = btn.dataset.tab;
     tabsNav.querySelectorAll("button").forEach((b) => b.classList.toggle("active", b === btn));
     mainEl.querySelectorAll("section.panel").forEach((s) => s.classList.toggle("active", s.id === "panel-" + id));
+  });
+
+  // =========================================================================
+  // Team detail modal (click any manager name to open)
+  // =========================================================================
+  const POSITION_ORDER = ["GK", "DEF", "MID", "FWD"];
+  const POSITION_LABELS = { GK: "Воротар", DEF: "Захист", MID: "Півзахист", FWD: "Атака" };
+  const modalOverlay = document.getElementById("teamModal");
+  const modalCard = document.getElementById("teamModalCard");
+  let modalTeamId = null;
+  let modalRound = null;
+
+  function squadPlayerRow(id, round, opts) {
+    opts = opts || {};
+    const p = playerMap.get(id);
+    const pts = playerRoundPoints(id, round);
+    const abbr = playerSquadAbbr(id);
+    let badges = "";
+    if (opts.captain) badges += `<span class="badge" title="Капітан">C</span>`;
+    if (opts.vice) badges += `<span class="badge v" title="Віце-капітан">V</span>`;
+    if (opts.autoIn) badges += `<span class="badge v" title="Вийшов на заміну">AUTO</span>`;
+    return `
+      <div class="squad-player${opts.out ? " out" : ""}">
+        <span>${esc(playerName(id))}${abbr ? ` <span class="psub">· ${esc(abbr)}</span>` : ""}${badges}</span>
+        <span class="points-sm">${pts} очок</span>
+      </div>`;
+  }
+
+  function buildTeamDetail(teamId, round) {
+    const team = teams.find((t) => t.id === teamId);
+    if (!team) return `<div class="state error">Команду не знайдено.</div>`;
+    const rd = team.rounds && team.rounds[String(round)];
+    const rankNow = currRankMap.get(teamId) ?? team.overallRank;
+
+    const roundButtons = rounds.map((r) =>
+      `<button data-round="${r}" class="${r === round ? "active" : ""}">Тур ${r}</button>`
+    ).join("");
+
+    if (!rd) {
+      return `
+        <button class="modal-close" data-close>×</button>
+        <div class="modal-head">
+          <img class="avatar" src="${esc(team.avatar || "")}" alt="" onerror="this.style.visibility='hidden'">
+          <div><h3>${esc(team.userName)}</h3><div class="psub">Немає даних за цей тур</div></div>
+        </div>
+        <div class="round-picker">${roundButtons}</div>
+        <div class="state">Дані по цьому туру ще не завантажені.</div>`;
+    }
+
+    const autoIn = new Set((rd.substitutions || []).filter((s) => s.isAuto).map((s) => s.in));
+
+    const lineupHtml = POSITION_ORDER.filter((pos) => rd.lineup && rd.lineup[pos] && rd.lineup[pos].length).map((pos) => `
+      <div class="squad-group">
+        <h4>${POSITION_LABELS[pos]}</h4>
+        ${rd.lineup[pos].map((id) => squadPlayerRow(id, round, { captain: id === rd.captain, vice: id === rd.vice })).join("")}
+      </div>`).join("");
+
+    const benchIds = flattenRoster(rd.bench);
+    const benchHtml = benchIds.length ? `
+      <div class="squad-group">
+        <h4>Лава запасних</h4>
+        ${benchIds.map((id) => squadPlayerRow(id, round, { autoIn: autoIn.has(id) })).join("")}
+      </div>` : "";
+
+    // MVP / bust of the full 15-man roster, by season-long total points
+    const roster = [...flattenRoster(rd.lineup), ...benchIds];
+    const withTotals = roster.map((id) => {
+      const p = playerMap.get(id);
+      return { id, total: p && p.stats ? (p.stats.totalPoints || 0) : 0 };
+    }).filter((x) => playerMap.has(x.id));
+    let mvp = null, bust = null;
+    withTotals.forEach((x) => {
+      if (!mvp || x.total > mvp.total) mvp = x;
+      if (!bust || x.total < bust.total) bust = x;
+    });
+
+    const chipsHtml = CHIP_FIELDS.map(([field, label]) => {
+      const val = rd[field];
+      const roundNum = chipRound(val);
+      if (roundNum == null) return `<span class="pill off">${esc(label)}: —</span>`;
+      const extra = (val && typeof val === "object" && val.playerId) ? ` · ${playerName(val.playerId)}` : "";
+      return `<span class="pill">${esc(label)}: тур ${roundNum}${esc(extra)}</span>`;
+    }).join(" ");
+
+    const transfers = rd.transfers || [];
+    const hits = transfers.filter((x) => x.isNegative).length;
+
+    return `
+      <button class="modal-close" data-close>×</button>
+      <div class="modal-head">
+        <img class="avatar" src="${esc(team.avatar || "")}" alt="" onerror="this.style.visibility='hidden'">
+        <div>
+          <h3>${esc(team.userName)}</h3>
+          <div class="psub">Місце ${rankNow ?? "—"} · Вартість складу ${rd.value != null ? rd.value : "—"}М</div>
+        </div>
+      </div>
+
+      <div class="modal-stats">
+        <div class="stat"><div class="v">${rd.roundPoints ?? "—"}</div><div class="l">Очки туру</div></div>
+        <div class="stat"><div class="v">${rd.overallPoints ?? "—"}</div><div class="l">Всього очок</div></div>
+        <div class="stat"><div class="v">${transfers.length}</div><div class="l">Трансфери</div></div>
+        <div class="stat"><div class="v">${hits}</div><div class="l">Хіти</div></div>
+      </div>
+
+      <div class="round-picker">${roundButtons}</div>
+
+      ${lineupHtml}
+      ${benchHtml}
+
+      <div class="mini-cards">
+        <div class="mini-card">
+          <div class="l">🔥 MVP складу (сезон)</div>
+          <div class="n">${mvp ? esc(playerName(mvp.id)) : "—"}</div>
+          <div class="p">${mvp ? mvp.total + " очок за сезон" : ""}</div>
+        </div>
+        <div class="mini-card">
+          <div class="l">📉 Провал складу (сезон)</div>
+          <div class="n">${bust ? esc(playerName(bust.id)) : "—"}</div>
+          <div class="p">${bust ? bust.total + " очок за сезон" : ""}</div>
+        </div>
+      </div>
+
+      <div class="squad-group">
+        <h4>Чіпи цієї команди</h4>
+        <div style="display:flex; flex-wrap:wrap; gap:6px;">${chipsHtml}</div>
+      </div>`;
+  }
+
+  function renderModal() {
+    if (modalTeamId == null) return;
+    modalCard.innerHTML = buildTeamDetail(modalTeamId, modalRound);
+  }
+
+  function openTeamModal(teamId) {
+    modalTeamId = teamId;
+    modalRound = currentRound;
+    renderModal();
+    modalOverlay.hidden = false;
+  }
+
+  function closeTeamModal() {
+    modalOverlay.hidden = true;
+    modalTeamId = null;
+  }
+
+  document.addEventListener("click", (e) => {
+    const link = e.target.closest("[data-team]");
+    if (link) {
+      openTeamModal(link.dataset.team);
+      return;
+    }
+    if (e.target.closest("[data-close]") || e.target === modalOverlay) {
+      closeTeamModal();
+      return;
+    }
+    const roundBtn = e.target.closest(".round-picker button[data-round]");
+    if (roundBtn && !modalOverlay.hidden) {
+      modalRound = Number(roundBtn.dataset.round);
+      renderModal();
+    }
+  });
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") closeTeamModal();
   });
 
   document.getElementById("updated").textContent = fmtDate(history.updated_at);
