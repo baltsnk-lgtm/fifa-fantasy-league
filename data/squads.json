@@ -60,7 +60,7 @@
     "name": "Canada",
     "group": "b",
     "abbr": "CAN",
-    "isEliminated": false
+    "isEliminated": true
   },
   {
     "id": 10,
@@ -235,7 +235,7 @@
     "name": "Paraguay",
     "group": "d",
     "abbr": "PAR",
-    "isEliminated": false
+    "isEliminated": true
   },
   {
     "id": 35,
