@@ -2208,7 +2208,7 @@
           "locked": false
         },
         "5": {
-          "captain": 500,
+          "captain": 855,
           "vice": 501,
           "lineup": {
             "GK": [
@@ -2284,6 +2284,11 @@
             {
               "out": 792,
               "in": 500,
+              "type": "captain"
+            },
+            {
+              "out": 500,
+              "in": 855,
               "type": "captain"
             }
           ],
@@ -7106,7 +7111,7 @@
               1099
             ],
             "DEF": [
-              916,
+              168,
               1320,
               1088,
               1429
@@ -7127,7 +7132,7 @@
               45
             ],
             "DEF": [
-              168
+              916
             ],
             "MID": [
               1674
@@ -7138,11 +7143,17 @@
           },
           "benchOrder": [
             45,
-            168,
+            916,
             1094,
             1674
           ],
-          "substitutions": [],
+          "substitutions": [
+            {
+              "out": 916,
+              "in": 168,
+              "isAuto": false
+            }
+          ],
           "transfers": [
             {
               "out": 543,
@@ -10481,5 +10492,5 @@
   },
   "current_round": 5,
   "league_id": "248321",
-  "updated_at": "2026-07-05T08:27:26Z"
+  "updated_at": "2026-07-05T14:55:20Z"
 }
