@@ -46,7 +46,7 @@
     "name": "Brazil",
     "group": "c",
     "abbr": "BRA",
-    "isEliminated": false
+    "isEliminated": true
   },
   {
     "id": 8,
@@ -193,7 +193,7 @@
     "name": "Mexico",
     "group": "a",
     "abbr": "MEX",
-    "isEliminated": false
+    "isEliminated": true
   },
   {
     "id": 29,
