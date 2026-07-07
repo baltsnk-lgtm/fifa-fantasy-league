@@ -242,7 +242,7 @@
     "name": "Portugal",
     "group": "k",
     "abbr": "POR",
-    "isEliminated": false
+    "isEliminated": true
   },
   {
     "id": 36,
@@ -326,7 +326,7 @@
     "name": "USA",
     "group": "d",
     "abbr": "USA",
-    "isEliminated": false
+    "isEliminated": true
   },
   {
     "id": 48,
