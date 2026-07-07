@@ -67,7 +67,7 @@
     "name": "Colombia",
     "group": "k",
     "abbr": "COL",
-    "isEliminated": false
+    "isEliminated": true
   },
   {
     "id": 11,
@@ -116,7 +116,7 @@
     "name": "Egypt",
     "group": "g",
     "abbr": "EGY",
-    "isEliminated": false
+    "isEliminated": true
   },
   {
     "id": 18,
