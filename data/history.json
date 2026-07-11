@@ -1758,11 +1758,10 @@
           "vice": 517,
           "lineup": {
             "GK": [
-              1099
+              45
             ],
             "DEF": [
-              1086,
-              1088,
+              1318,
               494,
               1089
             ],
@@ -1773,34 +1772,49 @@
               517
             ],
             "FWD": [
+              38,
               500,
               468
             ]
           },
           "bench": {
             "GK": [
-              45
+              1099
             ],
             "DEF": [
-              1318
+              1086,
+              1088
             ],
             "MID": [
               792
             ],
-            "FWD": [
-              38
-            ]
+            "FWD": []
           },
           "benchOrder": [
-            45,
+            1099,
             792,
-            1318,
-            38
+            1086,
+            1088
           ],
           "substitutions": [
             {
               "out": 792,
               "in": 491,
+              "isAuto": false
+            },
+            {
+              "out": 1099,
+              "in": 45,
+              "isAuto": false
+            },
+            {
+              "out": 1086,
+              "in": 1318,
+              "isAuto": false
+            },
+            {
+              "out": 1088,
+              "in": 38,
               "isAuto": false
             }
           ],
@@ -1843,11 +1857,11 @@
           "qualification": 4,
           "cleanSheet": 5,
           "qualificationPlayerIds": [
-            1099,
-            1086,
-            1088,
+            45,
+            1318,
             494,
             1089,
+            38,
             500,
             468,
             510,
@@ -2786,7 +2800,7 @@
       "avatar": "https://play.fifa.com/media/image/gamezone/avatars/WC_2026/12.svg",
       "level": 12,
       "overallRank": 1,
-      "roundRank": 7,
+      "roundRank": 6,
       "overallPoints": 551,
       "roundPoints": 58
     },
@@ -3848,7 +3862,7 @@
       },
       "avatar": "https://play.fifa.com/media/image/gamezone/avatars/WC_2026/5.svg",
       "level": 5,
-      "overallRank": 8,
+      "overallRank": 7,
       "roundRank": 10,
       "overallPoints": 460,
       "roundPoints": 51
@@ -7058,10 +7072,10 @@
       },
       "avatar": "https://play.fifa.com/media/image/gamezone/avatars/WC_2026/3.svg",
       "level": 3,
-      "overallRank": 7,
-      "roundRank": 6,
-      "overallPoints": 462,
-      "roundPoints": 61
+      "overallRank": 8,
+      "roundRank": 7,
+      "overallPoints": 456,
+      "roundPoints": 55
     },
     "3104284": {
       "userName": "artemovie",
@@ -10700,7 +10714,7 @@
             "MID": [
               1092,
               501,
-              939,
+              1157,
               1105
             ],
             "FWD": [
@@ -10718,7 +10732,7 @@
               1088
             ],
             "MID": [
-              1157
+              939
             ],
             "FWD": []
           },
@@ -10726,9 +10740,15 @@
             477,
             225,
             1088,
-            1157
+            939
           ],
-          "substitutions": [],
+          "substitutions": [
+            {
+              "out": 939,
+              "in": 1157,
+              "isAuto": false
+            }
+          ],
           "transfers": [],
           "captainChanges": [],
           "value": 105,
@@ -12759,5 +12779,5 @@
   },
   "current_round": 6,
   "league_id": "248321",
-  "updated_at": "2026-07-10T21:40:29Z"
+  "updated_at": "2026-07-11T06:28:23Z"
 }
