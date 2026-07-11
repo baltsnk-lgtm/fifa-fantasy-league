@@ -32,7 +32,7 @@
     "name": "Belgium",
     "group": "g",
     "abbr": "BEL",
-    "isEliminated": false
+    "isEliminated": true
   },
   {
     "id": 6,
@@ -200,7 +200,7 @@
     "name": "Morocco",
     "group": "c",
     "abbr": "MAR",
-    "isEliminated": false
+    "isEliminated": true
   },
   {
     "id": 30,
