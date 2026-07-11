@@ -1031,8 +1031,8 @@
             1089,
             1088
           ],
-          "roundPoints": 63,
-          "overallPoints": 520,
+          "roundPoints": 64,
+          "overallPoints": 521,
           "freeTransfers": 0,
           "negativeTransfers": 3,
           "locked": false
@@ -1875,8 +1875,8 @@
             517
           ],
           "cleanSheetPlayerIds": [],
-          "roundPoints": 47,
-          "overallPoints": 513,
+          "roundPoints": 44,
+          "overallPoints": 510,
           "freeTransfers": 0,
           "negativeTransfers": 1,
           "locked": false
@@ -2801,8 +2801,8 @@
             491
           ],
           "cleanSheetPlayerIds": [],
-          "roundPoints": 58,
-          "overallPoints": 551,
+          "roundPoints": 59,
+          "overallPoints": 552,
           "freeTransfers": 0,
           "negativeTransfers": 1,
           "locked": false
@@ -3238,8 +3238,8 @@
           "cleanSheet": null,
           "qualificationPlayerIds": [],
           "cleanSheetPlayerIds": [],
-          "roundPoints": 31,
-          "overallPoints": 427,
+          "roundPoints": 34,
+          "overallPoints": 430,
           "freeTransfers": 4,
           "negativeTransfers": 0,
           "locked": false
@@ -3864,8 +3864,8 @@
           "cleanSheetPlayerIds": [
             1088
           ],
-          "roundPoints": 51,
-          "overallPoints": 460,
+          "roundPoints": 53,
+          "overallPoints": 462,
           "freeTransfers": 0,
           "negativeTransfers": 2,
           "locked": false
@@ -4610,11 +4610,11 @@
           "locked": false
         },
         "6": {
-          "captain": 1094,
+          "captain": 491,
           "vice": 1526,
           "lineup": {
             "GK": [
-              1099
+              477
             ],
             "DEF": [
               1086,
@@ -4635,7 +4635,7 @@
           },
           "bench": {
             "GK": [
-              477
+              1099
             ],
             "DEF": [
               1320,
@@ -4647,7 +4647,7 @@
             ]
           },
           "benchOrder": [
-            477,
+            1099,
             1320,
             2012,
             38
@@ -4656,6 +4656,11 @@
             {
               "out": 2012,
               "in": 1086,
+              "isAuto": false
+            },
+            {
+              "out": 1099,
+              "in": 477,
               "isAuto": false
             }
           ],
@@ -4691,6 +4696,11 @@
               "out": 501,
               "in": 1094,
               "type": "captain"
+            },
+            {
+              "out": 1094,
+              "in": 491,
+              "type": "captain"
             }
           ],
           "value": 104,
@@ -4704,7 +4714,7 @@
           "qualification": 5,
           "cleanSheet": 4,
           "qualificationPlayerIds": [
-            1099,
+            477,
             1086,
             28,
             1088,
@@ -4717,8 +4727,8 @@
             1526
           ],
           "cleanSheetPlayerIds": [],
-          "roundPoints": 35,
-          "overallPoints": 484,
+          "roundPoints": 34,
+          "overallPoints": 483,
           "freeTransfers": 0,
           "negativeTransfers": 1,
           "locked": false
@@ -5546,8 +5556,8 @@
             491
           ],
           "cleanSheetPlayerIds": [],
-          "roundPoints": 64,
-          "overallPoints": 485,
+          "roundPoints": 66,
+          "overallPoints": 487,
           "freeTransfers": 0,
           "negativeTransfers": 0,
           "locked": false
@@ -6257,8 +6267,8 @@
             474
           ],
           "cleanSheetPlayerIds": [],
-          "roundPoints": 54,
-          "overallPoints": 486,
+          "roundPoints": 57,
+          "overallPoints": 489,
           "freeTransfers": 0,
           "negativeTransfers": 0,
           "locked": false
@@ -7074,8 +7084,8 @@
             129
           ],
           "cleanSheetPlayerIds": [],
-          "roundPoints": 55,
-          "overallPoints": 456,
+          "roundPoints": 58,
+          "overallPoints": 459,
           "freeTransfers": 0,
           "negativeTransfers": 3,
           "locked": false
@@ -7587,8 +7597,8 @@
           "cleanSheet": 4,
           "qualificationPlayerIds": [],
           "cleanSheetPlayerIds": [],
-          "roundPoints": 46,
-          "overallPoints": 429,
+          "roundPoints": 49,
+          "overallPoints": 432,
           "freeTransfers": 0,
           "negativeTransfers": 0,
           "locked": false
@@ -8152,8 +8162,8 @@
           "cleanSheet": null,
           "qualificationPlayerIds": [],
           "cleanSheetPlayerIds": [],
-          "roundPoints": 43,
-          "overallPoints": 429,
+          "roundPoints": 45,
+          "overallPoints": 431,
           "freeTransfers": 0,
           "negativeTransfers": 0,
           "locked": false
@@ -8728,8 +8738,8 @@
             1431
           ],
           "cleanSheetPlayerIds": [],
-          "roundPoints": 78,
-          "overallPoints": 437,
+          "roundPoints": 79,
+          "overallPoints": 438,
           "freeTransfers": 0,
           "negativeTransfers": 0,
           "locked": false
@@ -9227,8 +9237,8 @@
           "cleanSheet": null,
           "qualificationPlayerIds": [],
           "cleanSheetPlayerIds": [],
-          "roundPoints": 52,
-          "overallPoints": 418,
+          "roundPoints": 54,
+          "overallPoints": 420,
           "freeTransfers": null,
           "negativeTransfers": 0,
           "locked": false
@@ -9800,8 +9810,8 @@
             1997
           ],
           "cleanSheetPlayerIds": [],
-          "roundPoints": 70,
-          "overallPoints": 397,
+          "roundPoints": 71,
+          "overallPoints": 398,
           "freeTransfers": null,
           "negativeTransfers": 0,
           "locked": false
@@ -10318,8 +10328,8 @@
             517
           ],
           "cleanSheetPlayerIds": [],
-          "roundPoints": 40,
-          "overallPoints": 434,
+          "roundPoints": 43,
+          "overallPoints": 437,
           "freeTransfers": 0,
           "negativeTransfers": 0,
           "locked": false
@@ -10774,8 +10784,8 @@
           "cleanSheet": null,
           "qualificationPlayerIds": [],
           "cleanSheetPlayerIds": [],
-          "roundPoints": 35,
-          "overallPoints": 365,
+          "roundPoints": 36,
+          "overallPoints": 366,
           "freeTransfers": 4,
           "negativeTransfers": 0,
           "locked": false
@@ -11304,8 +11314,8 @@
             1088,
             1526
           ],
-          "roundPoints": 62,
-          "overallPoints": 417,
+          "roundPoints": 64,
+          "overallPoints": 419,
           "freeTransfers": 0,
           "negativeTransfers": 0,
           "locked": false
@@ -11787,8 +11797,8 @@
           "cleanSheet": null,
           "qualificationPlayerIds": [],
           "cleanSheetPlayerIds": [],
-          "roundPoints": 44,
-          "overallPoints": 344,
+          "roundPoints": 47,
+          "overallPoints": 347,
           "freeTransfers": 0,
           "negativeTransfers": 1,
           "locked": false
@@ -12220,8 +12230,8 @@
           "cleanSheet": null,
           "qualificationPlayerIds": [],
           "cleanSheetPlayerIds": [],
-          "roundPoints": 9,
-          "overallPoints": 290,
+          "roundPoints": 12,
+          "overallPoints": 293,
           "freeTransfers": 4,
           "negativeTransfers": 0,
           "locked": false
@@ -12790,5 +12800,5 @@
   },
   "current_round": 6,
   "league_id": "248321",
-  "updated_at": "2026-07-11T18:10:34Z"
+  "updated_at": "2026-07-11T21:35:55Z"
 }

@@ -999,7 +999,7 @@
     "price": 4.9,
     "status": "playing",
     "matchStatus": null,
-    "percentSelected": 9.8,
+    "percentSelected": 9.9,
     "roundsSelected": {
       "1": 5,
       "2": 5.8,
@@ -1007,7 +1007,7 @@
       "4": 5.5,
       "5": 5.9,
       "6": 9.7,
-      "7": 9.8
+      "7": 9.9
     },
     "stats": {
       "totalPoints": 22,
@@ -8287,7 +8287,7 @@
     "price": 3.9,
     "status": "eliminated",
     "matchStatus": null,
-    "percentSelected": 1.4,
+    "percentSelected": 1.3,
     "roundsSelected": {
       "1": 4.7,
       "2": 5.3,
@@ -8295,7 +8295,7 @@
       "4": 1.7,
       "5": 2,
       "6": 1.4,
-      "7": 1.4
+      "7": 1.3
     },
     "stats": {
       "totalPoints": 26,
@@ -14824,7 +14824,7 @@
     "position": "DEF",
     "price": 4.7,
     "status": "playing",
-    "matchStatus": null,
+    "matchStatus": "start",
     "percentSelected": 12.3,
     "roundsSelected": {
       "1": 11.9,
@@ -14836,18 +14836,19 @@
       "7": 12.3
     },
     "stats": {
-      "totalPoints": 11,
-      "avgPoints": 2.2,
-      "form": 3,
-      "lastRoundPoints": 0,
+      "totalPoints": 12,
+      "avgPoints": 2,
+      "form": 1,
+      "lastRoundPoints": 1,
       "roundPoints": {
         "1": 1,
         "2": 1,
         "3": 7,
         "4": 2,
-        "5": 0
+        "5": 0,
+        "6": 1
       },
-      "nextFixtureFromActiveRound": 98,
+      "nextFixtureFromActiveRound": null,
       "nextFixtureFromScheduledRound": null
     },
     "oneToWatch": false,
@@ -14864,7 +14865,7 @@
     "position": "DEF",
     "price": 4.6,
     "status": "transferred",
-    "matchStatus": null,
+    "matchStatus": "not_in_squad",
     "percentSelected": 0.1,
     "roundsSelected": {
       "1": 0.2,
@@ -14881,7 +14882,7 @@
       "form": 0,
       "lastRoundPoints": 0,
       "roundPoints": [],
-      "nextFixtureFromActiveRound": 98,
+      "nextFixtureFromActiveRound": null,
       "nextFixtureFromScheduledRound": null
     },
     "oneToWatch": false,
@@ -14898,7 +14899,7 @@
     "position": "DEF",
     "price": 5.1,
     "status": "playing",
-    "matchStatus": null,
+    "matchStatus": "start",
     "percentSelected": 6.7,
     "roundsSelected": {
       "1": 7.3,
@@ -14910,18 +14911,19 @@
       "7": 6.7
     },
     "stats": {
-      "totalPoints": 17,
-      "avgPoints": 3.4,
-      "form": 3,
-      "lastRoundPoints": 0,
+      "totalPoints": 18,
+      "avgPoints": 3,
+      "form": 1,
+      "lastRoundPoints": 1,
       "roundPoints": {
         "1": 1,
         "2": 7,
         "3": 7,
         "4": 2,
-        "5": 0
+        "5": 0,
+        "6": 1
       },
-      "nextFixtureFromActiveRound": 98,
+      "nextFixtureFromActiveRound": null,
       "nextFixtureFromScheduledRound": null
     },
     "oneToWatch": false,
@@ -14938,7 +14940,7 @@
     "position": "DEF",
     "price": 4.5,
     "status": "playing",
-    "matchStatus": null,
+    "matchStatus": "sub",
     "percentSelected": 0.4,
     "roundsSelected": {
       "1": 0.4,
@@ -14957,7 +14959,7 @@
       "roundPoints": {
         "5": 1
       },
-      "nextFixtureFromActiveRound": 98,
+      "nextFixtureFromActiveRound": null,
       "nextFixtureFromScheduledRound": null
     },
     "oneToWatch": false,
@@ -14974,7 +14976,7 @@
     "position": "DEF",
     "price": 4.8,
     "status": "playing",
-    "matchStatus": null,
+    "matchStatus": "start",
     "percentSelected": 5.7,
     "roundsSelected": {
       "1": 1,
@@ -14986,18 +14988,19 @@
       "7": 5.7
     },
     "stats": {
-      "totalPoints": 22,
-      "avgPoints": 4.4,
-      "form": 4,
+      "totalPoints": 23,
+      "avgPoints": 3.8,
+      "form": 1.3,
       "lastRoundPoints": 1,
       "roundPoints": {
         "1": 1,
         "2": 9,
         "3": 9,
         "4": 2,
-        "5": 1
+        "5": 1,
+        "6": 1
       },
-      "nextFixtureFromActiveRound": 98,
+      "nextFixtureFromActiveRound": null,
       "nextFixtureFromScheduledRound": null
     },
     "oneToWatch": false,
@@ -15014,7 +15017,7 @@
     "position": "DEF",
     "price": 4.6,
     "status": "playing",
-    "matchStatus": null,
+    "matchStatus": "start",
     "percentSelected": 1.2,
     "roundsSelected": {
       "1": 1.3,
@@ -15026,16 +15029,17 @@
       "7": 1.2
     },
     "stats": {
-      "totalPoints": 3,
+      "totalPoints": 4,
       "avgPoints": 1,
       "form": 1,
       "lastRoundPoints": 1,
       "roundPoints": {
         "1": 1,
         "4": 1,
-        "5": 1
+        "5": 1,
+        "6": 1
       },
-      "nextFixtureFromActiveRound": 98,
+      "nextFixtureFromActiveRound": null,
       "nextFixtureFromScheduledRound": null
     },
     "oneToWatch": false,
@@ -15052,7 +15056,7 @@
     "position": "DEF",
     "price": 4.5,
     "status": "playing",
-    "matchStatus": null,
+    "matchStatus": "sub",
     "percentSelected": 1,
     "roundsSelected": {
       "1": 0.4,
@@ -15075,7 +15079,7 @@
         "4": 2,
         "5": 1
       },
-      "nextFixtureFromActiveRound": 98,
+      "nextFixtureFromActiveRound": null,
       "nextFixtureFromScheduledRound": null
     },
     "oneToWatch": false,
@@ -15092,7 +15096,7 @@
     "position": "FWD",
     "price": 10.5,
     "status": "playing",
-    "matchStatus": null,
+    "matchStatus": "start",
     "percentSelected": 44.6,
     "roundsSelected": {
       "1": 36.3,
@@ -15104,18 +15108,19 @@
       "7": 44.6
     },
     "stats": {
-      "totalPoints": 45,
-      "avgPoints": 9,
-      "form": 10,
-      "lastRoundPoints": 9,
+      "totalPoints": 46,
+      "avgPoints": 7.7,
+      "form": 7.7,
+      "lastRoundPoints": 1,
       "roundPoints": {
         "1": 13,
         "2": 2,
         "3": 8,
         "4": 13,
-        "5": 9
+        "5": 9,
+        "6": 1
       },
-      "nextFixtureFromActiveRound": 98,
+      "nextFixtureFromActiveRound": null,
       "nextFixtureFromScheduledRound": null
     },
     "oneToWatch": false,
@@ -15132,7 +15137,7 @@
     "position": "MID",
     "price": 9.5,
     "status": "playing",
-    "matchStatus": null,
+    "matchStatus": "sub",
     "percentSelected": 4.7,
     "roundsSelected": {
       "1": 4.7,
@@ -15155,7 +15160,7 @@
         "4": 1,
         "5": 7
       },
-      "nextFixtureFromActiveRound": 98,
+      "nextFixtureFromActiveRound": null,
       "nextFixtureFromScheduledRound": null
     },
     "oneToWatch": false,
@@ -15172,7 +15177,7 @@
     "position": "MID",
     "price": 7.5,
     "status": "playing",
-    "matchStatus": null,
+    "matchStatus": "sub",
     "percentSelected": 2.1,
     "roundsSelected": {
       "1": 1.9,
@@ -15194,7 +15199,7 @@
         "3": 3,
         "4": 2
       },
-      "nextFixtureFromActiveRound": 98,
+      "nextFixtureFromActiveRound": null,
       "nextFixtureFromScheduledRound": null
     },
     "oneToWatch": false,
@@ -15211,7 +15216,7 @@
     "position": "MID",
     "price": 7,
     "status": "playing",
-    "matchStatus": null,
+    "matchStatus": "start",
     "percentSelected": 5.9,
     "roundsSelected": {
       "1": 1.7,
@@ -15223,17 +15228,18 @@
       "7": 5.9
     },
     "stats": {
-      "totalPoints": 21,
-      "avgPoints": 5.3,
-      "form": 6.3,
-      "lastRoundPoints": 7,
+      "totalPoints": 22,
+      "avgPoints": 4.4,
+      "form": 5.7,
+      "lastRoundPoints": 1,
       "roundPoints": {
         "1": 2,
         "2": 3,
         "4": 9,
-        "5": 7
+        "5": 7,
+        "6": 1
       },
-      "nextFixtureFromActiveRound": 98,
+      "nextFixtureFromActiveRound": null,
       "nextFixtureFromScheduledRound": null
     },
     "oneToWatch": false,
@@ -15250,7 +15256,7 @@
     "position": "MID",
     "price": 7.2,
     "status": "playing",
-    "matchStatus": null,
+    "matchStatus": "sub",
     "percentSelected": 0.5,
     "roundsSelected": {
       "1": 0.8,
@@ -15272,7 +15278,7 @@
         "3": 3,
         "5": 1
       },
-      "nextFixtureFromActiveRound": 98,
+      "nextFixtureFromActiveRound": null,
       "nextFixtureFromScheduledRound": null
     },
     "oneToWatch": false,
@@ -15289,7 +15295,7 @@
     "position": "FWD",
     "price": 6.1,
     "status": "playing",
-    "matchStatus": null,
+    "matchStatus": "start",
     "percentSelected": 0.4,
     "roundsSelected": {
       "1": 0.3,
@@ -15301,17 +15307,18 @@
       "7": 0.4
     },
     "stats": {
-      "totalPoints": 9,
-      "avgPoints": 2.3,
-      "form": 1.7,
-      "lastRoundPoints": 0,
+      "totalPoints": 10,
+      "avgPoints": 2,
+      "form": 1.3,
+      "lastRoundPoints": 1,
       "roundPoints": {
         "1": 4,
         "2": 2,
         "3": 1,
-        "4": 2
+        "4": 2,
+        "6": 1
       },
-      "nextFixtureFromActiveRound": 98,
+      "nextFixtureFromActiveRound": null,
       "nextFixtureFromScheduledRound": null
     },
     "oneToWatch": false,
@@ -15328,7 +15335,7 @@
     "position": "GK",
     "price": 4.8,
     "status": "playing",
-    "matchStatus": null,
+    "matchStatus": "start",
     "percentSelected": 17.1,
     "roundsSelected": {
       "1": 14.8,
@@ -15340,18 +15347,19 @@
       "7": 17.1
     },
     "stats": {
-      "totalPoints": 20,
-      "avgPoints": 4,
-      "form": 3.7,
-      "lastRoundPoints": 2,
+      "totalPoints": 21,
+      "avgPoints": 3.5,
+      "form": 1.7,
+      "lastRoundPoints": 1,
       "roundPoints": {
         "1": 2,
         "2": 7,
         "3": 7,
         "4": 2,
-        "5": 2
+        "5": 2,
+        "6": 1
       },
-      "nextFixtureFromActiveRound": 98,
+      "nextFixtureFromActiveRound": null,
       "nextFixtureFromScheduledRound": null
     },
     "oneToWatch": false,
@@ -15368,7 +15376,7 @@
     "position": "GK",
     "price": 4.2,
     "status": "playing",
-    "matchStatus": null,
+    "matchStatus": "sub",
     "percentSelected": 0.3,
     "roundsSelected": {
       "1": 0.3,
@@ -15385,7 +15393,7 @@
       "form": 0,
       "lastRoundPoints": 0,
       "roundPoints": [],
-      "nextFixtureFromActiveRound": 98,
+      "nextFixtureFromActiveRound": null,
       "nextFixtureFromScheduledRound": null
     },
     "oneToWatch": false,
@@ -15402,7 +15410,7 @@
     "position": "GK",
     "price": 4,
     "status": "playing",
-    "matchStatus": null,
+    "matchStatus": "sub",
     "percentSelected": 0.5,
     "roundsSelected": {
       "1": 0.5,
@@ -15419,7 +15427,7 @@
       "form": 0,
       "lastRoundPoints": 0,
       "roundPoints": [],
-      "nextFixtureFromActiveRound": 98,
+      "nextFixtureFromActiveRound": null,
       "nextFixtureFromScheduledRound": null
     },
     "oneToWatch": false,
@@ -15436,7 +15444,7 @@
     "position": "MID",
     "price": 5.1,
     "status": "injured",
-    "matchStatus": null,
+    "matchStatus": "sub",
     "percentSelected": 0.2,
     "roundsSelected": {
       "1": 0.2,
@@ -15455,7 +15463,7 @@
       "roundPoints": {
         "3": 1
       },
-      "nextFixtureFromActiveRound": 98,
+      "nextFixtureFromActiveRound": null,
       "nextFixtureFromScheduledRound": null
     },
     "oneToWatch": false,
@@ -15472,7 +15480,7 @@
     "position": "MID",
     "price": 6.1,
     "status": "playing",
-    "matchStatus": null,
+    "matchStatus": "sub",
     "percentSelected": 0.4,
     "roundsSelected": {
       "1": 0.5,
@@ -15489,7 +15497,7 @@
       "form": 0,
       "lastRoundPoints": 0,
       "roundPoints": [],
-      "nextFixtureFromActiveRound": 98,
+      "nextFixtureFromActiveRound": null,
       "nextFixtureFromScheduledRound": null
     },
     "oneToWatch": false,
@@ -15506,7 +15514,7 @@
     "position": "MID",
     "price": 6.5,
     "status": "playing",
-    "matchStatus": null,
+    "matchStatus": "start",
     "percentSelected": 1.5,
     "roundsSelected": {
       "1": 0.9,
@@ -15518,18 +15526,19 @@
       "7": 1.5
     },
     "stats": {
-      "totalPoints": 19,
-      "avgPoints": 3.8,
-      "form": 2.7,
-      "lastRoundPoints": 3,
+      "totalPoints": 20,
+      "avgPoints": 3.3,
+      "form": 2,
+      "lastRoundPoints": 1,
       "roundPoints": {
         "1": 7,
         "2": 4,
         "3": 3,
         "4": 2,
-        "5": 3
+        "5": 3,
+        "6": 1
       },
-      "nextFixtureFromActiveRound": 98,
+      "nextFixtureFromActiveRound": null,
       "nextFixtureFromScheduledRound": null
     },
     "oneToWatch": false,
@@ -15546,7 +15555,7 @@
     "position": "MID",
     "price": 7,
     "status": "playing",
-    "matchStatus": null,
+    "matchStatus": "start",
     "percentSelected": 6.1,
     "roundsSelected": {
       "1": 7.3,
@@ -15558,17 +15567,18 @@
       "7": 6.1
     },
     "stats": {
-      "totalPoints": 11,
-      "avgPoints": 2.8,
-      "form": 2,
+      "totalPoints": 12,
+      "avgPoints": 2.4,
+      "form": 1.7,
       "lastRoundPoints": 1,
       "roundPoints": {
         "1": 5,
         "2": 2,
         "4": 3,
-        "5": 1
+        "5": 1,
+        "6": 1
       },
-      "nextFixtureFromActiveRound": 98,
+      "nextFixtureFromActiveRound": null,
       "nextFixtureFromScheduledRound": null
     },
     "oneToWatch": false,
@@ -15585,7 +15595,7 @@
     "position": "MID",
     "price": 8.3,
     "status": "playing",
-    "matchStatus": null,
+    "matchStatus": "start",
     "percentSelected": 42.6,
     "roundsSelected": {
       "1": 9.1,
@@ -15597,18 +15607,19 @@
       "7": 42.6
     },
     "stats": {
-      "totalPoints": 42,
-      "avgPoints": 8.4,
-      "form": 10,
-      "lastRoundPoints": 15,
+      "totalPoints": 43,
+      "avgPoints": 7.2,
+      "form": 5.7,
+      "lastRoundPoints": 1,
       "roundPoints": {
         "1": 9,
         "2": 3,
         "3": 14,
         "4": 1,
-        "5": 15
+        "5": 15,
+        "6": 1
       },
-      "nextFixtureFromActiveRound": 98,
+      "nextFixtureFromActiveRound": null,
       "nextFixtureFromScheduledRound": null
     },
     "oneToWatch": false,
@@ -15700,7 +15711,7 @@
     "price": 5.3,
     "status": "playing",
     "matchStatus": "start",
-    "percentSelected": 14.2,
+    "percentSelected": 14.3,
     "roundsSelected": {
       "1": 4.6,
       "2": 4.9,
@@ -15708,7 +15719,7 @@
       "4": 5.1,
       "5": 9.3,
       "6": 13.7,
-      "7": 14.2
+      "7": 14.3
     },
     "stats": {
       "totalPoints": 34,
@@ -25481,8 +25492,8 @@
     "position": "MID",
     "price": 4.7,
     "status": "playing",
-    "matchStatus": null,
-    "percentSelected": 1.8,
+    "matchStatus": "start",
+    "percentSelected": 1.9,
     "roundsSelected": {
       "1": 0.3,
       "2": 0.3,
@@ -25490,20 +25501,21 @@
       "4": 0.3,
       "5": 0.3,
       "6": 1.8,
-      "7": 1.8
+      "7": 1.9
     },
     "stats": {
-      "totalPoints": 9,
-      "avgPoints": 2.3,
-      "form": 2.3,
-      "lastRoundPoints": 2,
+      "totalPoints": 10,
+      "avgPoints": 2,
+      "form": 2,
+      "lastRoundPoints": 1,
       "roundPoints": {
         "1": 2,
         "2": 2,
         "4": 3,
-        "5": 2
+        "5": 2,
+        "6": 1
       },
-      "nextFixtureFromActiveRound": 98,
+      "nextFixtureFromActiveRound": null,
       "nextFixtureFromScheduledRound": null
     },
     "oneToWatch": false,
@@ -25520,7 +25532,7 @@
     "position": "MID",
     "price": 5.1,
     "status": "playing",
-    "matchStatus": null,
+    "matchStatus": "sub",
     "percentSelected": 1,
     "roundsSelected": {
       "1": 0.8,
@@ -25543,7 +25555,7 @@
         "4": 1,
         "5": 1
       },
-      "nextFixtureFromActiveRound": 98,
+      "nextFixtureFromActiveRound": null,
       "nextFixtureFromScheduledRound": null
     },
     "oneToWatch": false,
@@ -25560,7 +25572,7 @@
     "position": "MID",
     "price": 5.6,
     "status": "playing",
-    "matchStatus": null,
+    "matchStatus": "sub",
     "percentSelected": 0,
     "roundsSelected": {
       "1": 0,
@@ -25579,7 +25591,7 @@
       "roundPoints": {
         "3": 1
       },
-      "nextFixtureFromActiveRound": 98,
+      "nextFixtureFromActiveRound": null,
       "nextFixtureFromScheduledRound": null
     },
     "oneToWatch": false,
@@ -25596,7 +25608,7 @@
     "position": "MID",
     "price": 5.6,
     "status": "playing",
-    "matchStatus": null,
+    "matchStatus": "start",
     "percentSelected": 1.1,
     "roundsSelected": {
       "1": 0.1,
@@ -25608,18 +25620,19 @@
       "7": 1.1
     },
     "stats": {
-      "totalPoints": 18,
-      "avgPoints": 3.6,
+      "totalPoints": 19,
+      "avgPoints": 3.2,
       "form": 4.3,
-      "lastRoundPoints": 3,
+      "lastRoundPoints": 1,
       "roundPoints": {
         "1": 1,
         "2": 4,
         "3": 1,
         "4": 9,
-        "5": 3
+        "5": 3,
+        "6": 1
       },
-      "nextFixtureFromActiveRound": 98,
+      "nextFixtureFromActiveRound": null,
       "nextFixtureFromScheduledRound": null
     },
     "oneToWatch": false,
@@ -25636,7 +25649,7 @@
     "position": "DEF",
     "price": 4.3,
     "status": "playing",
-    "matchStatus": null,
+    "matchStatus": "start",
     "percentSelected": 0.6,
     "roundsSelected": {
       "1": 0.7,
@@ -25648,17 +25661,18 @@
       "7": 0.6
     },
     "stats": {
-      "totalPoints": 6,
-      "avgPoints": 1.5,
+      "totalPoints": 7,
+      "avgPoints": 1.4,
       "form": 1.3,
       "lastRoundPoints": 1,
       "roundPoints": {
         "1": 2,
         "2": 1,
         "4": 2,
-        "5": 1
+        "5": 1,
+        "6": 1
       },
-      "nextFixtureFromActiveRound": 98,
+      "nextFixtureFromActiveRound": null,
       "nextFixtureFromScheduledRound": null
     },
     "oneToWatch": false,
@@ -25675,7 +25689,7 @@
     "position": "DEF",
     "price": 4.2,
     "status": "playing",
-    "matchStatus": null,
+    "matchStatus": "start",
     "percentSelected": 3,
     "roundsSelected": {
       "1": 7.7,
@@ -25687,16 +25701,17 @@
       "7": 3
     },
     "stats": {
-      "totalPoints": 12,
-      "avgPoints": 4,
-      "form": 4,
-      "lastRoundPoints": 9,
+      "totalPoints": 13,
+      "avgPoints": 3.3,
+      "form": 3.7,
+      "lastRoundPoints": 1,
       "roundPoints": {
         "1": 2,
         "2": 1,
-        "5": 9
+        "5": 9,
+        "6": 1
       },
-      "nextFixtureFromActiveRound": 98,
+      "nextFixtureFromActiveRound": null,
       "nextFixtureFromScheduledRound": null
     },
     "oneToWatch": false,
@@ -25713,7 +25728,7 @@
     "position": "DEF",
     "price": 4.1,
     "status": "playing",
-    "matchStatus": null,
+    "matchStatus": "sub",
     "percentSelected": 0.3,
     "roundsSelected": {
       "1": 0.1,
@@ -25734,7 +25749,7 @@
         "3": 1,
         "4": 2
       },
-      "nextFixtureFromActiveRound": 98,
+      "nextFixtureFromActiveRound": null,
       "nextFixtureFromScheduledRound": null
     },
     "oneToWatch": false,
@@ -25751,7 +25766,7 @@
     "position": "DEF",
     "price": 4.1,
     "status": "playing",
-    "matchStatus": null,
+    "matchStatus": "sub",
     "percentSelected": 0.7,
     "roundsSelected": {
       "1": 0.2,
@@ -25773,7 +25788,7 @@
         "3": -1,
         "5": 0
       },
-      "nextFixtureFromActiveRound": 98,
+      "nextFixtureFromActiveRound": null,
       "nextFixtureFromScheduledRound": null
     },
     "oneToWatch": false,
@@ -25790,7 +25805,7 @@
     "position": "DEF",
     "price": 4,
     "status": "playing",
-    "matchStatus": null,
+    "matchStatus": "start",
     "percentSelected": 2.6,
     "roundsSelected": {
       "1": 1.7,
@@ -25802,17 +25817,18 @@
       "7": 2.6
     },
     "stats": {
-      "totalPoints": 19,
-      "avgPoints": 4.8,
+      "totalPoints": 20,
+      "avgPoints": 4,
       "form": 4,
-      "lastRoundPoints": 9,
+      "lastRoundPoints": 1,
       "roundPoints": {
         "1": 7,
         "2": 1,
         "4": 2,
-        "5": 9
+        "5": 9,
+        "6": 1
       },
-      "nextFixtureFromActiveRound": 98,
+      "nextFixtureFromActiveRound": null,
       "nextFixtureFromScheduledRound": null
     },
     "oneToWatch": false,
@@ -25829,7 +25845,7 @@
     "position": "DEF",
     "price": 4,
     "status": "playing",
-    "matchStatus": null,
+    "matchStatus": "sub",
     "percentSelected": 0.4,
     "roundsSelected": {
       "1": 0.3,
@@ -25848,7 +25864,7 @@
       "roundPoints": {
         "3": -1
       },
-      "nextFixtureFromActiveRound": 98,
+      "nextFixtureFromActiveRound": null,
       "nextFixtureFromScheduledRound": null
     },
     "oneToWatch": false,
@@ -25865,7 +25881,7 @@
     "position": "DEF",
     "price": 3.7,
     "status": "playing",
-    "matchStatus": null,
+    "matchStatus": "start",
     "percentSelected": 0.5,
     "roundsSelected": {
       "1": 0.3,
@@ -25877,17 +25893,18 @@
       "7": 0.5
     },
     "stats": {
-      "totalPoints": 8,
-      "avgPoints": 2,
-      "form": 2,
-      "lastRoundPoints": 2,
+      "totalPoints": 9,
+      "avgPoints": 1.8,
+      "form": 1.7,
+      "lastRoundPoints": 1,
       "roundPoints": {
         "1": 2,
         "2": 2,
         "4": 2,
-        "5": 2
+        "5": 2,
+        "6": 1
       },
-      "nextFixtureFromActiveRound": 98,
+      "nextFixtureFromActiveRound": null,
       "nextFixtureFromScheduledRound": null
     },
     "oneToWatch": false,
@@ -25904,7 +25921,7 @@
     "position": "DEF",
     "price": 3.5,
     "status": "playing",
-    "matchStatus": null,
+    "matchStatus": "sub",
     "percentSelected": 0.8,
     "roundsSelected": {
       "1": 0.3,
@@ -25923,7 +25940,7 @@
       "roundPoints": {
         "3": 0
       },
-      "nextFixtureFromActiveRound": 98,
+      "nextFixtureFromActiveRound": null,
       "nextFixtureFromScheduledRound": null
     },
     "oneToWatch": false,
@@ -25940,7 +25957,7 @@
     "position": "FWD",
     "price": 10.5,
     "status": "playing",
-    "matchStatus": null,
+    "matchStatus": "start",
     "percentSelected": 32.2,
     "roundsSelected": {
       "1": 33.8,
@@ -25952,17 +25969,18 @@
       "7": 32.2
     },
     "stats": {
-      "totalPoints": 51,
-      "avgPoints": 12.8,
-      "form": 11.3,
-      "lastRoundPoints": 13,
+      "totalPoints": 52,
+      "avgPoints": 10.4,
+      "form": 7.3,
+      "lastRoundPoints": 1,
       "roundPoints": {
         "1": 17,
         "2": 13,
         "4": 8,
-        "5": 13
+        "5": 13,
+        "6": 1
       },
-      "nextFixtureFromActiveRound": 98,
+      "nextFixtureFromActiveRound": null,
       "nextFixtureFromScheduledRound": null
     },
     "oneToWatch": false,
@@ -25979,7 +25997,7 @@
     "position": "FWD",
     "price": 6.8,
     "status": "playing",
-    "matchStatus": null,
+    "matchStatus": "start",
     "percentSelected": 0.8,
     "roundsSelected": {
       "1": 1.4,
@@ -25991,17 +26009,18 @@
       "7": 0.8
     },
     "stats": {
-      "totalPoints": 7,
-      "avgPoints": 1.8,
-      "form": 1.7,
+      "totalPoints": 8,
+      "avgPoints": 1.6,
+      "form": 1.3,
       "lastRoundPoints": 1,
       "roundPoints": {
         "1": 2,
         "2": 2,
         "4": 2,
-        "5": 1
+        "5": 1,
+        "6": 1
       },
-      "nextFixtureFromActiveRound": 98,
+      "nextFixtureFromActiveRound": null,
       "nextFixtureFromScheduledRound": null
     },
     "oneToWatch": false,
@@ -26018,7 +26037,7 @@
     "position": "FWD",
     "price": 6.2,
     "status": "playing",
-    "matchStatus": null,
+    "matchStatus": "start",
     "percentSelected": 0.3,
     "roundsSelected": {
       "1": 0.2,
@@ -26030,18 +26049,19 @@
       "7": 0.3
     },
     "stats": {
-      "totalPoints": 19,
-      "avgPoints": 3.8,
-      "form": 5.7,
-      "lastRoundPoints": 9,
+      "totalPoints": 20,
+      "avgPoints": 3.3,
+      "form": 3.7,
+      "lastRoundPoints": 1,
       "roundPoints": {
         "1": 1,
         "2": 1,
         "3": 7,
         "4": 1,
-        "5": 9
+        "5": 9,
+        "6": 1
       },
-      "nextFixtureFromActiveRound": 98,
+      "nextFixtureFromActiveRound": null,
       "nextFixtureFromScheduledRound": null
     },
     "oneToWatch": false,
@@ -26058,7 +26078,7 @@
     "position": "FWD",
     "price": 5.6,
     "status": "playing",
-    "matchStatus": null,
+    "matchStatus": "sub",
     "percentSelected": 0.1,
     "roundsSelected": {
       "1": 0.2,
@@ -26077,7 +26097,7 @@
       "roundPoints": {
         "3": 2
       },
-      "nextFixtureFromActiveRound": 98,
+      "nextFixtureFromActiveRound": null,
       "nextFixtureFromScheduledRound": null
     },
     "oneToWatch": false,
@@ -26094,7 +26114,7 @@
     "position": "GK",
     "price": 4.2,
     "status": "playing",
-    "matchStatus": null,
+    "matchStatus": "start",
     "percentSelected": 3.4,
     "roundsSelected": {
       "1": 2.6,
@@ -26106,17 +26126,18 @@
       "7": 3.4
     },
     "stats": {
-      "totalPoints": 14,
-      "avgPoints": 3.5,
+      "totalPoints": 15,
+      "avgPoints": 3,
       "form": 4,
-      "lastRoundPoints": 8,
+      "lastRoundPoints": 1,
       "roundPoints": {
         "1": 2,
         "2": 1,
         "4": 3,
-        "5": 8
+        "5": 8,
+        "6": 1
       },
-      "nextFixtureFromActiveRound": 98,
+      "nextFixtureFromActiveRound": null,
       "nextFixtureFromScheduledRound": null
     },
     "oneToWatch": false,
@@ -26133,7 +26154,7 @@
     "position": "GK",
     "price": 3.8,
     "status": "playing",
-    "matchStatus": null,
+    "matchStatus": "sub",
     "percentSelected": 0.2,
     "roundsSelected": {
       "1": 0.1,
@@ -26152,7 +26173,7 @@
       "roundPoints": {
         "3": 0
       },
-      "nextFixtureFromActiveRound": 98,
+      "nextFixtureFromActiveRound": null,
       "nextFixtureFromScheduledRound": null
     },
     "oneToWatch": false,
@@ -26169,7 +26190,7 @@
     "position": "MID",
     "price": 5.9,
     "status": "playing",
-    "matchStatus": null,
+    "matchStatus": "sub",
     "percentSelected": 0.1,
     "roundsSelected": {
       "1": 0.1,
@@ -26188,7 +26209,7 @@
       "roundPoints": {
         "3": 1
       },
-      "nextFixtureFromActiveRound": 98,
+      "nextFixtureFromActiveRound": null,
       "nextFixtureFromScheduledRound": null
     },
     "oneToWatch": false,
@@ -26205,7 +26226,7 @@
     "position": "MID",
     "price": 6.1,
     "status": "playing",
-    "matchStatus": null,
+    "matchStatus": "sub",
     "percentSelected": 2.6,
     "roundsSelected": {
       "1": 3.4,
@@ -26228,7 +26249,7 @@
         "4": 10,
         "5": 1
       },
-      "nextFixtureFromActiveRound": 98,
+      "nextFixtureFromActiveRound": null,
       "nextFixtureFromScheduledRound": null
     },
     "oneToWatch": false,
@@ -26245,7 +26266,7 @@
     "position": "MID",
     "price": 6.2,
     "status": "playing",
-    "matchStatus": null,
+    "matchStatus": "sub",
     "percentSelected": 0,
     "roundsSelected": {
       "1": 0,
@@ -26265,7 +26286,7 @@
         "1": 1,
         "3": 1
       },
-      "nextFixtureFromActiveRound": 98,
+      "nextFixtureFromActiveRound": null,
       "nextFixtureFromScheduledRound": null
     },
     "oneToWatch": false,
@@ -33117,7 +33138,7 @@
     "price": 5.1,
     "status": "playing",
     "matchStatus": "start",
-    "percentSelected": 49.5,
+    "percentSelected": 49.6,
     "roundsSelected": {
       "1": 25.9,
       "2": 28.9,
@@ -33125,7 +33146,7 @@
       "4": 32.3,
       "5": 37.6,
       "6": 49.3,
-      "7": 49.5
+      "7": 49.6
     },
     "stats": {
       "totalPoints": 46,
@@ -41286,7 +41307,7 @@
     "price": 6.8,
     "status": "eliminated",
     "matchStatus": null,
-    "percentSelected": 2.4,
+    "percentSelected": 2.3,
     "roundsSelected": {
       "1": 2,
       "2": 2.8,
@@ -41294,7 +41315,7 @@
       "4": 4.9,
       "5": 7.9,
       "6": 2.4,
-      "7": 2.4
+      "7": 2.3
     },
     "stats": {
       "totalPoints": 34,
@@ -46335,7 +46356,7 @@
     "price": 7.8,
     "status": "eliminated",
     "matchStatus": null,
-    "percentSelected": 1.2,
+    "percentSelected": 1.1,
     "roundsSelected": {
       "1": 1.9,
       "2": 1.5,
@@ -46343,7 +46364,7 @@
       "4": 1.3,
       "5": 1.4,
       "6": 1.2,
-      "7": 1.2
+      "7": 1.1
     },
     "stats": {
       "totalPoints": 19,
@@ -48471,7 +48492,7 @@
     "position": "GK",
     "price": 3.5,
     "status": "playing",
-    "matchStatus": null,
+    "matchStatus": "sub",
     "percentSelected": 1,
     "roundsSelected": {
       "1": 0.9,
@@ -48488,7 +48509,7 @@
       "form": 0,
       "lastRoundPoints": 0,
       "roundPoints": [],
-      "nextFixtureFromActiveRound": 98,
+      "nextFixtureFromActiveRound": null,
       "nextFixtureFromScheduledRound": null
     },
     "oneToWatch": false,
@@ -48505,7 +48526,7 @@
     "position": "MID",
     "price": 5.5,
     "status": "playing",
-    "matchStatus": null,
+    "matchStatus": "sub",
     "percentSelected": 0.3,
     "roundsSelected": {
       "1": 0.1,
@@ -48524,7 +48545,7 @@
       "roundPoints": {
         "3": 11
       },
-      "nextFixtureFromActiveRound": 98,
+      "nextFixtureFromActiveRound": null,
       "nextFixtureFromScheduledRound": null
     },
     "oneToWatch": false,
@@ -48541,7 +48562,7 @@
     "position": "MID",
     "price": 6.5,
     "status": "playing",
-    "matchStatus": null,
+    "matchStatus": "sub",
     "percentSelected": 0.1,
     "roundsSelected": {
       "1": 0.2,
@@ -48564,7 +48585,7 @@
         "4": 1,
         "5": 1
       },
-      "nextFixtureFromActiveRound": 98,
+      "nextFixtureFromActiveRound": null,
       "nextFixtureFromScheduledRound": null
     },
     "oneToWatch": false,
@@ -48581,7 +48602,7 @@
     "position": "MID",
     "price": 7.7,
     "status": "playing",
-    "matchStatus": null,
+    "matchStatus": "start",
     "percentSelected": 6.3,
     "roundsSelected": {
       "1": 5,
@@ -48593,17 +48614,18 @@
       "7": 6.3
     },
     "stats": {
-      "totalPoints": 22,
-      "avgPoints": 5.5,
-      "form": 5.7,
-      "lastRoundPoints": 2,
+      "totalPoints": 23,
+      "avgPoints": 4.6,
+      "form": 3.7,
+      "lastRoundPoints": 1,
       "roundPoints": {
         "1": 5,
         "2": 7,
         "4": 8,
-        "5": 2
+        "5": 2,
+        "6": 1
       },
-      "nextFixtureFromActiveRound": 98,
+      "nextFixtureFromActiveRound": null,
       "nextFixtureFromScheduledRound": null
     },
     "oneToWatch": false,
@@ -49418,7 +49440,7 @@
     "position": "DEF",
     "price": 4.4,
     "status": "suspended",
-    "matchStatus": null,
+    "matchStatus": "not_in_squad",
     "percentSelected": 0.1,
     "roundsSelected": {
       "1": 0.1,
@@ -49438,7 +49460,7 @@
         "3": 8,
         "5": -2
       },
-      "nextFixtureFromActiveRound": 98,
+      "nextFixtureFromActiveRound": null,
       "nextFixtureFromScheduledRound": null
     },
     "oneToWatch": false,
@@ -49455,7 +49477,7 @@
     "position": "DEF",
     "price": 5.2,
     "status": "playing",
-    "matchStatus": null,
+    "matchStatus": "sub",
     "percentSelected": 3,
     "roundsSelected": {
       "1": 4.7,
@@ -49475,7 +49497,7 @@
         "1": 1,
         "2": 9
       },
-      "nextFixtureFromActiveRound": 98,
+      "nextFixtureFromActiveRound": null,
       "nextFixtureFromScheduledRound": null
     },
     "oneToWatch": false,
@@ -49492,7 +49514,7 @@
     "position": "MID",
     "price": 8,
     "status": "playing",
-    "matchStatus": null,
+    "matchStatus": "sub",
     "percentSelected": 0.9,
     "roundsSelected": {
       "1": 1.2,
@@ -49513,7 +49535,7 @@
         "3": 1,
         "4": 1
       },
-      "nextFixtureFromActiveRound": 98,
+      "nextFixtureFromActiveRound": null,
       "nextFixtureFromScheduledRound": null
     },
     "oneToWatch": false,
@@ -49530,7 +49552,7 @@
     "position": "FWD",
     "price": 7.9,
     "status": "playing",
-    "matchStatus": null,
+    "matchStatus": "sub",
     "percentSelected": 0.8,
     "roundsSelected": {
       "1": 1.2,
@@ -49549,7 +49571,7 @@
       "roundPoints": {
         "3": 1
       },
-      "nextFixtureFromActiveRound": 98,
+      "nextFixtureFromActiveRound": null,
       "nextFixtureFromScheduledRound": null
     },
     "oneToWatch": false,
@@ -49566,7 +49588,7 @@
     "position": "FWD",
     "price": 7.5,
     "status": "playing",
-    "matchStatus": null,
+    "matchStatus": "sub",
     "percentSelected": 0.2,
     "roundsSelected": {
       "1": 0.2,
@@ -49583,7 +49605,7 @@
       "form": 0,
       "lastRoundPoints": 0,
       "roundPoints": [],
-      "nextFixtureFromActiveRound": 98,
+      "nextFixtureFromActiveRound": null,
       "nextFixtureFromScheduledRound": null
     },
     "oneToWatch": false,
@@ -49636,7 +49658,7 @@
     "position": "DEF",
     "price": 4,
     "status": "playing",
-    "matchStatus": null,
+    "matchStatus": "sub",
     "percentSelected": 0.3,
     "roundsSelected": {
       "1": 0.3,
@@ -49655,7 +49677,7 @@
       "roundPoints": {
         "3": 1
       },
-      "nextFixtureFromActiveRound": 98,
+      "nextFixtureFromActiveRound": null,
       "nextFixtureFromScheduledRound": null
     },
     "oneToWatch": false,
@@ -52274,7 +52296,7 @@
     "price": 6,
     "status": "eliminated",
     "matchStatus": "start",
-    "percentSelected": 33,
+    "percentSelected": 32.9,
     "roundsSelected": {
       "1": 22.3,
       "2": 18.3,
@@ -52282,7 +52304,7 @@
       "4": 24.5,
       "5": 33.1,
       "6": 33.8,
-      "7": 33
+      "7": 32.9
     },
     "stats": {
       "totalPoints": 32,
@@ -54685,7 +54707,7 @@
     "position": "DEF",
     "price": 4.5,
     "status": "playing",
-    "matchStatus": null,
+    "matchStatus": "sub",
     "percentSelected": 0.1,
     "roundsSelected": {
       "2": 0,
@@ -54701,7 +54723,7 @@
       "form": 0,
       "lastRoundPoints": 0,
       "roundPoints": [],
-      "nextFixtureFromActiveRound": 98,
+      "nextFixtureFromActiveRound": null,
       "nextFixtureFromScheduledRound": null
     },
     "oneToWatch": false,
