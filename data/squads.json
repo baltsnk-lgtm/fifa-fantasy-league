@@ -221,7 +221,7 @@
     "name": "Norway",
     "group": "i",
     "abbr": "NOR",
-    "isEliminated": false
+    "isEliminated": true
   },
   {
     "id": 33,
@@ -298,7 +298,7 @@
     "name": "Switzerland",
     "group": "b",
     "abbr": "SUI",
-    "isEliminated": false
+    "isEliminated": true
   },
   {
     "id": 44,
