@@ -2820,8 +2820,8 @@
           "locked": false
         }
       },
-      "avatar": "https://play.fifa.com/media/image/gamezone/avatars/WC_2026/12.svg",
-      "level": 12,
+      "avatar": "https://play.fifa.com/media/image/gamezone/avatars/WC_2026/13.svg",
+      "level": 13,
       "overallRank": 1,
       "roundRank": 2,
       "overallPoints": 582,
@@ -3884,8 +3884,8 @@
           "locked": false
         }
       },
-      "avatar": "https://play.fifa.com/media/image/gamezone/avatars/WC_2026/5.svg",
-      "level": 5,
+      "avatar": "https://play.fifa.com/media/image/gamezone/avatars/WC_2026/6.svg",
+      "level": 6,
       "overallRank": 8,
       "roundRank": 13,
       "overallPoints": 478,
@@ -7124,8 +7124,8 @@
           "locked": false
         }
       },
-      "avatar": "https://play.fifa.com/media/image/gamezone/avatars/WC_2026/3.svg",
-      "level": 3,
+      "avatar": "https://play.fifa.com/media/image/gamezone/avatars/WC_2026/4.svg",
+      "level": 4,
       "overallRank": 7,
       "roundRank": 6,
       "overallPoints": 482,
@@ -7637,8 +7637,8 @@
           "locked": false
         }
       },
-      "avatar": "https://play.fifa.com/media/image/gamezone/avatars/WC_2026/10.svg",
-      "level": 10,
+      "avatar": "https://play.fifa.com/media/image/gamezone/avatars/WC_2026/11.svg",
+      "level": 11,
       "overallRank": 10,
       "roundRank": 7,
       "overallPoints": 458,
@@ -9283,8 +9283,8 @@
           "locked": false
         }
       },
-      "avatar": "https://play.fifa.com/media/image/gamezone/avatars/WC_2026/11.svg",
-      "level": 11,
+      "avatar": "https://play.fifa.com/media/image/gamezone/avatars/WC_2026/12.svg",
+      "level": 12,
       "overallRank": 13,
       "roundRank": 10,
       "overallPoints": 439,
@@ -12840,5 +12840,5 @@
   },
   "current_round": 6,
   "league_id": "248321",
-  "updated_at": "2026-07-13T12:19:03Z"
+  "updated_at": "2026-07-13T18:52:12Z"
 }
