@@ -4321,26 +4321,26 @@
           "locked": false
         },
         "7": {
-          "captain": 500,
+          "captain": 30,
           "vice": 38,
           "lineup": {
             "GK": [
               45
             ],
             "DEF": [
-              1430,
+              1318,
               1320,
-              1088
+              1088,
+              30
             ],
             "MID": [
               517,
               501,
               491,
-              1431
+              50
             ],
             "FWD": [
               38,
-              500,
               468
             ]
           },
@@ -4349,21 +4349,38 @@
               1428
             ],
             "DEF": [
-              30,
-              1318
+              1430
             ],
             "MID": [
-              50
+              1431
             ],
-            "FWD": []
+            "FWD": [
+              500
+            ]
           },
           "benchOrder": [
             1428,
-            30,
-            1318,
-            50
+            500,
+            1430,
+            1431
           ],
-          "substitutions": [],
+          "substitutions": [
+            {
+              "out": 1430,
+              "in": 1318,
+              "isAuto": false
+            },
+            {
+              "out": 1431,
+              "in": 50,
+              "isAuto": false
+            },
+            {
+              "out": 500,
+              "in": 30,
+              "isAuto": false
+            }
+          ],
           "transfers": [
             {
               "out": 2009,
@@ -4404,16 +4421,16 @@
           "cleanSheet": 6,
           "qualificationPlayerIds": [
             45,
-            1430,
+            1318,
             1320,
             1088,
+            30,
             38,
-            500,
             468,
             517,
             501,
             491,
-            1431
+            50
           ],
           "cleanSheetPlayerIds": [],
           "roundPoints": 20,
@@ -14771,5 +14788,5 @@
   },
   "current_round": 7,
   "league_id": "248321",
-  "updated_at": "2026-07-15T06:31:57Z"
+  "updated_at": "2026-07-15T12:06:20Z"
 }
