@@ -3070,7 +3070,7 @@
           "locked": false
         },
         "7": {
-          "captain": 500,
+          "captain": 468,
           "vice": 501,
           "lineup": {
             "GK": [
@@ -3161,7 +3161,13 @@
               "isNegative": false
             }
           ],
-          "captainChanges": [],
+          "captainChanges": [
+            {
+              "out": 500,
+              "in": 468,
+              "type": "captain"
+            }
+          ],
           "value": 104,
           "maxCaptain": null,
           "maxCaptainBooster": null,
@@ -14788,5 +14794,5 @@
   },
   "current_round": 7,
   "league_id": "248321",
-  "updated_at": "2026-07-15T12:06:20Z"
+  "updated_at": "2026-07-15T16:53:19Z"
 }
