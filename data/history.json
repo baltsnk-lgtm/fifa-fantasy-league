@@ -1289,8 +1289,8 @@
             1105
           ],
           "cleanSheetPlayerIds": [],
-          "roundPoints": 39,
-          "overallPoints": 634,
+          "roundPoints": 47,
+          "overallPoints": 642,
           "freeTransfers": 0,
           "negativeTransfers": 2,
           "locked": false
@@ -1299,9 +1299,9 @@
       "avatar": "https://play.fifa.com/media/image/gamezone/avatars/WC_2026/11.svg",
       "level": 11,
       "overallRank": 4,
-      "roundRank": 13,
-      "overallPoints": 634,
-      "roundPoints": 39
+      "roundRank": 11,
+      "overallPoints": 642,
+      "roundPoints": 47
     },
     "4779999": {
       "userName": "Dyom",
@@ -2380,8 +2380,8 @@
             517
           ],
           "cleanSheetPlayerIds": [],
-          "roundPoints": 44,
-          "overallPoints": 643,
+          "roundPoints": 53,
+          "overallPoints": 652,
           "freeTransfers": 0,
           "negativeTransfers": 0,
           "locked": false
@@ -2389,10 +2389,10 @@
       },
       "avatar": "https://play.fifa.com/media/image/gamezone/avatars/WC_2026/7.svg",
       "level": 7,
-      "overallRank": 3,
-      "roundRank": 9,
-      "overallPoints": 643,
-      "roundPoints": 44
+      "overallRank": 2,
+      "roundRank": 10,
+      "overallPoints": 652,
+      "roundPoints": 53
     },
     "3698906": {
       "userName": "Vetal307",
@@ -3456,7 +3456,7 @@
         },
         "8": {
           "captain": 500,
-          "vice": 1082,
+          "vice": 1094,
           "lineup": {
             "GK": [
               1099
@@ -3468,14 +3468,14 @@
             ],
             "MID": [
               56,
-              1082,
               517,
               1092,
               491
             ],
             "FWD": [
               38,
-              500
+              500,
+              1094
             ]
           },
           "bench": {
@@ -3486,16 +3486,16 @@
               457,
               1430
             ],
-            "MID": [],
-            "FWD": [
-              1094
-            ]
+            "MID": [
+              1082
+            ],
+            "FWD": []
           },
           "benchOrder": [
             506,
             457,
             1430,
-            1094
+            1082
           ],
           "substitutions": [
             {
@@ -3511,6 +3511,11 @@
             {
               "out": 1430,
               "in": 1085,
+              "isAuto": false
+            },
+            {
+              "out": 1082,
+              "in": 1094,
               "isAuto": false
             }
           ],
@@ -3567,15 +3572,15 @@
             1085,
             38,
             500,
+            1094,
             56,
-            1082,
             517,
             1092,
             491
           ],
           "cleanSheetPlayerIds": [],
-          "roundPoints": 51,
-          "overallPoints": 664,
+          "roundPoints": 58,
+          "overallPoints": 671,
           "freeTransfers": 0,
           "negativeTransfers": 0,
           "locked": false
@@ -3585,8 +3590,8 @@
       "level": 13,
       "overallRank": 1,
       "roundRank": 6,
-      "overallPoints": 664,
-      "roundPoints": 51
+      "overallPoints": 672,
+      "roundPoints": 59
     },
     "5344013": {
       "userName": "Andrii Lubinets",
@@ -4139,8 +4144,8 @@
           "cleanSheet": null,
           "qualificationPlayerIds": [],
           "cleanSheetPlayerIds": [],
-          "roundPoints": 44,
-          "overallPoints": 491,
+          "roundPoints": 45,
+          "overallPoints": 492,
           "freeTransfers": 6,
           "negativeTransfers": 0,
           "locked": false
@@ -4149,9 +4154,9 @@
       "avatar": "https://play.fifa.com/media/image/gamezone/avatars/WC_2026/3.svg",
       "level": 3,
       "overallRank": 15,
-      "roundRank": 10,
-      "overallPoints": 491,
-      "roundPoints": 44
+      "roundRank": 13,
+      "overallPoints": 492,
+      "roundPoints": 45
     },
     "3166273": {
       "userName": "bltsnk",
@@ -4975,8 +4980,8 @@
             1431
           ],
           "cleanSheetPlayerIds": [],
-          "roundPoints": 68,
-          "overallPoints": 582,
+          "roundPoints": 72,
+          "overallPoints": 586,
           "freeTransfers": 6,
           "negativeTransfers": 0,
           "locked": false
@@ -4986,8 +4991,8 @@
       "level": 6,
       "overallRank": 7,
       "roundRank": 2,
-      "overallPoints": 582,
-      "roundPoints": 68
+      "overallPoints": 587,
+      "roundPoints": 73
     },
     "3577130": {
       "userName": "sergstappen",
@@ -5980,7 +5985,7 @@
               45
             ],
             "DEF": [
-              30,
+              1088,
               28,
               1318
             ],
@@ -6002,7 +6007,7 @@
             ],
             "DEF": [
               496,
-              1088
+              30
             ],
             "MID": [
               516
@@ -6012,7 +6017,7 @@
           "benchOrder": [
             477,
             496,
-            1088,
+            30,
             516
           ],
           "substitutions": [
@@ -6024,6 +6029,11 @@
             {
               "out": 516,
               "in": 56,
+              "isAuto": false
+            },
+            {
+              "out": 30,
+              "in": 1088,
               "isAuto": false
             }
           ],
@@ -6080,7 +6090,7 @@
           "cleanSheet": 4,
           "qualificationPlayerIds": [
             45,
-            30,
+            1088,
             28,
             1318,
             500,
@@ -6091,8 +6101,8 @@
             469
           ],
           "cleanSheetPlayerIds": [],
-          "roundPoints": 73,
-          "overallPoints": 644,
+          "roundPoints": 79,
+          "overallPoints": 650,
           "freeTransfers": 0,
           "negativeTransfers": 1,
           "locked": false
@@ -6100,10 +6110,10 @@
       },
       "avatar": "https://play.fifa.com/media/image/gamezone/avatars/WC_2026/3.svg",
       "level": 3,
-      "overallRank": 2,
+      "overallRank": 3,
       "roundRank": 1,
-      "overallPoints": 644,
-      "roundPoints": 73
+      "overallPoints": 651,
+      "roundPoints": 80
     },
     "1731201": {
       "userName": "Last Bite Of Suarez",
@@ -7073,49 +7083,69 @@
         },
         "8": {
           "captain": 500,
-          "vice": 475,
+          "vice": 56,
           "lineup": {
             "GK": [
-              506
+              45
             ],
             "DEF": [
-              493,
+              1085,
               1318,
               1089,
               1088
             ],
             "MID": [
-              475,
-              516,
+              56,
               517,
               1092
             ],
             "FWD": [
               500,
-              1094
+              1094,
+              38
             ]
           },
           "bench": {
             "GK": [
-              45
+              506
             ],
             "DEF": [
-              1085
+              493
             ],
             "MID": [
-              56
+              516,
+              475
             ],
-            "FWD": [
-              38
-            ]
+            "FWD": []
           },
           "benchOrder": [
-            45,
-            1085,
-            38,
-            56
+            506,
+            493,
+            516,
+            475
           ],
-          "substitutions": [],
+          "substitutions": [
+            {
+              "out": 506,
+              "in": 45,
+              "isAuto": false
+            },
+            {
+              "out": 493,
+              "in": 1085,
+              "isAuto": false
+            },
+            {
+              "out": 516,
+              "in": 38,
+              "isAuto": false
+            },
+            {
+              "out": 475,
+              "in": 56,
+              "isAuto": false
+            }
+          ],
           "transfers": [
             {
               "out": 494,
@@ -7163,19 +7193,21 @@
           "qualification": 4,
           "cleanSheet": 7,
           "qualificationPlayerIds": [
-            506,
+            45,
+            1085,
             1318,
             1089,
             1088,
             500,
             1094,
-            516,
+            38,
+            56,
             517,
             1092
           ],
           "cleanSheetPlayerIds": [],
-          "roundPoints": 42,
-          "overallPoints": 616,
+          "roundPoints": 52,
+          "overallPoints": 626,
           "freeTransfers": 0,
           "negativeTransfers": 0,
           "locked": false
@@ -7184,9 +7216,9 @@
       "avatar": "https://play.fifa.com/media/image/gamezone/avatars/WC_2022/0.svg",
       "level": 11,
       "overallRank": 5,
-      "roundRank": 11,
-      "overallPoints": 616,
-      "roundPoints": 42
+      "roundRank": 9,
+      "overallPoints": 627,
+      "roundPoints": 53
     },
     "5361425": {
       "userName": "Maks66",
@@ -8127,8 +8159,8 @@
             1998
           ],
           "cleanSheetPlayerIds": [],
-          "roundPoints": 47,
-          "overallPoints": 597,
+          "roundPoints": 57,
+          "overallPoints": 607,
           "freeTransfers": 0,
           "negativeTransfers": 0,
           "locked": false
@@ -8137,9 +8169,9 @@
       "avatar": "https://play.fifa.com/media/image/gamezone/avatars/WC_2026/7.svg",
       "level": 7,
       "overallRank": 6,
-      "roundRank": 8,
-      "overallPoints": 597,
-      "roundPoints": 47
+      "roundRank": 7,
+      "overallPoints": 608,
+      "roundPoints": 58
     },
     "4497197": {
       "userName": "Pocik",
@@ -9213,8 +9245,8 @@
             1092
           ],
           "cleanSheetPlayerIds": [],
-          "roundPoints": 36,
-          "overallPoints": 574,
+          "roundPoints": 44,
+          "overallPoints": 582,
           "freeTransfers": 0,
           "negativeTransfers": 2,
           "locked": false
@@ -9224,8 +9256,8 @@
       "level": 4,
       "overallRank": 8,
       "roundRank": 15,
-      "overallPoints": 574,
-      "roundPoints": 36
+      "overallPoints": 582,
+      "roundPoints": 44
     },
     "3104284": {
       "userName": "artemovie",
@@ -9935,8 +9967,8 @@
             1105
           ],
           "cleanSheetPlayerIds": [],
-          "roundPoints": 37,
-          "overallPoints": 545,
+          "roundPoints": 43,
+          "overallPoints": 551,
           "freeTransfers": null,
           "negativeTransfers": 0,
           "locked": false
@@ -9946,8 +9978,8 @@
       "level": 11,
       "overallRank": 11,
       "roundRank": 14,
-      "overallPoints": 545,
-      "roundPoints": 37
+      "overallPoints": 552,
+      "roundPoints": 44
     },
     "2468665": {
       "userName": "bucherino",
@@ -10695,8 +10727,8 @@
             1082
           ],
           "cleanSheetPlayerIds": [],
-          "roundPoints": 32,
-          "overallPoints": 525,
+          "roundPoints": 39,
+          "overallPoints": 532,
           "freeTransfers": null,
           "negativeTransfers": 0,
           "locked": false
@@ -10706,8 +10738,8 @@
       "level": 12,
       "overallRank": 13,
       "roundRank": 16,
-      "overallPoints": 525,
-      "roundPoints": 32
+      "overallPoints": 532,
+      "roundPoints": 39
     },
     "4916573": {
       "userName": "SRJ Team",
@@ -11484,8 +11516,8 @@
             1431
           ],
           "cleanSheetPlayerIds": [],
-          "roundPoints": 57,
-          "overallPoints": 569,
+          "roundPoints": 63,
+          "overallPoints": 575,
           "freeTransfers": 6,
           "negativeTransfers": 0,
           "locked": false
@@ -11494,9 +11526,9 @@
       "avatar": "https://play.fifa.com/media/image/gamezone/avatars/WC_2026/3.svg",
       "level": 3,
       "overallRank": 9,
-      "roundRank": 4,
-      "overallPoints": 569,
-      "roundPoints": 57
+      "roundRank": 5,
+      "overallPoints": 575,
+      "roundPoints": 63
     },
     "3949297": {
       "userName": "Oleksandr10",
@@ -12111,8 +12143,8 @@
           "cleanSheet": null,
           "qualificationPlayerIds": [],
           "cleanSheetPlayerIds": [],
-          "roundPoints": 51,
-          "overallPoints": 532,
+          "roundPoints": 56,
+          "overallPoints": 537,
           "freeTransfers": 6,
           "negativeTransfers": 0,
           "locked": false
@@ -12121,9 +12153,9 @@
       "avatar": "https://play.fifa.com/media/image/gamezone/avatars/WC_2026/12.svg",
       "level": 12,
       "overallRank": 12,
-      "roundRank": 7,
-      "overallPoints": 532,
-      "roundPoints": 51
+      "roundRank": 8,
+      "overallPoints": 537,
+      "roundPoints": 56
     },
     "4581314": {
       "userName": "OleksiiTim",
@@ -12883,8 +12915,8 @@
             1997
           ],
           "cleanSheetPlayerIds": [],
-          "roundPoints": 25,
-          "overallPoints": 463,
+          "roundPoints": 33,
+          "overallPoints": 471,
           "freeTransfers": 0,
           "negativeTransfers": 1,
           "locked": false
@@ -12894,8 +12926,8 @@
       "level": 9,
       "overallRank": 17,
       "roundRank": 17,
-      "overallPoints": 463,
-      "roundPoints": 25
+      "overallPoints": 471,
+      "roundPoints": 33
     },
     "5166213": {
       "userName": "Anna B01",
@@ -13614,8 +13646,8 @@
             505
           ],
           "cleanSheetPlayerIds": [],
-          "roundPoints": -1,
-          "overallPoints": 509,
+          "roundPoints": 11,
+          "overallPoints": 521,
           "freeTransfers": 1,
           "negativeTransfers": 0,
           "locked": false
@@ -13624,9 +13656,9 @@
       "avatar": "https://play.fifa.com/media/image/gamezone/avatars/WC_2026/8.svg",
       "level": 8,
       "overallRank": 14,
-      "roundRank": 20,
-      "overallPoints": 509,
-      "roundPoints": -1
+      "roundRank": 18,
+      "overallPoints": 522,
+      "roundPoints": 12
     },
     "4592310": {
       "userName": "TymofiiMC",
@@ -14235,8 +14267,8 @@
           "cleanSheet": 8,
           "qualificationPlayerIds": [],
           "cleanSheetPlayerIds": [],
-          "roundPoints": 59,
-          "overallPoints": 486,
+          "roundPoints": 64,
+          "overallPoints": 491,
           "freeTransfers": 6,
           "negativeTransfers": 0,
           "locked": false
@@ -14246,8 +14278,8 @@
       "level": 11,
       "overallRank": 16,
       "roundRank": 3,
-      "overallPoints": 486,
-      "roundPoints": 59
+      "overallPoints": 491,
+      "roundPoints": 64
     },
     "4963205": {
       "userName": "Ob1one",
@@ -14901,7 +14933,7 @@
           "vice": 500,
           "lineup": {
             "GK": [
-              1428
+              1099
             ],
             "DEF": [
               1086,
@@ -14911,7 +14943,7 @@
             ],
             "MID": [
               517,
-              510,
+              57,
               469
             ],
             "FWD": [
@@ -14922,24 +14954,35 @@
           },
           "bench": {
             "GK": [
-              1099
+              1428
             ],
             "DEF": [
               1085
             ],
             "MID": [
               56,
-              57
+              510
             ],
             "FWD": []
           },
           "benchOrder": [
-            1099,
+            1428,
             1085,
             56,
-            57
+            510
           ],
-          "substitutions": [],
+          "substitutions": [
+            {
+              "out": 510,
+              "in": 57,
+              "isAuto": false
+            },
+            {
+              "out": 1428,
+              "in": 1099,
+              "isAuto": false
+            }
+          ],
           "transfers": [
             {
               "out": 477,
@@ -14987,6 +15030,7 @@
           "qualification": 5,
           "cleanSheet": 6,
           "qualificationPlayerIds": [
+            1099,
             1086,
             463,
             1088,
@@ -14995,12 +15039,12 @@
             1094,
             38,
             517,
-            510,
+            57,
             469
           ],
           "cleanSheetPlayerIds": [],
-          "roundPoints": 56,
-          "overallPoints": 546,
+          "roundPoints": 63,
+          "overallPoints": 553,
           "freeTransfers": 0,
           "negativeTransfers": 0,
           "locked": false
@@ -15009,9 +15053,9 @@
       "avatar": "https://play.fifa.com/media/image/gamezone/avatars/WC_2026/12.svg",
       "level": 12,
       "overallRank": 10,
-      "roundRank": 5,
-      "overallPoints": 546,
-      "roundPoints": 56
+      "roundRank": 4,
+      "overallPoints": 553,
+      "roundPoints": 63
     },
     "4589585": {
       "userName": "antonishen21",
@@ -15618,8 +15662,8 @@
           "cleanSheet": null,
           "qualificationPlayerIds": [],
           "cleanSheetPlayerIds": [],
-          "roundPoints": 41,
-          "overallPoints": 448,
+          "roundPoints": 44,
+          "overallPoints": 451,
           "freeTransfers": 6,
           "negativeTransfers": 0,
           "locked": false
@@ -15629,8 +15673,8 @@
       "level": 7,
       "overallRank": 18,
       "roundRank": 12,
-      "overallPoints": 448,
-      "roundPoints": 41
+      "overallPoints": 452,
+      "roundPoints": 45
     },
     "4784313": {
       "userName": "Coolelyk",
@@ -16181,8 +16225,8 @@
           "cleanSheet": null,
           "qualificationPlayerIds": [],
           "cleanSheetPlayerIds": [],
-          "roundPoints": 5,
-          "overallPoints": 319,
+          "roundPoints": 6,
+          "overallPoints": 320,
           "freeTransfers": 6,
           "negativeTransfers": 0,
           "locked": false
@@ -16191,9 +16235,9 @@
       "avatar": "https://play.fifa.com/media/image/gamezone/avatars/WC_2026/3.svg",
       "level": 3,
       "overallRank": 19,
-      "roundRank": 18,
-      "overallPoints": 319,
-      "roundPoints": 5
+      "roundRank": 19,
+      "overallPoints": 320,
+      "roundPoints": 6
     },
     "5339304": {
       "userName": "Oranje Wereldkampioen",
@@ -16866,12 +16910,12 @@
       "avatar": "https://play.fifa.com/media/image/gamezone/avatars/WC_2026/2.svg",
       "level": 2,
       "overallRank": 20,
-      "roundRank": 19,
+      "roundRank": 20,
       "overallPoints": 287,
       "roundPoints": 0
     }
   },
   "current_round": 8,
   "league_id": "248321",
-  "updated_at": "2026-07-19T15:34:36Z"
+  "updated_at": "2026-07-19T20:10:25Z"
 }
