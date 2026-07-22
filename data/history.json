@@ -14282,8 +14282,8 @@
           "locked": false
         }
       },
-      "avatar": "https://play.fifa.com/media/image/gamezone/avatars/WC_2026/11.svg",
-      "level": 11,
+      "avatar": "https://play.fifa.com/media/image/gamezone/avatars/WC_2026/12.svg",
+      "level": 12,
       "overallRank": 15,
       "roundRank": 10,
       "overallPoints": 507,
@@ -16937,5 +16937,5 @@
   },
   "current_round": 8,
   "league_id": "248321",
-  "updated_at": "2026-07-22T00:11:24Z"
+  "updated_at": "2026-07-22T10:08:25Z"
 }
